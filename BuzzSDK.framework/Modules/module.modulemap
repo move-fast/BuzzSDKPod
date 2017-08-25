@@ -1,0 +1,10 @@
+framework module BuzzSDK {
+  umbrella header "BuzzSDK.h"
+
+  export *
+  module * { export * }
+}
+
+module BuzzSDK.Swift {
+    header "BuzzSDK-Swift.h"
+}
