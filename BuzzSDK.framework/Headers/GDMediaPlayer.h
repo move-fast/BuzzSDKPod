@@ -225,6 +225,9 @@ typedef void (^_Nullable GDTimeObservationBlock)(CMTime time);
 // or in CMTime
 - (void)setStartCMTime:(CMTime)startCMTime;
 
+// Gets the start time in seconds.
+- (NSTimeInterval)startTime;
+
 #pragma mark Video Layer
 
 // natural size for Active Video Content
@@ -263,6 +266,9 @@ typedef void (^_Nullable GDTimeObservationBlock)(CMTime time);
 
 // indicates if loading has been requested.
 - (BOOL)loadingHasBeenRequested;
+
+/// indicates if assets setup has been requested.
+- (BOOL)assetsSetupRequested;
 
 #pragma mark Time Status for activeContent
 

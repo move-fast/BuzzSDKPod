@@ -75,13 +75,15 @@ In addition, you can put a small tag image to your article cards at top right co
  * BuzzSDKStateNone: The SDK is not loaded and its UI hierarchy is not set.
  * BuzzSDKStatePrepared: The SDK Session has started, the UI Hierarchy is not yet set and no content is currently being presented.
  * BuzzSDKStatePresenting: The SDK UI Hierarchy is set, and content is currently being presented.
- * BuzzSDKStateHidden: The SDK UI Hierarchy is set, content is displayed but currently hidden.
+ * BuzzSDKStateHiddenByHostApp: The SDK UI Hierarchy is set, content is displayed but currently hidden by host app request. User can not manually show it again.
+ * BuzzSDKStateHiddenByUser: The SDK UI Hierarchy is set, content is displayed but currently hidden by user request. A show buttons is displayed so user can show the UI again on request.
  */
 typedef enum : NSUInteger {
     BuzzSDKStateNone,
     BuzzSDKStatePrepared,
     BuzzSDKStatePresenting,
-    BuzzSDKStateHidden
+    BuzzSDKStateHiddenByHostApp,
+    BuzzSDKStateHiddenByUser,
 } BuzzSDKState;
 
 @protocol BuzzSDKDelegate <NSObject>
