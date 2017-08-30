@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|  
     s.name              = 'BuzzSDK'
-    s.version           = '1.2.5'
+    s.version           = '1.2.6'
     s.summary           = 'BuzzSDK is a turnkey solution for publishers to add an extra revenue stream to their mobile app suites.'
     s.homepage          = 'http://www.buzzsdk.com/'
 
@@ -8,7 +8,7 @@ Pod::Spec.new do |s|
     s.license           = { :type => 'Apache-2.0', :file => 'LICENSE' }
 
     s.platform          = :ios
-    s.source            = { :git => 'https://github.com/move-fast/BuzzSDKPod.git', :tag => 'v1.2.5' }
+    s.source            = { :git => 'https://github.com/move-fast/BuzzSDKPod.git', :tag => 'v1.2.6' }
 
     s.ios.deployment_target = '9.0'
     s.ios.vendored_frameworks = 'BuzzSDK.framework'
