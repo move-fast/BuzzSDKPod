@@ -181,5 +181,8 @@ FOUNDATION_EXPORT NSString *const kBUZZSDKOptionMinimumNumberOfCardsBetweenVideo
 /// Defines if the first card (when a video or video ad) must be presented in Card Mode. If `false` it will be presented in PIP. Default value is `false`
 FOUNDATION_EXPORT NSString *const kBUZZSDKOptionFirstVideoInCardMode;
 
+/// Defines if the hide actions (pressing the hide button or dismissing the PIP Playlist on the down direction) will actually dismiss the SDK or simply hide it and show a `show videos` button. If `YES`, it will dismiss the SDK, if `NO` it will hide it and show the button. Default value is `YES`
+FOUNDATION_EXPORT NSString *const kBUZZSDKOptionHideActionsDismissTheSDK;
+
 
 #endif /* BUZZSDKOptions_h */
