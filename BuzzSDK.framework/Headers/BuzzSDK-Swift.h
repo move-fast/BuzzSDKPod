@@ -353,6 +353,7 @@ typedef SWIFT_ENUM(NSInteger, Vertical) {
   VerticalRap1d = 3,
   VerticalArchAndDesign = 4,
   VerticalMakerApp = 5,
+  VerticalPulse = 6,
 };
 
 @class LayoutCoordinatesObjC;
@@ -656,7 +657,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) BUZZSDKNetwo
 /// Will register a device with given device Info if <code>slug == nil</code>. Otherwise will update device info into backend. When succesfull, callback will include the <code>slug</code> from backend.
 - (void)registerOrUpdateDeviceForSlug:(NSString * _Nullable)slug deviceInfo:(NSDictionary<NSString *, id> * _Nonnull)deviceInfo completion:(void (^ _Nonnull)(NSString * _Nullable, NSError * _Nullable))completion;
 /// Will retrieve the config dictionary and the cards array from backend. Completion block signature is (config : Payload?, cards : [Payload]?, error : Error?)
-- (void)getConfigurationWithCompletion:(void (^ _Nonnull)(NSDictionary<NSString *, id> * _Nullable, NSArray<NSDictionary<NSString *, id> *> * _Nullable, NSError * _Nullable))completion;
+- (void)getConfigurationForGroup:(NSString * _Nullable)group completion:(void (^ _Nonnull)(NSDictionary<NSString *, id> * _Nullable, NSArray<NSDictionary<NSString *, id> *> * _Nullable, NSError * _Nullable))completion;
 /// Post the device logs to the backend. Completion block will indicate success of request. Completion block signature is (success : Bool, error : Error?)
 - (void)postDeviceLogs:(NSArray<NSDictionary<NSString *, id> *> * _Nonnull)logs forSlug:(NSString * _Nonnull)slug completion:(void (^ _Nonnull)(BOOL, NSError * _Nullable))completion;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;

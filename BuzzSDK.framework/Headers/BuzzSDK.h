@@ -94,7 +94,7 @@ typedef enum : NSUInteger {
  * Notifies the delegate a Article Card has been tapped. 
  * `cardData` dictionary as configured in the dashboards is passed along.
  */
-- (void)buzzSDKCardTap:(NSDictionary*)cardData;
+- (void)buzzSDKCardTap:(nonnull NSDictionary*)cardData;
 
 /**
  * Notifies the delegate that the 'Remove Ads' button has been tapped.
@@ -119,22 +119,31 @@ typedef enum : NSUInteger {
  * @brief Initializes BuzzSDK
  * @param APIKey you can look up your API key at the dashboard
  * @param secretKey you can look up your secret key at the dashboard
+ * @param groupId an Integer indicating the group configurations to be used.
  * @param SDKOptions a dictionary containing the initialization options. Please find all possible options in <BuzzSDK/BUZZSDKOptions.h> header file.
  */
-+ (void)startWithAPIKey:(NSString *)APIKey secretKey:(NSString *)secretKey andSDKOptions:(NSDictionary *)SDKOptions;
++ (void)startWithAPIKey:(nonnull NSString *)APIKey secretKey:(nonnull NSString *)secretKey groupId:(NSInteger)groupId andSDKOptions:(nullable NSDictionary *)SDKOptions;
+
+/**
+ * @brief Initializes BuzzSDK
+ * @param APIKey you can look up your API key at the dashboard
+ * @param secretKey you can look up your secret key at the dashboard
+ * @param SDKOptions a dictionary containing the initialization options. Please find all possible options in <BuzzSDK/BUZZSDKOptions.h> header file.
+ */
++ (void)startWithAPIKey:(nonnull NSString *)APIKey secretKey:(nonnull NSString *)secretKey andSDKOptions:(nullable NSDictionary *)SDKOptions;
 
 /**
  * @brief Initializes BuzzSDK. Simplified version of initialization (uses default options).
  * @param APIKey you can look up your API key at the dashboard
  * @param secretKey you can look up your secret key at the dashboard
  */
-+ (void)startWithAPIKey:(NSString *)APIKey secretKey:(NSString *)secretKey;
++ (void)startWithAPIKey:(nonnull NSString *)APIKey secretKey:(nonnull NSString *)secretKey;
 
 /**
  *  @brief Sets an object to be forwarded taps on article cards.
  *  @param delegate An object that can respond to the callbacks that a user interaction on an article sends.
  */
-+ (void)setDelegate:(NSObject<BuzzSDKDelegate> *)delegate;
++ (void)setDelegate:(nonnull NSObject<BuzzSDKDelegate> *)delegate;
 
 /**
  * @brief Presents the BuzzSDK's UI on top of the host app's UI.
@@ -159,6 +168,6 @@ typedef enum : NSUInteger {
  */
 + (void)pause;
 
-- (id) init __attribute__((unavailable("Please use 'startWithAPIKey:secretKey:andSDKOptions:' or 'startWithAPIKey:secretKey:' instead.")));
+- (nonnull id) init __attribute__((unavailable("Please use 'startWithAPIKey:secretKey:groupId:andSDKOptions:' or 'startWithAPIKey:secretKey:' instead.")));
 
 @end
