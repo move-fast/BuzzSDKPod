@@ -146,15 +146,30 @@ FOUNDATION_EXPORT NSString *const kBUZZSDKOptionVideoAutoplayInWifi;
 FOUNDATION_EXPORT NSString *const kBUZZSDKOptionVideoAutoplayInCellular;
 
 /**
- *  The PIP Video views will try to fill up to the given fraction of the screen width
+ *  For iPhone: The PIP Video views will try to fill up to the given fraction of the screen width
  *  as much as possible. It will be ignored if resulting size for PIP Video Views exceeds
  *  the allowed internal allowed range for width and height.
  *  Should be a value between 0 and 1.
  *  If 0 is provided, the app will dyanmically size the PIP Video Views to fill as much 
  *  of the leftover screen size below the card stack.
  */
-FOUNDATION_EXPORT NSString *const kBUZZSDKOptionDesiredPIPFillWidthRatioToScreenWidthKey;
+FOUNDATION_EXPORT NSString *const kBUZZSDKOptionDesiredPIPFillWidthRatioToScreenWidthKeyIPhone;
 
+/**
+ *  For iPad: The PIP Video views will try to fill up to the given fraction of the screen width
+ *  as much as possible. It will be ignored if resulting size for PIP Video Views exceeds
+ *  the allowed internal allowed range for width and height.
+ *  Should be a value between 0 and 1.
+ *  If 0 is provided, the app will dyanmically size the PIP Video Views to fill as much
+ *  of the leftover screen size below the card stack.
+ */
+FOUNDATION_EXPORT NSString *const kBUZZSDKOptionDesiredPIPFillWidthRatioToScreenWidthKeyIPad;
+
+/**
+ *  For iPad: The Card View will fill up to the given fraction of the screen width. It will be ignored if invalid value.
+ *  Should be a value between 0 and 1.
+ */
+FOUNDATION_EXPORT NSString *const kBUZZSDKOptionDesiredCardFillWidthRatioToScreenWidthKeyIPad;
 
 /**
  * Indicates maximum amount of time which SDK is allowed to stay alive if the app has made inactive (in seconds).
