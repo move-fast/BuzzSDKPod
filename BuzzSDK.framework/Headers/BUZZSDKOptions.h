@@ -14,32 +14,6 @@
 #pragma mark - Definitions
 
 /*!
- * @typedef BUZZSDKPresentationMode
- * @brief A list of SDK Presentation modes.
- */
-typedef NS_ENUM(NSInteger, BUZZSDKPresentationMode) {
-    ///Acts as a "kill switch" and means that SDK must not start, or shutdown if it has been started before.
-    BUZZSDKPresentationModeNever = 0,
-    
-    /*!Use this option if you want to control SDK presentation manually.
-     *
-     * Call @c [BuzzSDK presentDeck] whenever you want to show the card deck.
-     *
-     * <b>Note:</b> Only first call to this method has the effect. All subsequest calls are ignored.
-     */
-    BUZZSDKPresentationModeManual = 1,
-    
-    ///BUZZSDKPresentationModeOncePerDay
-    BUZZSDKPresentationModeOncePerDay = 2,
-    
-    ///BUZZSDKPresentationModeOncePerWeek
-    BUZZSDKPresentationModeOncePerWeek = 3,
-    
-    ///BUZZSDKPresentationModeWhenAppBecomesActive
-    BUZZSDKPresentationModeWhenAppBecomesActive = 4
-};
-
-/*!
  * @typedef BUZZSDKLogLevel
  * @brief A list of SDK Log Levels.
  */
@@ -118,13 +92,6 @@ FOUNDATION_EXPORT NSString *const kBUZZSDKOptionRemoveAdsAlertTextKey;
 FOUNDATION_EXPORT NSString *const kBUZZSDKOptionNoAdsKey;
 
 #pragma mark - Options to be set by the server
-
-/**
- * SDK Presentation Mode. Default is BUZZSDKPresentationModeManual - it means that developer must call [BuzzSDK presentDeck]
- * to show the SDK's card deck
- */
-FOUNDATION_EXPORT NSString *const kBUZZSDKOptionPresentationModeKey;
-
 
 /**
  * This option will indicates that the SDK should not present to the user any content that has already been seen.
@@ -218,9 +185,12 @@ FOUNDATION_EXPORT NSString *const kBUZZSDKOptionVideoAdSkipBlockInPIPMillisecond
 //Indicates if sound should be on when video or video Ads are displayed for the firs time in the SDK session. Default is NO
 FOUNDATION_EXPORT NSString *const kBUZZSDKOptionVideoSoundIsOnByDefaultKey;
 
-//The maximum allowed amount of time which SDK has to load its resources. Default value is 1.5 seconds.
-//If timeout occurs, and the SDK hasn't completed its loading operations - it won't be presented
+/// The maximum allowed amount of time which SDK has to load its resources. Default value is 1.5 seconds. If timeout occurs, and the SDK hasn't completed its loading operations - it won't be presented
 FOUNDATION_EXPORT NSString *const kBUZZSDKOptionSDKLoadTimeoutKey;
+
+/// The minimum ammount of time (in seconds) that have to pass after SDK has been dismissed to be able to present the SDK once more. Any call to `presentDeck` before this grace period will be ignored.
+FOUNDATION_EXPORT NSString *const kBUZZSDKOptionSDKGracePeriodAfterDismiss;
+
 
 ///Indicates whether card stack should be rotated or not
 FOUNDATION_EXPORT NSString *const kBUZZSDKPrivateOptionStackRotationEnabledKey;

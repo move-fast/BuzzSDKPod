@@ -168,6 +168,11 @@ typedef enum : NSUInteger {
  */
 + (void)pause;
 
+/**
+ * @brief Will completely stop the SDK and remove it from the view hierarchy.
+ */
++ (void)dismissDeck;
+
 - (nonnull id) init __attribute__((unavailable("Please use 'startWithAPIKey:secretKey:groupId:andSDKOptions:' or 'startWithAPIKey:secretKey:' instead.")));
 
 @end
