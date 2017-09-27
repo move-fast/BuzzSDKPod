@@ -238,14 +238,14 @@ SWIFT_CLASS("_TtC7BuzzSDK7AdStyle")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
-enum Vertical : NSInteger;
+enum MFVertical : NSInteger;
 @class UIImage;
 
 /// Provides the configurable parameters values for the app based on its vertical identifier.
 SWIFT_CLASS("_TtC7BuzzSDK16AppConfiguration")
 @interface AppConfiguration : NSObject
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) enum Vertical vertical;)
-+ (enum Vertical)vertical SWIFT_WARN_UNUSED_RESULT;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) enum MFVertical vertical;)
++ (enum MFVertical)vertical SWIFT_WARN_UNUSED_RESULT;
 /// When <code>true</code> all videos will be considered as playbable before assessment and will be played on its original card position
 + (BOOL)debugAssessAllVideosAsPlayable SWIFT_WARN_UNUSED_RESULT;
 /// When <code>true</code>, the app will block any Ad content from presentation.
@@ -393,14 +393,14 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) enum Vertical vertic
 @end
 
 /// Defines the grouping of verticals
-typedef SWIFT_ENUM(NSInteger, Vertical) {
-  VerticalBuzz = 0,
-  VerticalBuzzSDK = 1,
-  VerticalBroNews = 2,
-  VerticalRap1d = 3,
-  VerticalArchAndDesign = 4,
-  VerticalMakerApp = 5,
-  VerticalPulse = 6,
+typedef SWIFT_ENUM(NSInteger, MFVertical) {
+  MFVerticalBuzz = 0,
+  MFVerticalBuzzSDK = 1,
+  MFVerticalBroNews = 2,
+  MFVerticalRap1d = 3,
+  MFVerticalArchAndDesign = 4,
+  MFVerticalMakerApp = 5,
+  MFVerticalPulse = 6,
 };
 
 @class LayoutCoordinatesObjC;
