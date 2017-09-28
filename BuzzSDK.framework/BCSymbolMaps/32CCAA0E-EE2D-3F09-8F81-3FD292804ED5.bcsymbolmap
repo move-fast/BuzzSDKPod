@@ -52,32 +52,32 @@ ___destroy_helper_block_.195
 -[BuzzSDK _configure]
 ___21-[BuzzSDK _configure]_block_invoke
 ___21-[BuzzSDK _configure]_block_invoke_2
-___copy_helper_block_.287
-___destroy_helper_block_.288
-___21-[BuzzSDK _configure]_block_invoke.297
-___copy_helper_block_.298
-___destroy_helper_block_.299
-___copy_helper_block_.301
-___destroy_helper_block_.302
+___copy_helper_block_.292
+___destroy_helper_block_.293
+___21-[BuzzSDK _configure]_block_invoke.302
+___copy_helper_block_.303
+___destroy_helper_block_.304
+___copy_helper_block_.306
+___destroy_helper_block_.307
 -[BuzzSDK _updateOptionsWithNewOptions:shouldOverride:]
 ___55-[BuzzSDK _updateOptionsWithNewOptions:shouldOverride:]_block_invoke
-___copy_helper_block_.307
-___destroy_helper_block_.308
+___copy_helper_block_.312
+___destroy_helper_block_.313
 -[BuzzSDK _defaultOptions]
 -[BuzzSDK _hasOptions]
 -[BuzzSDK _startLaunchTimeoutTimer]
 ___35-[BuzzSDK _startLaunchTimeoutTimer]_block_invoke
-___copy_helper_block_.336
-___destroy_helper_block_.337
+___copy_helper_block_.341
+___destroy_helper_block_.342
 -[BuzzSDK _stopLaunchTimeoutTimer]
 ___34-[BuzzSDK _stopLaunchTimeoutTimer]_block_invoke
-___copy_helper_block_.343
-___destroy_helper_block_.344
+___copy_helper_block_.348
+___destroy_helper_block_.349
 -[BuzzSDK _launchTimeoutTimerTimeout:]
 -[BuzzSDK _bootstrap]
 ___21-[BuzzSDK _bootstrap]_block_invoke
-___copy_helper_block_.352
-___destroy_helper_block_.353
+___copy_helper_block_.357
+___destroy_helper_block_.358
 -[BuzzSDK _isMainControllerLoaded]
 -[BuzzSDK _loadMainController]
 -[BuzzSDK _handleKeyboardNotifications:]
@@ -89,15 +89,12 @@ ___destroy_helper_block_.353
 -[BuzzSDK _isHidden]
 -[BuzzSDK _hide]
 ___16-[BuzzSDK _hide]_block_invoke
-___copy_helper_block_.444
-___destroy_helper_block_.445
+___copy_helper_block_.449
+___destroy_helper_block_.450
 -[BuzzSDK _show]
 ___16-[BuzzSDK _show]_block_invoke
-___copy_helper_block_.451
-___destroy_helper_block_.452
--[BuzzSDK dateLastSDKDismissal]
--[BuzzSDK setDateLastSDKDismissal:]
--[BuzzSDK _timeIntervalSinceLastSDKDismissal]
+___copy_helper_block_.456
+___destroy_helper_block_.457
 -[BuzzSDK _hasGracePeriodPassed]
 -[BuzzSDK _didReceiveBecomeActiveNotification:]
 -[BuzzSDK _appWillTerminatedNotification:]
@@ -134,6 +131,8 @@ ___destroy_helper_block_.452
 -[BuzzSDK setUiHiddenByKeyboard:]
 -[BuzzSDK uiHiddenByWindowConflict]
 -[BuzzSDK setUiHiddenByWindowConflict:]
+-[BuzzSDK dateLastSDKDismissal]
+-[BuzzSDK setDateLastSDKDismissal:]
 -[BuzzSDK .cxx_destruct]
 _sharedInstance._instance
 _sharedInstance.onceToken
@@ -146,27 +145,27 @@ ___block_descriptor_tmp.186
 ___block_descriptor_tmp.191
 ___block_descriptor_tmp.197
 _OBJC_IVAR_$_BuzzSDK._sdkViewController
+_OBJC_IVAR_$_BuzzSDK._dateLastSDKDismissal
 _OBJC_IVAR_$_BuzzSDK._delegate
 _OBJC_IVAR_$_BuzzSDK._buzzSDKSession
 _OBJC_IVAR_$_BuzzSDK._modelManager
 _OBJC_IVAR_$_BuzzSDK._sdkOptionsFetchingInProgress
 _OBJC_IVAR_$_BuzzSDK._sdkOptions
 _OBJC_IVAR_$_BuzzSDK._groupId
-___block_descriptor_tmp.289
+___block_descriptor_tmp.294
 _OBJC_IVAR_$_BuzzSDK._presentSDKPeindingConfiguration
-___block_descriptor_tmp.300
-___block_descriptor_tmp.304
-___block_descriptor_tmp.310
+___block_descriptor_tmp.305
+___block_descriptor_tmp.309
+___block_descriptor_tmp.315
 _OBJC_IVAR_$_BuzzSDK._launchTimeoutTimer
-___block_descriptor_tmp.338
-___block_descriptor_tmp.345
+___block_descriptor_tmp.343
+___block_descriptor_tmp.350
 _OBJC_IVAR_$_BuzzSDK._sdkOptionsFetched
-___block_descriptor_tmp.354
+___block_descriptor_tmp.359
 _OBJC_IVAR_$_BuzzSDK._uiHiddenByKeyboard
 _OBJC_IVAR_$_BuzzSDK._uiHiddenByWindowConflict
-___block_descriptor_tmp.446
-___block_descriptor_tmp.453
-_OBJC_IVAR_$_BuzzSDK._dateLastSDKDismissal
+___block_descriptor_tmp.451
+___block_descriptor_tmp.458
 _OBJC_IVAR_$_BuzzSDK._sdkLaunchRequested
 _OBJC_IVAR_$_BuzzSDK._manualBootstrapTimer
 l_OBJC_PROTOCOL_$_NSObject
@@ -185,7 +184,7 @@ __21-[BuzzSDK _bootstrap]_block_invoke
 __34-[BuzzSDK _stopLaunchTimeoutTimer]_block_invoke
 __35-[BuzzSDK _startLaunchTimeoutTimer]_block_invoke
 __55-[BuzzSDK _updateOptionsWithNewOptions:shouldOverride:]_block_invoke
-__21-[BuzzSDK _configure]_block_invoke.297
+__21-[BuzzSDK _configure]_block_invoke.302
 __21-[BuzzSDK _configure]_block_invoke_2
 __21-[BuzzSDK _configure]_block_invoke
 __16+[BuzzSDK pause]_block_invoke
@@ -2378,8 +2377,6 @@ ___copy_helper_block_.446
 ___destroy_helper_block_.447
 ___100-[GDCardStackViewController executeAnimationForCardView:forInsertCardAnimationStyle:withCompletion:]_block_invoke.449
 ___100-[GDCardStackViewController executeAnimationForCardView:forInsertCardAnimationStyle:withCompletion:]_block_invoke.455
-___copy_helper_block_.456
-___destroy_helper_block_.457
 ___100-[GDCardStackViewController executeAnimationForCardView:forInsertCardAnimationStyle:withCompletion:]_block_invoke.459
 ___copy_helper_block_.460
 ___destroy_helper_block_.461
@@ -2519,7 +2516,6 @@ ___block_descriptor_tmp.427
 _OBJC_IVAR_$_GDCardStackViewController._screenshotOfTopCard
 ___block_descriptor_tmp.432
 ___block_descriptor_tmp.448
-___block_descriptor_tmp.458
 ___block_descriptor_tmp.462
 ___block_descriptor_tmp.471
 ___block_descriptor_tmp.475
