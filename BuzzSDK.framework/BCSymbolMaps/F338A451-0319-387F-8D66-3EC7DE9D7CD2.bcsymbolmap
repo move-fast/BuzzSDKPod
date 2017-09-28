@@ -10,27 +10,27 @@ ___destroy_helper_block_
 -[BuzzSDK dealloc]
 +[BuzzSDK presentDeck]
 ___22+[BuzzSDK presentDeck]_block_invoke
-___copy_helper_block_.155
-___destroy_helper_block_.156
+___copy_helper_block_.164
+___destroy_helper_block_.165
 +[BuzzSDK hideDeck]
 ___19+[BuzzSDK hideDeck]_block_invoke
-___copy_helper_block_.167
-___destroy_helper_block_.168
+___copy_helper_block_.176
+___destroy_helper_block_.177
 +[BuzzSDK dismissDeck]
 ___22+[BuzzSDK dismissDeck]_block_invoke
-___copy_helper_block_.173
-___destroy_helper_block_.174
+___copy_helper_block_.182
+___destroy_helper_block_.183
 -[BuzzSDK _dismissDeck]
 ___23-[BuzzSDK _dismissDeck]_block_invoke
-___copy_helper_block_.184
-___destroy_helper_block_.185
-___23-[BuzzSDK _dismissDeck]_block_invoke.187
-___copy_helper_block_.188
-___destroy_helper_block_.189
+___copy_helper_block_.193
+___destroy_helper_block_.194
+___23-[BuzzSDK _dismissDeck]_block_invoke.196
+___copy_helper_block_.197
+___destroy_helper_block_.198
 +[BuzzSDK pause]
 ___16+[BuzzSDK pause]_block_invoke
-___copy_helper_block_.194
-___destroy_helper_block_.195
+___copy_helper_block_.203
+___destroy_helper_block_.204
 -[BuzzSDK _pause]
 -[BuzzSDK buzzSDKViewControllerDidFinish:]
 -[BuzzSDK buzzSDKViewControllerTimeIntervalForLoadingTimeoutTimer:]
@@ -52,32 +52,32 @@ ___destroy_helper_block_.195
 -[BuzzSDK _configure]
 ___21-[BuzzSDK _configure]_block_invoke
 ___21-[BuzzSDK _configure]_block_invoke_2
-___copy_helper_block_.292
-___destroy_helper_block_.293
-___21-[BuzzSDK _configure]_block_invoke.302
-___copy_helper_block_.303
-___destroy_helper_block_.304
-___copy_helper_block_.306
-___destroy_helper_block_.307
--[BuzzSDK _updateOptionsWithNewOptions:shouldOverride:]
-___55-[BuzzSDK _updateOptionsWithNewOptions:shouldOverride:]_block_invoke
+___copy_helper_block_.301
+___destroy_helper_block_.302
+___21-[BuzzSDK _configure]_block_invoke.311
 ___copy_helper_block_.312
 ___destroy_helper_block_.313
+___copy_helper_block_.315
+___destroy_helper_block_.316
+-[BuzzSDK _updateOptionsWithNewOptions:shouldOverride:]
+___55-[BuzzSDK _updateOptionsWithNewOptions:shouldOverride:]_block_invoke
+___copy_helper_block_.321
+___destroy_helper_block_.322
 -[BuzzSDK _defaultOptions]
 -[BuzzSDK _hasOptions]
 -[BuzzSDK _startLaunchTimeoutTimer]
 ___35-[BuzzSDK _startLaunchTimeoutTimer]_block_invoke
-___copy_helper_block_.341
-___destroy_helper_block_.342
+___copy_helper_block_.350
+___destroy_helper_block_.351
 -[BuzzSDK _stopLaunchTimeoutTimer]
 ___34-[BuzzSDK _stopLaunchTimeoutTimer]_block_invoke
-___copy_helper_block_.348
-___destroy_helper_block_.349
+___copy_helper_block_.357
+___destroy_helper_block_.358
 -[BuzzSDK _launchTimeoutTimerTimeout:]
 -[BuzzSDK _bootstrap]
 ___21-[BuzzSDK _bootstrap]_block_invoke
-___copy_helper_block_.357
-___destroy_helper_block_.358
+___copy_helper_block_.366
+___destroy_helper_block_.367
 -[BuzzSDK _isMainControllerLoaded]
 -[BuzzSDK _loadMainController]
 -[BuzzSDK _handleKeyboardNotifications:]
@@ -89,12 +89,12 @@ ___destroy_helper_block_.358
 -[BuzzSDK _isHidden]
 -[BuzzSDK _hide]
 ___16-[BuzzSDK _hide]_block_invoke
-___copy_helper_block_.449
-___destroy_helper_block_.450
+___copy_helper_block_.455
+___destroy_helper_block_.456
 -[BuzzSDK _show]
 ___16-[BuzzSDK _show]_block_invoke
-___copy_helper_block_.456
-___destroy_helper_block_.457
+___copy_helper_block_.462
+___destroy_helper_block_.463
 -[BuzzSDK _hasGracePeriodPassed]
 -[BuzzSDK _didReceiveBecomeActiveNotification:]
 -[BuzzSDK _appWillTerminatedNotification:]
@@ -133,17 +133,19 @@ ___destroy_helper_block_.457
 -[BuzzSDK setUiHiddenByWindowConflict:]
 -[BuzzSDK dateLastSDKDismissal]
 -[BuzzSDK setDateLastSDKDismissal:]
+-[BuzzSDK presentDeckDeferedToAppBecameActive]
+-[BuzzSDK setPresentDeckDeferedToAppBecameActive:]
 -[BuzzSDK .cxx_destruct]
 _sharedInstance._instance
 _sharedInstance.onceToken
 ___block_descriptor_tmp
-___block_descriptor_tmp.158
-___block_descriptor_tmp.170
-___block_descriptor_tmp.176
+___block_descriptor_tmp.167
+___block_descriptor_tmp.179
+___block_descriptor_tmp.185
 _OBJC_IVAR_$_BuzzSDK._window
-___block_descriptor_tmp.186
-___block_descriptor_tmp.191
-___block_descriptor_tmp.197
+___block_descriptor_tmp.195
+___block_descriptor_tmp.200
+___block_descriptor_tmp.206
 _OBJC_IVAR_$_BuzzSDK._sdkViewController
 _OBJC_IVAR_$_BuzzSDK._dateLastSDKDismissal
 _OBJC_IVAR_$_BuzzSDK._delegate
@@ -152,20 +154,21 @@ _OBJC_IVAR_$_BuzzSDK._modelManager
 _OBJC_IVAR_$_BuzzSDK._sdkOptionsFetchingInProgress
 _OBJC_IVAR_$_BuzzSDK._sdkOptions
 _OBJC_IVAR_$_BuzzSDK._groupId
-___block_descriptor_tmp.294
+___block_descriptor_tmp.303
 _OBJC_IVAR_$_BuzzSDK._presentSDKPeindingConfiguration
-___block_descriptor_tmp.305
-___block_descriptor_tmp.309
-___block_descriptor_tmp.315
+___block_descriptor_tmp.314
+___block_descriptor_tmp.318
+___block_descriptor_tmp.324
 _OBJC_IVAR_$_BuzzSDK._launchTimeoutTimer
-___block_descriptor_tmp.343
-___block_descriptor_tmp.350
-_OBJC_IVAR_$_BuzzSDK._sdkOptionsFetched
+___block_descriptor_tmp.352
 ___block_descriptor_tmp.359
+_OBJC_IVAR_$_BuzzSDK._sdkOptionsFetched
+___block_descriptor_tmp.368
 _OBJC_IVAR_$_BuzzSDK._uiHiddenByKeyboard
 _OBJC_IVAR_$_BuzzSDK._uiHiddenByWindowConflict
-___block_descriptor_tmp.451
-___block_descriptor_tmp.458
+___block_descriptor_tmp.457
+___block_descriptor_tmp.464
+_OBJC_IVAR_$_BuzzSDK._presentDeckDeferedToAppBecameActive
 _OBJC_IVAR_$_BuzzSDK._sdkLaunchRequested
 _OBJC_IVAR_$_BuzzSDK._manualBootstrapTimer
 l_OBJC_PROTOCOL_$_NSObject
@@ -184,11 +187,11 @@ __21-[BuzzSDK _bootstrap]_block_invoke
 __34-[BuzzSDK _stopLaunchTimeoutTimer]_block_invoke
 __35-[BuzzSDK _startLaunchTimeoutTimer]_block_invoke
 __55-[BuzzSDK _updateOptionsWithNewOptions:shouldOverride:]_block_invoke
-__21-[BuzzSDK _configure]_block_invoke.302
+__21-[BuzzSDK _configure]_block_invoke.311
 __21-[BuzzSDK _configure]_block_invoke_2
 __21-[BuzzSDK _configure]_block_invoke
 __16+[BuzzSDK pause]_block_invoke
-__23-[BuzzSDK _dismissDeck]_block_invoke.187
+__23-[BuzzSDK _dismissDeck]_block_invoke.196
 __23-[BuzzSDK _dismissDeck]_block_invoke
 __22+[BuzzSDK dismissDeck]_block_invoke
 __19+[BuzzSDK hideDeck]_block_invoke
@@ -270,8 +273,6 @@ ___49-[GDCardViewBase hideControlOverlayViewAnimated:]_block_invoke
 ___copy_helper_block_.178
 ___destroy_helper_block_.179
 ___49-[GDCardViewBase hideControlOverlayViewAnimated:]_block_invoke.181
-___copy_helper_block_.182
-___destroy_helper_block_.183
 -[GDCardViewBase controlsView:hasTappedControlOfType:]
 -[GDCardViewBase hitTest:withEvent:]
 -[GDCardViewBase activityIndicatorView]
@@ -397,6 +398,8 @@ ___destroy_helper_block_.135
 -[GDPIPVideoView pause]
 -[GDPIPVideoView resetUIForPlaybackState]
 ___41-[GDPIPVideoView resetUIForPlaybackState]_block_invoke
+___copy_helper_block_.155
+___destroy_helper_block_.156
 -[GDPIPVideoView resetUIForPauseState]
 ___38-[GDPIPVideoView resetUIForPauseState]_block_invoke
 ___copy_helper_block_.162
@@ -558,7 +561,6 @@ _OBJC_IVAR_$_GDPIPVideoView._playbackTimeWhenStopedInQueue
 _OBJC_IVAR_$_GDPIPVideoView._playButtonImageView
 ___block_descriptor_tmp.157
 ___block_descriptor_tmp.164
-___block_descriptor_tmp.167
 _OBJC_IVAR_$_GDPIPVideoView._dismissInteractionDirection
 _OBJC_IVAR_$_GDPIPVideoView._onTransitionToCardViewProcess
 _OBJC_IVAR_$_GDPIPVideoView._isBeingPanned
@@ -1070,6 +1072,7 @@ ___block_descriptor_tmp.160
 ___block_descriptor_tmp.163
 _OBJC_IVAR_$_GDMediaPlayer._mainContentSoundTrackAvailableBoolean
 ___block_descriptor_tmp.181
+___block_descriptor_tmp.191
 _PlayerStatusObservationContext
 _PlayerLikelyToKeepUpObservationContext
 _PlayerBufferFullObservationContext
@@ -2010,8 +2013,6 @@ ___73-[GDCardViewVideo mediaPlayer:videoHasReachedEndForContentType:willLoop:]_b
 ___copy_helper_block_.342
 ___destroy_helper_block_.343
 ___73-[GDCardViewVideo mediaPlayer:videoHasReachedEndForContentType:willLoop:]_block_invoke.347
-___copy_helper_block_.350
-___destroy_helper_block_.351
 -[GDCardViewVideo videoViewContainerView]
 -[GDCardViewVideo setVideoViewContainerView:]
 -[GDCardViewVideo videoPlayer]
@@ -2047,7 +2048,6 @@ _OBJC_IVAR_$_GDCardViewVideo._fullScreenControlButton
 ___block_descriptor_tmp.264
 _OBJC_IVAR_$_GDCardViewVideo._progressView
 ___block_descriptor_tmp.312
-___block_descriptor_tmp.324
 ___block_descriptor_tmp.329
 ___block_descriptor_tmp.344
 _OBJC_IVAR_$_GDCardViewVideo._statusReportDelegate
@@ -2295,9 +2295,9 @@ ___copy_helper_block_.152
 ___destroy_helper_block_.153
 -[GDCardStackViewController setupActionViewInView:]
 ___51-[GDCardStackViewController setupActionViewInView:]_block_invoke
+___copy_helper_block_.184
+___destroy_helper_block_.185
 ___51-[GDCardStackViewController setupActionViewInView:]_block_invoke.192
-___copy_helper_block_.193
-___destroy_helper_block_.194
 -[GDCardStackViewController addGestureRecognizersToStackTop]
 -[GDCardStackViewController gestureRecognizer:shouldRecognizeSimultaneouslyWithGestureRecognizer:]
 -[GDCardStackViewController gestureRecognizerShouldBegin:]
@@ -2377,6 +2377,8 @@ ___copy_helper_block_.446
 ___destroy_helper_block_.447
 ___100-[GDCardStackViewController executeAnimationForCardView:forInsertCardAnimationStyle:withCompletion:]_block_invoke.449
 ___100-[GDCardStackViewController executeAnimationForCardView:forInsertCardAnimationStyle:withCompletion:]_block_invoke.455
+___copy_helper_block_.456
+___destroy_helper_block_.457
 ___100-[GDCardStackViewController executeAnimationForCardView:forInsertCardAnimationStyle:withCompletion:]_block_invoke.459
 ___copy_helper_block_.460
 ___destroy_helper_block_.461
@@ -2488,7 +2490,6 @@ ___block_descriptor_tmp.144
 ___block_descriptor_tmp.150
 ___block_descriptor_tmp.154
 ___block_descriptor_tmp.187
-___block_descriptor_tmp.195
 _OBJC_IVAR_$_GDCardStackViewController._currentTopCardPanGestureRecognizer
 ___block_descriptor_tmp.232
 _OBJC_IVAR_$_GDCardStackViewController._initialTouchPoint
@@ -2516,6 +2517,7 @@ ___block_descriptor_tmp.427
 _OBJC_IVAR_$_GDCardStackViewController._screenshotOfTopCard
 ___block_descriptor_tmp.432
 ___block_descriptor_tmp.448
+___block_descriptor_tmp.458
 ___block_descriptor_tmp.462
 ___block_descriptor_tmp.471
 ___block_descriptor_tmp.475
