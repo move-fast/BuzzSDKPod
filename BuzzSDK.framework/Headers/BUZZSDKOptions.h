@@ -33,50 +33,49 @@ typedef NS_ENUM(NSInteger, BUZZSDKLogLevel) {
 FOUNDATION_EXPORT NSString *const kBUZZSDKOptionLogLevel;
 
 /**
- *  Kicker font name
+ *  Kicker font name. Defaults to `HelveticaNeueBold` if none or invalid font name is provided.
  */
-FOUNDATION_EXPORT NSString *const kBUZZSDKOptionCardStyleKickerFontNameKey;
+FOUNDATION_EXPORT NSString *const kBUZZSDKOptionStyleKickerFontNameKey;
 
 /**
- *  Kicker font size (NSNumber)
+ *  Kicker font size (NSNumber) while in fullScreen. Default is 12.0
  */
-FOUNDATION_EXPORT NSString *const kBUZZSDKOptionCardStyleKickerFontSizeKey;
+FOUNDATION_EXPORT NSString *const kBUZZSDKOptionStyleKickerFontSizeInFullscreenKey;
+
+/**
+ *  Kicker font size (NSNumber) while in PIP. Default is 10.0
+ */
+FOUNDATION_EXPORT NSString *const kBUZZSDKOptionStyleKickerFontSizeInPIPKey;
 
 /**
  *  Kicker text color (UIColor)
  */
-FOUNDATION_EXPORT NSString *const kBUZZSDKOptionCardStyleKickerTextColorKey;
+FOUNDATION_EXPORT NSString *const kBUZZSDKOptionStyleKickerTextColorKey;
 
 /**
- *  Kicker background color (UIColor)
+ *  Title font name. Defaults to `HelveticaNeue` if none or invalid font name is provided.
  */
-FOUNDATION_EXPORT NSString *const kBUZZSDKOptionCardStyleKickerBackgroundColorKey;
+FOUNDATION_EXPORT NSString *const kBUZZSDKOptionStyleTitleFontNameKey;
 
 /**
- *  Title font name
+ *  Title font size (NSNumber) while in fullScreen. Default is 15.0
  */
-FOUNDATION_EXPORT NSString *const kBUZZSDKOptionCardStyleTitleFontNameKey;
+FOUNDATION_EXPORT NSString *const kBUZZSDKOptionStyleTitleFontSizeInFullscreenKey;
 
 /**
- *  Title font size (NSNumber)
+ *  Title font size (NSNumber) while in PIP. Default is 12.0
  */
-FOUNDATION_EXPORT NSString *const kBUZZSDKOptionCardStyleTitleFontSizeKey;
+FOUNDATION_EXPORT NSString *const kBUZZSDKOptionStyleTitleFontSizeInPIPKey;
 
 /**
  *  Title text color (UIColor)
  */
-FOUNDATION_EXPORT NSString *const kBUZZSDKOptionCardStyleTitleTextColorKey;
+FOUNDATION_EXPORT NSString *const kBUZZSDKOptionStyleTitleTextColorKey;
 
 /**
- *  Title background color (UIColor)
+ *  Title background color (UIColor). An RGBA color to set the background of the titles in PIP or fullscreen.
  */
-FOUNDATION_EXPORT NSString *const kBUZZSDKOptionCardStyleTitleBackgroundColorKey;
-
-/**
- *  Tag image appears at the top right of the card.
- *  Please specify a name of the image from your app's bundle
- */
-FOUNDATION_EXPORT NSString *const kBUZZSDKOptionCardStyleTagImageNameKey;
+FOUNDATION_EXPORT NSString *const kBUZZSDKOptionStyleTitleBackgroundColorKey;
 
 /**
  * BuzzSDK can present a custom alert to allow the user to opt for an Ad free version of the app via payment or subscriptions.

@@ -65,8 +65,6 @@ Available styling options for card kicker & title:
  
 You can find more information about supported option keys in <BUZZSDKOptions.h> header file.
  
-In addition, you can put a small tag image to your article cards at top right corner (see kBUZZSDKOptionCardStyleTagImageNameKey option key for more information)
- 
 @warning Note about the fonts. For custom fonts, which are not a part of the iOS SDK, you should include them into your app's bundle, and add corresponding key to the plist file.
  */
 

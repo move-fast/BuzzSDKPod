@@ -37,14 +37,6 @@
  */
 - (BOOL)removeObjectFromModelAtIndex:(NSInteger)indexOfObjectToRemove;
 
-/**
- Updates the Model with a new model object at a given index.
- @param newModelObject The object to add to the model.
- @param index The index for insertion
- @param completion The completion block to run when done. It takes a parameter `changes` sepcifying if changes were made.
- */
-- (void)updateModelDataWithNewModelObject:(nonnull id)newModelObject atIndex:(NSInteger)index completion:(nullable void (^)(BOOL changes))completion;
-
 /// Tells the model a specific model object has been seen
 - (void)modelObjectIsSeen:(nonnull id)modelObject;
 

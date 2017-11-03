@@ -135,7 +135,7 @@ typedef void (^_Nullable GDTimeObservationBlock)(CMTime time);
 @property (nonatomic, weak, nullable) NSObject<GDMediaPlayerUIDelegateProtocol> *secondaryUIDelegate; // We support a secondary UI Delegate for cases like video Ads in PIP where UI actions need to be reported to diferent objects.
 
 // Reference to associated Model object when applicable
-@property (nonatomic, weak, nullable) id modelObject;
+@property (nonatomic, weak, nullable) id associatedObject;
 
 // Secondary content
 @property (nonatomic, assign, readonly) GDMediaPlayerSecondaryContentPlaybackMode secondaryContentPlaybackMode;
@@ -149,7 +149,11 @@ typedef void (^_Nullable GDTimeObservationBlock)(CMTime time);
 @property (nonatomic, assign) BOOL plackbackLoopMode; // This applies to mainContentOnly and will prevent the use of Postroll!
 
 // Time related variables
-@property (nonatomic, assign, readonly) CMTime mainContentStartTime;
+
+/// The start time of the media content (main) as to play from the very begining. Value is 0 by default but can be changed by calling `setStartTime` if for instance the video has an unwanted preroll. Calling `backToBegining`
+@property (nonatomic, assign, readonly) CMTime mainContentBeginingTime;
+/// The start time of the media once it has been stoped and unloaded, used to support reloading and restarting on a different location that the begining of the media file. Calling `jumpToCurrentStartTime` will set the playback time to this time.
+@property (nonatomic, assign, readonly) CMTime mainContentCurrentStartTime;
 
 // Status flags
 @property (nonatomic, assign, readonly) BOOL playbackRequested;
@@ -213,20 +217,25 @@ typedef void (^_Nullable GDTimeObservationBlock)(CMTime time);
 // Pause media playback. Restart with play.
 - (void)pause;
 
-// Bring playback pointer for main media content back to initial point.
-// This will be Zero or the value of startTime if set.
-- (void)backToBegining;
+// Bring playback pointer for main media content to the `currentStartTime`. If this has not been set yet, it will be the `beginingTime`.
+- (void)jumpToStartTime;
+
+/// Bring playback pointer to the Beginning time of the media.
+- (void)jumpToBegining;
 
 - (void)seekToTime:(CMTime)time completionHandler:(nullable void(^)(BOOL finished))completion;
 
-// Sets the point where the main content media should comence
-// playback from. (in seconds)
-- (void)setStartTime:(NSTimeInterval)startTime;
-// or in CMTime
-- (void)setStartCMTime:(CMTime)startCMTime;
+/// Sets the point where the main content media should start playback from when started from the begining. (in seconds)
+- (void)setBeginingTime:(NSTimeInterval)startTime;
 
-// Gets the start time in seconds.
-- (NSTimeInterval)startTime;
+// Sets the point where the main content media should start playback from when started from the begining. (in CMTime)
+- (void)setBeginingCMTime:(CMTime)startCMTime;
+
+// Sets the point where the main content media should start playback when `jumpToCurrentStartTime` is called. (in CMTime)
+- (void)setCurrentStartCMTime:(CMTime)startCMTime;
+
+// Gets the begining time in seconds.
+- (NSTimeInterval)beginingTime;
 
 #pragma mark Video Layer
 
@@ -249,9 +258,14 @@ typedef void (^_Nullable GDTimeObservationBlock)(CMTime time);
 // a failed or cancelled state.
 - (BOOL)hasFailedToLoad;
 
-// is Ready to play reflect both the status of the asset and
-// the video layer ready for display
-- (BOOL)isReadyToPlay;
+/// Indicates if the main content is ready for immediate Playbak.
+- (BOOL)isMainContentReadyForImmediatePlayback;
+
+/// Indicates if the main content player item is ready to play. (it might no be ready for display or for immediate playback)
+- (BOOL)isMainContentReadyToPlay;
+
+/// Indicates if the main content is ready for display. i.e. it has a media track with a visual frame loade.
+- (BOOL)isMainContentReadyForDisplay;
 
 // indicates if the video buffer is currently not enough for
 // playback and media has been stopped.
