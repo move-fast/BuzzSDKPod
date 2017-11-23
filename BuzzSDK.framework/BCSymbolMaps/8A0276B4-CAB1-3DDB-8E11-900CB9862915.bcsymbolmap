@@ -14,23 +14,23 @@ ___copy_helper_block_.164
 ___destroy_helper_block_.165
 +[BuzzSDK hideDeck]
 ___19+[BuzzSDK hideDeck]_block_invoke
-___copy_helper_block_.176
-___destroy_helper_block_.177
+___copy_helper_block_.180
+___destroy_helper_block_.181
 +[BuzzSDK dismissDeck]
 ___22+[BuzzSDK dismissDeck]_block_invoke
-___copy_helper_block_.182
-___destroy_helper_block_.183
+___copy_helper_block_.186
+___destroy_helper_block_.187
 -[BuzzSDK _dismissDeck]
 ___23-[BuzzSDK _dismissDeck]_block_invoke
-___copy_helper_block_.193
-___destroy_helper_block_.194
-___23-[BuzzSDK _dismissDeck]_block_invoke.196
-___copy_helper_block_.197
-___destroy_helper_block_.198
+___copy_helper_block_.195
+___destroy_helper_block_.196
+___23-[BuzzSDK _dismissDeck]_block_invoke.198
+___copy_helper_block_.199
+___destroy_helper_block_.200
 +[BuzzSDK pause]
 ___16+[BuzzSDK pause]_block_invoke
-___copy_helper_block_.203
-___destroy_helper_block_.204
+___copy_helper_block_.205
+___destroy_helper_block_.206
 -[BuzzSDK _pause]
 -[BuzzSDK buzzSDKViewControllerDidFinish:]
 -[BuzzSDK buzzSDKViewControllerTimeIntervalForLoadingTimeoutTimer:]
@@ -52,32 +52,32 @@ ___destroy_helper_block_.204
 -[BuzzSDK _configure]
 ___21-[BuzzSDK _configure]_block_invoke
 ___21-[BuzzSDK _configure]_block_invoke_2
-___copy_helper_block_.303
-___destroy_helper_block_.304
-___21-[BuzzSDK _configure]_block_invoke.313
-___copy_helper_block_.314
-___destroy_helper_block_.315
-___copy_helper_block_.317
-___destroy_helper_block_.318
+___copy_helper_block_.305
+___destroy_helper_block_.306
+___21-[BuzzSDK _configure]_block_invoke.315
+___copy_helper_block_.316
+___destroy_helper_block_.317
+___copy_helper_block_.319
+___destroy_helper_block_.320
 -[BuzzSDK _updateOptionsWithNewOptions:shouldOverride:]
 ___55-[BuzzSDK _updateOptionsWithNewOptions:shouldOverride:]_block_invoke
-___copy_helper_block_.323
-___destroy_helper_block_.324
+___copy_helper_block_.325
+___destroy_helper_block_.326
 -[BuzzSDK _defaultOptions]
 -[BuzzSDK _hasOptions]
 -[BuzzSDK _startLaunchTimeoutTimer]
 ___35-[BuzzSDK _startLaunchTimeoutTimer]_block_invoke
-___copy_helper_block_.352
-___destroy_helper_block_.353
+___copy_helper_block_.354
+___destroy_helper_block_.355
 -[BuzzSDK _stopLaunchTimeoutTimer]
 ___34-[BuzzSDK _stopLaunchTimeoutTimer]_block_invoke
-___copy_helper_block_.359
-___destroy_helper_block_.360
+___copy_helper_block_.361
+___destroy_helper_block_.362
 -[BuzzSDK _launchTimeoutTimerTimeout:]
 -[BuzzSDK _bootstrap]
 ___21-[BuzzSDK _bootstrap]_block_invoke
-___copy_helper_block_.368
-___destroy_helper_block_.369
+___copy_helper_block_.370
+___destroy_helper_block_.371
 -[BuzzSDK _isMainControllerLoaded]
 -[BuzzSDK _loadMainController]
 -[BuzzSDK _handleKeyboardNotifications:]
@@ -89,12 +89,12 @@ ___destroy_helper_block_.369
 -[BuzzSDK _isHidden]
 -[BuzzSDK _hide]
 ___16-[BuzzSDK _hide]_block_invoke
-___copy_helper_block_.461
-___destroy_helper_block_.462
+___copy_helper_block_.463
+___destroy_helper_block_.464
 -[BuzzSDK _show]
 ___16-[BuzzSDK _show]_block_invoke
-___copy_helper_block_.468
-___destroy_helper_block_.469
+___copy_helper_block_.470
+___destroy_helper_block_.471
 -[BuzzSDK _activateAudioSession]
 -[BuzzSDK _deactivateAudioSession]
 -[BuzzSDK _hasGracePeriodPassed]
@@ -144,12 +144,12 @@ _sharedInstance._instance
 _sharedInstance.onceToken
 ___block_descriptor_tmp
 ___block_descriptor_tmp.167
-___block_descriptor_tmp.179
-___block_descriptor_tmp.185
+___block_descriptor_tmp.183
+___block_descriptor_tmp.189
 _OBJC_IVAR_$_BuzzSDK._window
-___block_descriptor_tmp.195
-___block_descriptor_tmp.200
-___block_descriptor_tmp.206
+___block_descriptor_tmp.197
+___block_descriptor_tmp.202
+___block_descriptor_tmp.208
 _OBJC_IVAR_$_BuzzSDK._sdkViewController
 _OBJC_IVAR_$_BuzzSDK._dateLastSDKDismissal
 _OBJC_IVAR_$_BuzzSDK._delegate
@@ -158,20 +158,20 @@ _OBJC_IVAR_$_BuzzSDK._modelManager
 _OBJC_IVAR_$_BuzzSDK._sdkOptionsFetchingInProgress
 _OBJC_IVAR_$_BuzzSDK._sdkOptions
 _OBJC_IVAR_$_BuzzSDK._groupId
-___block_descriptor_tmp.305
+___block_descriptor_tmp.307
 _OBJC_IVAR_$_BuzzSDK._presentSDKPeindingConfiguration
-___block_descriptor_tmp.316
-___block_descriptor_tmp.320
-___block_descriptor_tmp.326
+___block_descriptor_tmp.318
+___block_descriptor_tmp.322
+___block_descriptor_tmp.328
 _OBJC_IVAR_$_BuzzSDK._launchTimeoutTimer
-___block_descriptor_tmp.354
-___block_descriptor_tmp.361
+___block_descriptor_tmp.356
+___block_descriptor_tmp.363
 _OBJC_IVAR_$_BuzzSDK._sdkOptionsFetched
-___block_descriptor_tmp.370
+___block_descriptor_tmp.372
 _OBJC_IVAR_$_BuzzSDK._uiHiddenByKeyboard
 _OBJC_IVAR_$_BuzzSDK._uiHiddenByWindowConflict
-___block_descriptor_tmp.463
-___block_descriptor_tmp.470
+___block_descriptor_tmp.465
+___block_descriptor_tmp.472
 _OBJC_IVAR_$_BuzzSDK._hostAppAudioSessionCategory
 _OBJC_IVAR_$_BuzzSDK._presentDeckDeferedToAppBecameActive
 _OBJC_IVAR_$_BuzzSDK._sdkLaunchRequested
@@ -192,18 +192,18 @@ __21-[BuzzSDK _bootstrap]_block_invoke
 __34-[BuzzSDK _stopLaunchTimeoutTimer]_block_invoke
 __35-[BuzzSDK _startLaunchTimeoutTimer]_block_invoke
 __55-[BuzzSDK _updateOptionsWithNewOptions:shouldOverride:]_block_invoke
-__21-[BuzzSDK _configure]_block_invoke.313
+__21-[BuzzSDK _configure]_block_invoke.315
 __21-[BuzzSDK _configure]_block_invoke_2
 __21-[BuzzSDK _configure]_block_invoke
 __16+[BuzzSDK pause]_block_invoke
-__23-[BuzzSDK _dismissDeck]_block_invoke.196
+__23-[BuzzSDK _dismissDeck]_block_invoke.198
 __23-[BuzzSDK _dismissDeck]_block_invoke
 __22+[BuzzSDK dismissDeck]_block_invoke
 __19+[BuzzSDK hideDeck]_block_invoke
 __22+[BuzzSDK presentDeck]_block_invoke
 __25+[BuzzSDK sharedInstance]_block_invoke
 _dispatch_once
-/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.0.sdk/usr/include/dispatch/once.h
+/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.1.sdk/usr/include/dispatch/once.h
 /Users/alfhern/Documents/Development/MoveFast/Apps/PusherV2/pusher/Shared/API/GDApiModelConstants.m
 /Users/alfhern/Documents/Development/MoveFast/Apps/PusherV2/pusher/Shared/GDAppConstants.m
 +[GDPIPVideoView pipVideoViewWithPlayer:placeholderImage:optimalHeight:maxWidth:optimalMinWidth:maxHeight:bottomRigthCorner:soundOn:]
@@ -309,8 +309,6 @@ ___destroy_helper_block_.348
 -[GDPIPVideoView mediaPlayer:playbackHasBeenRequestedCanStartPlayback:]
 -[GDPIPVideoView mediaPlayer:isReadyForDisplayForContentType:]
 ___62-[GDPIPVideoView mediaPlayer:isReadyForDisplayForContentType:]_block_invoke
-___copy_helper_block_.361
-___destroy_helper_block_.362
 -[GDPIPVideoView mediaPlayer:videoHasReachedEndForContentType:willLoop:]
 -[GDPIPVideoView mediaPlayer:videoCanRestartPlaybackForContentType:wasStalled:]
 -[GDPIPVideoView mediaPlayer:startedPlaybackForContentType:]
@@ -343,8 +341,6 @@ ___copy_helper_block_.443
 ___destroy_helper_block_.444
 -[GDPIPVideoView _animateFrameChangesFromFrame:toFrame:duration:completion:]
 ___76-[GDPIPVideoView _animateFrameChangesFromFrame:toFrame:duration:completion:]_block_invoke
-___copy_helper_block_.470
-___destroy_helper_block_.471
 ___76-[GDPIPVideoView _animateFrameChangesFromFrame:toFrame:duration:completion:]_block_invoke.473
 ___copy_helper_block_.474
 ___destroy_helper_block_.475
@@ -427,6 +423,7 @@ _OBJC_IVAR_$_GDPIPVideoView._playButtonImageView
 ___block_descriptor_tmp.156
 ___block_descriptor_tmp.163
 ___block_descriptor_tmp.174
+___block_descriptor_tmp.179
 _OBJC_IVAR_$_GDPIPVideoView._dismissInteractionDirection
 _OBJC_IVAR_$_GDPIPVideoView._onTransitionToCardViewProcess
 _OBJC_IVAR_$_GDPIPVideoView._isBeingPanned
@@ -446,18 +443,15 @@ ___block_descriptor_tmp.296
 ___block_descriptor_tmp.302
 _OBJC_IVAR_$_GDPIPVideoView._buttonAudioControl
 _OBJC_IVAR_$_GDPIPVideoView._delegate
-___block_descriptor_tmp.328
 _OBJC_IVAR_$_GDPIPVideoView._viewFullScreenControl
 _OBJC_IVAR_$_GDPIPVideoView._buttonFullScreenControl
 ___block_descriptor_tmp.346
 ___block_descriptor_tmp.349
-___block_descriptor_tmp.363
 _OBJC_IVAR_$_GDPIPVideoView._videoContainerViewFrame
 ___block_descriptor_tmp.385
 ___block_descriptor_tmp.432
 ___block_descriptor_tmp.442
 ___block_descriptor_tmp.445
-___block_descriptor_tmp.472
 ___block_descriptor_tmp.476
 _OBJC_IVAR_$_GDPIPVideoView._referencePIPSize
 l_OBJC_PROTOCOL_$_GDMediaPlayerUIDelegateProtocol
@@ -482,7 +476,7 @@ __69-[GDPIPVideoView _restoreWithVelocity:locationInView:withCompletion:]_block_
 __79-[GDPIPVideoView _dismissWithVelocity:locationInView:forReason:withCompletion:]_block_invoke.286
 __79-[GDPIPVideoView _dismissWithVelocity:locationInView:forReason:withCompletion:]_block_invoke
 __inline_isinfd
-/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.0.sdk/usr/include/math.h
+/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.1.sdk/usr/include/math.h
 __inline_isnand
 __61-[GDPIPVideoView releaseResourcesIncludingVideoDataDownload:]_block_invoke.241
 __61-[GDPIPVideoView releaseResourcesIncludingVideoDataDownload:]_block_invoke
@@ -915,7 +909,6 @@ ___block_descriptor_tmp.161
 _OBJC_IVAR_$_GDMediaPlayer._assetImageGenerator
 ___block_descriptor_tmp.171
 ___block_descriptor_tmp.180
-___block_descriptor_tmp.183
 _OBJC_IVAR_$_GDMediaPlayer._mainContentSoundTrackAvailableBoolean
 ___block_descriptor_tmp.203
 ___block_descriptor_tmp.213
@@ -982,9 +975,9 @@ __51-[GDMediaPlayer getImageForFrameAtTime:completion:]_block_invoke
 __51-[GDMediaPlayer estimatedLoadedDataBitsCompletion:]_block_invoke_2
 __51-[GDMediaPlayer estimatedLoadedDataBitsCompletion:]_block_invoke
 __CGSizeApplyAffineTransform
-/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.0.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CGAffineTransform.h
+/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.1.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CGAffineTransform.h
 __CGSizeEqualToSize
-/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.0.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CGGeometry.h
+/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.1.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CGGeometry.h
 __51-[GDMediaPlayer stopContentLoadingAndReleaseAssets]_block_invoke
 __36-[GDMediaPlayer startContentLoading]_block_invoke
 -[NSString(SizeInRect) actualSizeForPossibleSize:andFont:]
@@ -1436,7 +1429,7 @@ __90-[GDPIPVideoViewController pipVideoViewUserEndedPanningOnTransitionToSourceV
 __85-[GDPIPVideoViewController pipVideoViewUserCancelledTransitionToSourceVideoViewMode:]_block_invoke
 __70-[GDPIPVideoViewController pipVideoViewDidDisappear:reason:direction:]_block_invoke
 NSMakeRange
-/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.0.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSRange.h
+/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.1.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSRange.h
 __71-[GDPIPVideoViewController _hideToBottomRefreshingPIPCenters:duration:]_block_invoke.292
 __71-[GDPIPVideoViewController _hideToBottomRefreshingPIPCenters:duration:]_block_invoke
 __CGPointEqualToPoint
@@ -2091,8 +2084,6 @@ ___destroy_helper_block_.657
 -[BUZZSDKViewController setResignActiveFullScreenWasPlaying:]
 -[BUZZSDKViewController resignActivePIPWasPlaying]
 -[BUZZSDKViewController setResignActivePIPWasPlaying:]
--[BUZZSDKViewController isIpad]
--[BUZZSDKViewController setIsIpad:]
 -[BUZZSDKViewController pipVideoViewInTransition]
 -[BUZZSDKViewController setPipVideoViewInTransition:]
 -[BUZZSDKViewController fullScreenVideoPlayerController]
@@ -2118,12 +2109,12 @@ _OBJC_IVAR_$_BUZZSDKViewController._removeAdsAlertOptionSelectedInSesssion
 _OBJC_IVAR_$_BUZZSDKViewController._transitionController
 _OBJC_IVAR_$_BUZZSDKViewController._loadingTimeoutTimer
 _OBJC_IVAR_$_BUZZSDKViewController._hideShowPIPButton
-_OBJC_IVAR_$_BUZZSDKViewController._isIpad
 ___block_descriptor_tmp.228
 _OBJC_IVAR_$_BUZZSDKViewController._settingNextPIPAutomatically
 ___block_descriptor_tmp.280
 _OBJC_IVAR_$_BUZZSDKViewController._initialPanLocationForVideoTransitionPanGesture
 ___block_descriptor_tmp.310
+___block_descriptor_tmp.320
 ___block_descriptor_tmp.342
 _OBJC_IVAR_$_BUZZSDKViewController._pipVideoAdSkipToolTipRefreshTimer
 _OBJC_IVAR_$_BUZZSDKViewController._transparentCGColorObjectForGradient
@@ -2182,6 +2173,8 @@ __61-[BUZZSDKViewController didClickOnAdLinkForObject:urlString:]_block_invoke
 __53-[BUZZSDKViewController didReceivedAdErrorForObject:]_block_invoke
 __95-[BUZZSDKViewController pipVideoViewController:userDidTapOnFullScreenButtonForTopPIPVideoView:]_block_invoke
 __88-[BUZZSDKViewController pipVideoViewController:didDismissLastPIPVideoViewShouldCleanUp:]_block_invoke
+UI_USER_INTERFACE_IDIOM
+/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.1.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIDevice.h
 __44-[BUZZSDKViewController releaseAllResources]_block_invoke
 __45-[BUZZSDKViewController onAppDidBecomeActive]_block_invoke
 +[BUZZSDKEventTracking sharedTracking]
@@ -2899,10 +2892,9 @@ l_OBJC_PROTOCOL_REFERENCE_$_NSObject
 _objc_classes
 _objc_categories
 __T07BuzzSDK8Download33_D62C936053882F7D0EEC2E23BEB802E6LLVN
-Apple LLVM version 9.0.0 (clang-900.0.37)
--emit-bc /Users/alfhern/Documents/Development/MoveFast/Apps/MFSharedLibraries/MFSharedLibaries/MFDownloadManager/MFDownloadManager.swift /Users/alfhern/Documents/Development/MoveFast/Apps/BuzzSDK/AdDeckSDK/AdDeckSDK/BuzzSDKStyle.swift /Users/alfhern/Documents/Development/MoveFast/Apps/PusherV2/pusher/Shared/ConfigAndStyle/AppStyle.swift /Users/alfhern/Documents/Development/MoveFast/Apps/PusherV2/pusher/Shared/Categories/UIViews_Tint.swift /Users/alfhern/Documents/Development/MoveFast/Apps/PusherV2/pusher/Shared/Utility/VAST/MFVASTSettings.swift /Users/alfhern/Documents/Development/MoveFast/Apps/PusherV2/pusher/Shared/ConfigAndStyle/CardStyle.swift /Users/alfhern/Documents/Development/MoveFast/Apps/MFSharedLibraries/MFSharedLibaries/Categories/Date+Formatters.swift /Users/alfhern/Documents/Development/MoveFast/Apps/MFSharedLibraries/MFSharedLibaries/MFGradientView/MFGradientView.swift /Users/alfhern/Documents/Development/MoveFast/Apps/PusherV2/pusher/Shared/ConfigAndStyle/AppConfiguration.swift /Users/alfhern/Documents/Development/MoveFast/Apps/MFSharedLibraries/MFSharedLibaries/MFLogger/MFLogger.swift /Users/alfhern/Documents/Development/MoveFast/Apps/PusherV2/pusher/Shared/Utility/VAST/MFVASTAd.swift /Users/alfhern/Documents/Development/MoveFast/Apps/BuzzSDK/AdDeckSDK/AdDeckSDK/BUZZSDKNetworking.swift /Users/alfhern/Documents/Development/MoveFast/Apps/PusherV2/pusher/Shared/AD_related/MFVASTPlayerController.swift /Users/alfhern/Documents/Development/MoveFast/Apps/MFSharedLibraries/MFSharedLibaries/Categories/UIView+Shadow.swift /Users/alfhern/Documents/Development/MoveFast/Apps/MFSharedLibraries/MFSharedLibaries/MFFullScreenVideoPlayerController/MFFullScreenVideoPlayerController.swift /Users/alfhern/Documents/Development/MoveFast/Apps/MFSharedLibraries/MFSharedLibaries/MFImageDownloader/MFImageDownloader.swift /Users/alfhern/Documents/Development/MoveFast/Apps/PusherV2/pusher/Shared/Utility/VAST/MFVASTDefinitions.swift /Users/alfhern/Documents/Development/MoveFast/Apps/PusherV2/pusher/Shared/Utility/VAST/MFVASTMediaFile.swift /Users/alfhern/Documents/Development/MoveFast/Apps/MFSharedLibraries/MFSharedLibaries/MFNetworking/MFNetworking.swift /Users/alfhern/Documents/Development/MoveFast/Apps/MFSharedLibraries/MFSharedLibaries/Categories/UIColor_RGBA.swift /Users/alfhern/Documents/Development/MoveFast/Apps/MFSharedLibraries/MFSharedLibaries/MFIgnoreSelfTouchesView/MFIgnoreSelfTouchesView.swift /Users/alfhern/Documents/Development/MoveFast/Apps/BuzzSDK/AdDeckSDK/AdDeckSDK/APIEndpoint.swift /Users/alfhern/Documents/Development/MoveFast/Apps/PusherV2/pusher/Shared/Utility/VAST/MFVASTParserOperation.swift /Users/alfhern/Documents/Development/MoveFast/Apps/PusherV2/pusher/Shared/Categories/StringLocalized.swift /Users/alfhern/Documents/Development/MoveFast/Apps/PusherV2/pusher/Shared/Utility/VAST/MFVASTError.swift /Users/alfhern/Documents/Development/MoveFast/Apps/MFSharedLibraries/MFSharedLibaries/MFWebViewController/MFWebViewController.swift -target arm64-apple-ios9.0 -Xllvm -aarch64-use-tbi -enable-objc-interop -sdk /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.0.sdk -I /Users/alfhern/Library/Developer/Xcode/DerivedData/BuzzSDK-fweehmmbvevedtflhfyvkokodybl/Build/Intermediates.noindex/ArchiveIntermediates/BuzzSDK/BuildProductsPath/Release-iphoneos -F /Users/alfhern/Library/Developer/Xcode/DerivedData/BuzzSDK-fweehmmbvevedtflhfyvkokodybl/Build/Intermediates.noindex/ArchiveIntermediates/BuzzSDK/BuildProductsPath/Release-iphoneos -F . -F AdDeckSDK -F BuzzSDKTests -F ProjectModule -F AdDeckSDK/Model -F AdDeckSDK/Transitions -F /Users/alfhern/Documents/Development/MoveFast/Apps/BuzzSDK/AdDeckSDK -g -import-underlying-module -module-cache-path /Users/alfhern/Library/Developer/Xcode/DerivedData/ModuleCache -swift-version 4 -disable-swift3-objc-inference -serialize-debugging-options -Xcc -I/Users/alfhern/Library/Developer/Xcode/DerivedData/BuzzSDK-fweehmmbvevedtflhfyvkokodybl/Build/Intermediates.noindex/ArchiveIntermediates/BuzzSDK/IntermediateBuildFilesPath/BuzzSDK.build/Release-iphoneos/BuzzSDK.build/swift-overrides.hmap -Xcc -iquote -Xcc /Users/alfhern/Library/Developer/Xcode/DerivedData/BuzzSDK-fweehmmbvevedtflhfyvkokodybl/Build/Intermediates.noindex/ArchiveIntermediates/BuzzSDK/IntermediateBuildFilesPath/BuzzSDK.build/Release-iphoneos/BuzzSDK.build/BuzzSDK-generated-files.hmap -Xcc -I/Users/alfhern/Library/Developer/Xcode/DerivedData/BuzzSDK-fweehmmbvevedtflhfyvkokodybl/Build/Intermediates.noindex/ArchiveIntermediates/BuzzSDK/IntermediateBuildFilesPath/BuzzSDK.build/Release-iphoneos/BuzzSDK.build/BuzzSDK-own-target-headers.hmap -Xcc -I/Users/alfhern/Library/Developer/Xcode/DerivedData/BuzzSDK-fweehmmbvevedtflhfyvkokodybl/Build/Intermediates.noindex/ArchiveIntermediates/BuzzSDK/IntermediateBuildFilesPath/BuzzSDK.build/Release-iphoneos/BuzzSDK.build/BuzzSDK-all-non-framework-target-headers.hmap -Xcc -ivfsoverlay -Xcc /Users/alfhern/Library/Developer/Xcode/DerivedData/BuzzSDK-fweehmmbvevedtflhfyvkokodybl/Build/Intermediates.noindex/ArchiveIntermediates/BuzzSDK/IntermediateBuildFilesPath/BuzzSDK.build/all-product-headers.yaml -Xcc -iquote -Xcc /Users/alfhern/Library/Developer/Xcode/DerivedData/BuzzSDK-fweehmmbvevedtflhfyvkokodybl/Build/Intermediates.noindex/ArchiveIntermediates/BuzzSDK/IntermediateBuildFilesPath/BuzzSDK.build/Release-iphoneos/BuzzSDK.build/BuzzSDK-project-headers.hmap -Xcc -I/Users/alfhern/Library/Developer/Xcode/DerivedData/BuzzSDK-fweehmmbvevedtflhfyvkokodybl/Build/Intermediates.noindex/ArchiveIntermediates/BuzzSDK/BuildProductsPath/Release-iphoneos/include -Xcc -I/Users/alfhern/Documents/Development/MoveFast/Apps/BuzzSDK/AdDeckSDK/../pusher -Xcc -I/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.0.sdk/usr/include/libxml2 -Xcc -I. -Xcc -IAdDeckSDK -Xcc -IBuzzSDKTests -Xcc -IProjectModule -Xcc -IAdDeckSDK/Model -Xcc -IAdDeckSDK/Transitions -Xcc -I/Users/alfhern/Library/Developer/Xcode/DerivedData/BuzzSDK-fweehmmbvevedtflhfyvkokodybl/Build/Intermediates.noindex/ArchiveIntermediates/BuzzSDK/BuildProductsPath -Xcc -I/Users/alfhern/Library/Developer/Xcode/DerivedData/BuzzSDK-fweehmmbvevedtflhfyvkokodybl/Build/Intermediates.noindex/ArchiveIntermediates/BuzzSDK/IntermediateBuildFilesPath/BuzzSDK.build/Release-iphoneos/BuzzSDK.build/DerivedSources/arm64 -Xcc -I/Users/alfhern/Library/Developer/Xcode/DerivedData/BuzzSDK-fweehmmbvevedtflhfyvkokodybl/Build/Intermediates.noindex/ArchiveIntermediates/BuzzSDK/IntermediateBuildFilesPath/BuzzSDK.build/Release-iphoneos/BuzzSDK.build/DerivedSources -Xcc -DBUZZ_SDK=1 -Xcc -ivfsoverlay -Xcc /Users/alfhern/Library/Developer/Xcode/DerivedData/BuzzSDK-fweehmmbvevedtflhfyvkokodybl/Build/Intermediates.noindex/ArchiveIntermediates/BuzzSDK/IntermediateBuildFilesPath/BuzzSDK.build/Release-iphoneos/BuzzSDK.build/unextended-module-overlay.yaml -Xcc -working-directory/Users/alfhern/Documents/Development/MoveFast/Apps/BuzzSDK/AdDeckSDK -emit-module-doc-path /Users/alfhern/Library/Developer/Xcode/DerivedData/BuzzSDK-fweehmmbvevedtflhfyvkokodybl/Build/Intermediates.noindex/ArchiveIntermediates/BuzzSDK/IntermediateBuildFilesPath/BuzzSDK.build/Release-iphoneos/BuzzSDK.build/Objects-normal/arm64/BuzzSDK.swiftdoc -serialize-diagnostics-path /Users/alfhern/Library/Developer/Xcode/DerivedData/BuzzSDK-fweehmmbvevedtflhfyvkokodybl/Build/Intermediates.noindex/ArchiveIntermediates/BuzzSDK/IntermediateBuildFilesPath/BuzzSDK.build/Release-iphoneos/BuzzSDK.build/Objects-normal/arm64/MFDownloadManager.dia -O -module-name BuzzSDK -emit-module-path /Users/alfhern/Library/Developer/Xcode/DerivedData/BuzzSDK-fweehmmbvevedtflhfyvkokodybl/Build/Intermediates.noindex/ArchiveIntermediates/BuzzSDK/IntermediateBuildFilesPath/BuzzSDK.build/Release-iphoneos/BuzzSDK.build/Objects-normal/arm64/BuzzSDK.swiftmodule -emit-objc-header-path /Users/alfhern/Library/Developer/Xcode/DerivedData/BuzzSDK-fweehmmbvevedtflhfyvkokodybl/Build/Intermediates.noindex/ArchiveIntermediates/BuzzSDK/IntermediateBuildFilesPath/BuzzSDK.build/Release-iphoneos/BuzzSDK.build/Objects-normal/arm64/BuzzSDK-Swift.h -emit-dependencies-path /Users/alfhern/Library/Developer/Xcode/DerivedData/BuzzSDK-fweehmmbvevedtflhfyvkokodybl/Build/Intermediates.noindex/ArchiveIntermediates/BuzzSDK/IntermediateBuildFilesPath/BuzzSDK.build/Release-iphoneos/BuzzSDK.build/Objects-normal/arm64/MFDownloadManager.d -num-threads 8 -o /Users/alfhern/Library/Developer/Xcode/DerivedData/BuzzSDK-fweehmmbvevedtflhfyvkokodybl/Build/Intermediates.noindex/ArchiveIntermediates/BuzzSDK/IntermediateBuildFilesPath/BuzzSDK.build/Release-iphoneos/BuzzSDK.build/Objects-normal/arm64/MFDownloadManager.bc -o /Users/alfhern/Library/Developer/Xcode/DerivedData/BuzzSDK-fweehmmbvevedtflhfyvkokodybl/Build/Intermediates.noindex/ArchiveIntermediates/BuzzSDK/IntermediateBuildFilesPath/BuzzSDK.build/Release-iphoneos/BuzzSDK.build/Objects-normal/arm64/BuzzSDKStyle.bc -o /Users/alfhern/Library/Developer/Xcode/DerivedData/BuzzSDK-fweehmmbvevedtflhfyvkokodybl/Build/Intermediates.noindex/ArchiveIntermediates/BuzzSDK/IntermediateBuildFilesPath/BuzzSDK.build/Release-iphoneos/BuzzSDK.build/Objects-normal/arm64/AppStyle.bc -o /Users/alfhern/Library/Developer/Xcode/DerivedData/BuzzSDK-fweehmmbvevedtflhfyvkokodybl/Build/Intermediates.noindex/ArchiveIntermediates/BuzzSDK/IntermediateBuildFilesPath/BuzzSDK.build/Release-iphoneos/BuzzSDK.build/Objects-normal/arm64/UIViews_Tint.bc -o /Users/alfhern/Library/Developer/Xcode/DerivedData/BuzzSDK-fweehmmbvevedtflhfyvkokodybl/Build/Intermediates.noindex/ArchiveIntermediates/BuzzSDK/IntermediateBuildFilesPath/BuzzSDK.build/Release-iphoneos/BuzzSDK.build/Objects-normal/arm64/MFVASTSettings.bc -o /Users/alfhern/Library/Developer/Xcode/DerivedData/BuzzSDK-fweehmmbvevedtflhfyvkokodybl/Build/Intermediates.noindex/ArchiveIntermediates/BuzzSDK/IntermediateBuildFilesPath/BuzzSDK.build/Release-iphoneos/BuzzSDK.build/Objects-normal/arm64/CardStyle.bc -o /Users/alfhern/Library/Developer/Xcode/DerivedData/BuzzSDK-fweehmmbvevedtflhfyvkokodybl/Build/Intermediates.noindex/ArchiveIntermediates/BuzzSDK/IntermediateBuildFilesPath/BuzzSDK.build/Release-iphoneos/BuzzSDK.build/Objects-normal/arm64/Date+Formatters.bc -o /Users/alfhern/Library/Developer/Xcode/DerivedData/BuzzSDK-fweehmmbvevedtflhfyvkokodybl/Build/Intermediates.noindex/ArchiveIntermediates/BuzzSDK/IntermediateBuildFilesPath/BuzzSDK.build/Release-iphoneos/BuzzSDK.build/Objects-normal/arm64/MFGradientView.bc -o /Users/alfhern/Library/Developer/Xcode/DerivedData/BuzzSDK-fweehmmbvevedtflhfyvkokodybl/Build/Intermediates.noindex/ArchiveIntermediates/BuzzSDK/IntermediateBuildFilesPath/BuzzSDK.build/Release-iphoneos/BuzzSDK.build/Objects-normal/arm64/AppConfiguration.bc -o /Users/alfhern/Library/Developer/Xcode/DerivedData/BuzzSDK-fweehmmbvevedtflhfyvkokodybl/Build/Intermediates.noindex/ArchiveIntermediates/BuzzSDK/IntermediateBuildFilesPath/BuzzSDK.build/Release-iphoneos/BuzzSDK.build/Objects-normal/arm64/MFLogger.bc -o /Users/alfhern/Library/Developer/Xcode/DerivedData/BuzzSDK-fweehmmbvevedtflhfyvkokodybl/Build/Intermediates.noindex/ArchiveIntermediates/BuzzSDK/IntermediateBuildFilesPath/BuzzSDK.build/Release-iphoneos/BuzzSDK.build/Objects-normal/arm64/MFVASTAd.bc -o /Users/alfhern/Library/Developer/Xcode/DerivedData/BuzzSDK-fweehmmbvevedtflhfyvkokodybl/Build/Intermediates.noindex/ArchiveIntermediates/BuzzSDK/IntermediateBuildFilesPath/BuzzSDK.build/Release-iphoneos/BuzzSDK.build/Objects-normal/arm64/BUZZSDKNetworking.bc -o /Users/alfhern/Library/Developer/Xcode/DerivedData/BuzzSDK-fweehmmbvevedtflhfyvkokodybl/Build/Intermediates.noindex/ArchiveIntermediates/BuzzSDK/IntermediateBuildFilesPath/BuzzSDK.build/Release-iphoneos/BuzzSDK.build/Objects-normal/arm64/MFVASTPlayerController.bc -o /Users/alfhern/Library/Developer/Xcode/DerivedData/BuzzSDK-fweehmmbvevedtflhfyvkokodybl/Build/Intermediates.noindex/ArchiveIntermediates/BuzzSDK/IntermediateBuildFilesPath/BuzzSDK.build/Release-iphoneos/BuzzSDK.build/Objects-normal/arm64/UIView+Shadow.bc -o /Users/alfhern/Library/Developer/Xcode/DerivedData/BuzzSDK-fweehmmbvevedtflhfyvkokodybl/Build/Intermediates.noindex/ArchiveIntermediates/BuzzSDK/IntermediateBuildFilesPath/BuzzSDK.build/Release-iphoneos/BuzzSDK.build/Objects-normal/arm64/MFFullScreenVideoPlayerController.bc -o /Users/alfhern/Library/Developer/Xcode/DerivedData/BuzzSDK-fweehmmbvevedtflhfyvkokodybl/Build/Intermediates.noindex/ArchiveIntermediates/BuzzSDK/IntermediateBuildFilesPath/BuzzSDK.build/Release-iphoneos/BuzzSDK.build/Objects-normal/arm64/MFImageDownloader.bc -o /Users/alfhern/Library/Developer/Xcode/DerivedData/BuzzSDK-fweehmmbvevedtflhfyvkokodybl/Build/Intermediates.noindex/ArchiveIntermediates/BuzzSDK/IntermediateBuildFilesPath/BuzzSDK.build/Release-iphoneos/BuzzSDK.build/Objects-normal/arm64/MFVASTDefinitions.bc -o /Users/alfhern/Library/Developer/Xcode/DerivedData/BuzzSDK-fweehmmbvevedtflhfyvkokodybl/Build/Intermediates.noindex/ArchiveIntermediates/BuzzSDK/IntermediateBuildFilesPath/BuzzSDK.build/Release-iphoneos/BuzzSDK.build/Objects-normal/arm64/MFVASTMediaFile.bc -o /Users/alfhern/Library/Developer/Xcode/DerivedData/BuzzSDK-fweehmmbvevedtflhfyvkokodybl/Build/Intermediates.noindex/ArchiveIntermediates/BuzzSDK/IntermediateBuildFilesPath/BuzzSDK.build/Release-iphoneos/BuzzSDK.build/Objects-normal/arm64/MFNetworking.bc -o /Users/alfhern/Library/Developer/Xcode/DerivedData/BuzzSDK-fweehmmbvevedtflhfyvkokodybl/Build/Intermediates.noindex/ArchiveIntermediates/BuzzSDK/IntermediateBuildFilesPath/BuzzSDK.build/Release-iphoneos/BuzzSDK.build/Objects-normal/arm64/UIColor_RGBA.bc -o /Users/alfhern/Library/Developer/Xcode/DerivedData/BuzzSDK-fweehmmbvevedtflhfyvkokodybl/Build/Intermediates.noindex/ArchiveIntermediates/BuzzSDK/IntermediateBuildFilesPath/BuzzSDK.build/Release-iphoneos/BuzzSDK.build/Objects-normal/arm64/MFIgnoreSelfTouchesView.bc -o /Users/alfhern/Library/Developer/Xcode/DerivedData/BuzzSDK-fweehmmbvevedtflhfyvkokodybl/Build/Intermediates.noindex/ArchiveIntermediates/BuzzSDK/IntermediateBuildFilesPath/BuzzSDK.build/Release-iphoneos/BuzzSDK.build/Objects-normal/arm64/APIEndpoint.bc -o /Users/alfhern/Library/Developer/Xcode/DerivedData/BuzzSDK-fweehmmbvevedtflhfyvkokodybl/Build/Intermediates.noindex/ArchiveIntermediates/BuzzSDK/IntermediateBuildFilesPath/BuzzSDK.build/Release-iphoneos/BuzzSDK.build/Objects-normal/arm64/MFVASTParserOperation.bc -o /Users/alfhern/Library/Developer/Xcode/DerivedData/BuzzSDK-fweehmmbvevedtflhfyvkokodybl/Build/Intermediates.noindex/ArchiveIntermediates/BuzzSDK/IntermediateBuildFilesPath/BuzzSDK.build/Release-iphoneos/BuzzSDK.build/Objects-normal/arm64/StringLocalized.bc -o /Users/alfhern/Library/Developer/Xcode/DerivedData/BuzzSDK-fweehmmbvevedtflhfyvkokodybl/Build/Intermediates.noindex/ArchiveIntermediates/BuzzSDK/IntermediateBuildFilesPath/BuzzSDK.build/Release-iphoneos/BuzzSDK.build/Objects-normal/arm64/MFVASTError.bc -o /Users/alfhern/Library/Developer/Xcode/DerivedData/BuzzSDK-fweehmmbvevedtflhfyvkokodybl/Build/Intermediates.noindex/ArchiveIntermediates/BuzzSDK/IntermediateBuildFilesPath/BuzzSDK.build/Release-iphoneos/BuzzSDK.build/Objects-normal/arm64/MFWebViewController.bc -resource-dir /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift
+-emit-bc /Users/alfhern/Documents/Development/MoveFast/Apps/MFSharedLibraries/MFSharedLibaries/MFDownloadManager/MFDownloadManager.swift /Users/alfhern/Documents/Development/MoveFast/Apps/BuzzSDK/AdDeckSDK/AdDeckSDK/BuzzSDKStyle.swift /Users/alfhern/Documents/Development/MoveFast/Apps/PusherV2/pusher/Shared/ConfigAndStyle/AppStyle.swift /Users/alfhern/Documents/Development/MoveFast/Apps/PusherV2/pusher/Shared/Categories/UIViews_Tint.swift /Users/alfhern/Documents/Development/MoveFast/Apps/PusherV2/pusher/Shared/Utility/VAST/MFVASTSettings.swift /Users/alfhern/Documents/Development/MoveFast/Apps/PusherV2/pusher/Shared/ConfigAndStyle/CardStyle.swift /Users/alfhern/Documents/Development/MoveFast/Apps/MFSharedLibraries/MFSharedLibaries/Categories/Date+Formatters.swift /Users/alfhern/Documents/Development/MoveFast/Apps/MFSharedLibraries/MFSharedLibaries/MFGradientView/MFGradientView.swift /Users/alfhern/Documents/Development/MoveFast/Apps/PusherV2/pusher/Shared/ConfigAndStyle/AppConfiguration.swift /Users/alfhern/Documents/Development/MoveFast/Apps/MFSharedLibraries/MFSharedLibaries/MFLogger/MFLogger.swift /Users/alfhern/Documents/Development/MoveFast/Apps/PusherV2/pusher/Shared/Utility/VAST/MFVASTAd.swift /Users/alfhern/Documents/Development/MoveFast/Apps/BuzzSDK/AdDeckSDK/AdDeckSDK/BUZZSDKNetworking.swift /Users/alfhern/Documents/Development/MoveFast/Apps/PusherV2/pusher/Shared/AD_related/MFVASTPlayerController.swift /Users/alfhern/Documents/Development/MoveFast/Apps/MFSharedLibraries/MFSharedLibaries/Categories/UIView+Shadow.swift /Users/alfhern/Documents/Development/MoveFast/Apps/MFSharedLibraries/MFSharedLibaries/MFFullScreenVideoPlayerController/MFFullScreenVideoPlayerController.swift /Users/alfhern/Documents/Development/MoveFast/Apps/MFSharedLibraries/MFSharedLibaries/MFImageDownloader/MFImageDownloader.swift /Users/alfhern/Documents/Development/MoveFast/Apps/PusherV2/pusher/Shared/Utility/VAST/MFVASTDefinitions.swift /Users/alfhern/Documents/Development/MoveFast/Apps/PusherV2/pusher/Shared/Utility/VAST/MFVASTMediaFile.swift /Users/alfhern/Documents/Development/MoveFast/Apps/MFSharedLibraries/MFSharedLibaries/MFNetworking/MFNetworking.swift /Users/alfhern/Documents/Development/MoveFast/Apps/MFSharedLibraries/MFSharedLibaries/Categories/UIColor_RGBA.swift /Users/alfhern/Documents/Development/MoveFast/Apps/MFSharedLibraries/MFSharedLibaries/MFIgnoreSelfTouchesView/MFIgnoreSelfTouchesView.swift /Users/alfhern/Documents/Development/MoveFast/Apps/BuzzSDK/AdDeckSDK/AdDeckSDK/APIEndpoint.swift /Users/alfhern/Documents/Development/MoveFast/Apps/PusherV2/pusher/Shared/Utility/VAST/MFVASTParserOperation.swift /Users/alfhern/Documents/Development/MoveFast/Apps/PusherV2/pusher/Shared/Categories/StringLocalized.swift /Users/alfhern/Documents/Development/MoveFast/Apps/PusherV2/pusher/Shared/Utility/VAST/MFVASTError.swift /Users/alfhern/Documents/Development/MoveFast/Apps/MFSharedLibraries/MFSharedLibaries/MFWebViewController/MFWebViewController.swift -target arm64-apple-ios9.0 -Xllvm -aarch64-use-tbi -enable-objc-interop -sdk /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.1.sdk -I /Users/alfhern/Library/Developer/Xcode/DerivedData/BuzzSDK-fweehmmbvevedtflhfyvkokodybl/Build/Intermediates.noindex/ArchiveIntermediates/BuzzSDK/BuildProductsPath/Release-iphoneos -F /Users/alfhern/Library/Developer/Xcode/DerivedData/BuzzSDK-fweehmmbvevedtflhfyvkokodybl/Build/Intermediates.noindex/ArchiveIntermediates/BuzzSDK/BuildProductsPath/Release-iphoneos -F . -F AdDeckSDK -F BuzzSDKTests -F ProjectModule -F AdDeckSDK/Model -F AdDeckSDK/Transitions -F /Users/alfhern/Documents/Development/MoveFast/Apps/BuzzSDK/AdDeckSDK -g -import-underlying-module -module-cache-path /Users/alfhern/Library/Developer/Xcode/DerivedData/ModuleCache -swift-version 4 -disable-swift3-objc-inference -serialize-debugging-options -report-errors-to-debugger -Xcc -I/Users/alfhern/Library/Developer/Xcode/DerivedData/BuzzSDK-fweehmmbvevedtflhfyvkokodybl/Build/Intermediates.noindex/ArchiveIntermediates/BuzzSDK/IntermediateBuildFilesPath/BuzzSDK.build/Release-iphoneos/BuzzSDK.build/swift-overrides.hmap -Xcc -iquote -Xcc /Users/alfhern/Library/Developer/Xcode/DerivedData/BuzzSDK-fweehmmbvevedtflhfyvkokodybl/Build/Intermediates.noindex/ArchiveIntermediates/BuzzSDK/IntermediateBuildFilesPath/BuzzSDK.build/Release-iphoneos/BuzzSDK.build/BuzzSDK-generated-files.hmap -Xcc -I/Users/alfhern/Library/Developer/Xcode/DerivedData/BuzzSDK-fweehmmbvevedtflhfyvkokodybl/Build/Intermediates.noindex/ArchiveIntermediates/BuzzSDK/IntermediateBuildFilesPath/BuzzSDK.build/Release-iphoneos/BuzzSDK.build/BuzzSDK-own-target-headers.hmap -Xcc -I/Users/alfhern/Library/Developer/Xcode/DerivedData/BuzzSDK-fweehmmbvevedtflhfyvkokodybl/Build/Intermediates.noindex/ArchiveIntermediates/BuzzSDK/IntermediateBuildFilesPath/BuzzSDK.build/Release-iphoneos/BuzzSDK.build/BuzzSDK-all-non-framework-target-headers.hmap -Xcc -ivfsoverlay -Xcc /Users/alfhern/Library/Developer/Xcode/DerivedData/BuzzSDK-fweehmmbvevedtflhfyvkokodybl/Build/Intermediates.noindex/ArchiveIntermediates/BuzzSDK/IntermediateBuildFilesPath/BuzzSDK.build/all-product-headers.yaml -Xcc -iquote -Xcc /Users/alfhern/Library/Developer/Xcode/DerivedData/BuzzSDK-fweehmmbvevedtflhfyvkokodybl/Build/Intermediates.noindex/ArchiveIntermediates/BuzzSDK/IntermediateBuildFilesPath/BuzzSDK.build/Release-iphoneos/BuzzSDK.build/BuzzSDK-project-headers.hmap -Xcc -I/Users/alfhern/Library/Developer/Xcode/DerivedData/BuzzSDK-fweehmmbvevedtflhfyvkokodybl/Build/Intermediates.noindex/ArchiveIntermediates/BuzzSDK/BuildProductsPath/Release-iphoneos/include -Xcc -I/Users/alfhern/Documents/Development/MoveFast/Apps/BuzzSDK/AdDeckSDK/../pusher -Xcc -I/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.1.sdk/usr/include/libxml2 -Xcc -I. -Xcc -IAdDeckSDK -Xcc -IBuzzSDKTests -Xcc -IProjectModule -Xcc -IAdDeckSDK/Model -Xcc -IAdDeckSDK/Transitions -Xcc -I/Users/alfhern/Library/Developer/Xcode/DerivedData/BuzzSDK-fweehmmbvevedtflhfyvkokodybl/Build/Intermediates.noindex/ArchiveIntermediates/BuzzSDK/BuildProductsPath -Xcc -I/Users/alfhern/Library/Developer/Xcode/DerivedData/BuzzSDK-fweehmmbvevedtflhfyvkokodybl/Build/Intermediates.noindex/ArchiveIntermediates/BuzzSDK/IntermediateBuildFilesPath/BuzzSDK.build/Release-iphoneos/BuzzSDK.build/DerivedSources/arm64 -Xcc -I/Users/alfhern/Library/Developer/Xcode/DerivedData/BuzzSDK-fweehmmbvevedtflhfyvkokodybl/Build/Intermediates.noindex/ArchiveIntermediates/BuzzSDK/IntermediateBuildFilesPath/BuzzSDK.build/Release-iphoneos/BuzzSDK.build/DerivedSources -Xcc -DBUZZ_SDK=1 -Xcc -ivfsoverlay -Xcc /Users/alfhern/Library/Developer/Xcode/DerivedData/BuzzSDK-fweehmmbvevedtflhfyvkokodybl/Build/Intermediates.noindex/ArchiveIntermediates/BuzzSDK/IntermediateBuildFilesPath/BuzzSDK.build/Release-iphoneos/BuzzSDK.build/unextended-module-overlay.yaml -Xcc -working-directory/Users/alfhern/Documents/Development/MoveFast/Apps/BuzzSDK/AdDeckSDK -emit-module-doc-path /Users/alfhern/Library/Developer/Xcode/DerivedData/BuzzSDK-fweehmmbvevedtflhfyvkokodybl/Build/Intermediates.noindex/ArchiveIntermediates/BuzzSDK/IntermediateBuildFilesPath/BuzzSDK.build/Release-iphoneos/BuzzSDK.build/Objects-normal/arm64/BuzzSDK.swiftdoc -serialize-diagnostics-path /Users/alfhern/Library/Developer/Xcode/DerivedData/BuzzSDK-fweehmmbvevedtflhfyvkokodybl/Build/Intermediates.noindex/ArchiveIntermediates/BuzzSDK/IntermediateBuildFilesPath/BuzzSDK.build/Release-iphoneos/BuzzSDK.build/Objects-normal/arm64/MFDownloadManager.dia -O -module-name BuzzSDK -emit-module-path /Users/alfhern/Library/Developer/Xcode/DerivedData/BuzzSDK-fweehmmbvevedtflhfyvkokodybl/Build/Intermediates.noindex/ArchiveIntermediates/BuzzSDK/IntermediateBuildFilesPath/BuzzSDK.build/Release-iphoneos/BuzzSDK.build/Objects-normal/arm64/BuzzSDK.swiftmodule -emit-objc-header-path /Users/alfhern/Library/Developer/Xcode/DerivedData/BuzzSDK-fweehmmbvevedtflhfyvkokodybl/Build/Intermediates.noindex/ArchiveIntermediates/BuzzSDK/IntermediateBuildFilesPath/BuzzSDK.build/Release-iphoneos/BuzzSDK.build/Objects-normal/arm64/BuzzSDK-Swift.h -emit-dependencies-path /Users/alfhern/Library/Developer/Xcode/DerivedData/BuzzSDK-fweehmmbvevedtflhfyvkokodybl/Build/Intermediates.noindex/ArchiveIntermediates/BuzzSDK/IntermediateBuildFilesPath/BuzzSDK.build/Release-iphoneos/BuzzSDK.build/Objects-normal/arm64/MFDownloadManager.d -num-threads 8 -o /Users/alfhern/Library/Developer/Xcode/DerivedData/BuzzSDK-fweehmmbvevedtflhfyvkokodybl/Build/Intermediates.noindex/ArchiveIntermediates/BuzzSDK/IntermediateBuildFilesPath/BuzzSDK.build/Release-iphoneos/BuzzSDK.build/Objects-normal/arm64/MFDownloadManager.bc -o /Users/alfhern/Library/Developer/Xcode/DerivedData/BuzzSDK-fweehmmbvevedtflhfyvkokodybl/Build/Intermediates.noindex/ArchiveIntermediates/BuzzSDK/IntermediateBuildFilesPath/BuzzSDK.build/Release-iphoneos/BuzzSDK.build/Objects-normal/arm64/BuzzSDKStyle.bc -o /Users/alfhern/Library/Developer/Xcode/DerivedData/BuzzSDK-fweehmmbvevedtflhfyvkokodybl/Build/Intermediates.noindex/ArchiveIntermediates/BuzzSDK/IntermediateBuildFilesPath/BuzzSDK.build/Release-iphoneos/BuzzSDK.build/Objects-normal/arm64/AppStyle.bc -o /Users/alfhern/Library/Developer/Xcode/DerivedData/BuzzSDK-fweehmmbvevedtflhfyvkokodybl/Build/Intermediates.noindex/ArchiveIntermediates/BuzzSDK/IntermediateBuildFilesPath/BuzzSDK.build/Release-iphoneos/BuzzSDK.build/Objects-normal/arm64/UIViews_Tint.bc -o /Users/alfhern/Library/Developer/Xcode/DerivedData/BuzzSDK-fweehmmbvevedtflhfyvkokodybl/Build/Intermediates.noindex/ArchiveIntermediates/BuzzSDK/IntermediateBuildFilesPath/BuzzSDK.build/Release-iphoneos/BuzzSDK.build/Objects-normal/arm64/MFVASTSettings.bc -o /Users/alfhern/Library/Developer/Xcode/DerivedData/BuzzSDK-fweehmmbvevedtflhfyvkokodybl/Build/Intermediates.noindex/ArchiveIntermediates/BuzzSDK/IntermediateBuildFilesPath/BuzzSDK.build/Release-iphoneos/BuzzSDK.build/Objects-normal/arm64/CardStyle.bc -o /Users/alfhern/Library/Developer/Xcode/DerivedData/BuzzSDK-fweehmmbvevedtflhfyvkokodybl/Build/Intermediates.noindex/ArchiveIntermediates/BuzzSDK/IntermediateBuildFilesPath/BuzzSDK.build/Release-iphoneos/BuzzSDK.build/Objects-normal/arm64/Date+Formatters.bc -o /Users/alfhern/Library/Developer/Xcode/DerivedData/BuzzSDK-fweehmmbvevedtflhfyvkokodybl/Build/Intermediates.noindex/ArchiveIntermediates/BuzzSDK/IntermediateBuildFilesPath/BuzzSDK.build/Release-iphoneos/BuzzSDK.build/Objects-normal/arm64/MFGradientView.bc -o /Users/alfhern/Library/Developer/Xcode/DerivedData/BuzzSDK-fweehmmbvevedtflhfyvkokodybl/Build/Intermediates.noindex/ArchiveIntermediates/BuzzSDK/IntermediateBuildFilesPath/BuzzSDK.build/Release-iphoneos/BuzzSDK.build/Objects-normal/arm64/AppConfiguration.bc -o /Users/alfhern/Library/Developer/Xcode/DerivedData/BuzzSDK-fweehmmbvevedtflhfyvkokodybl/Build/Intermediates.noindex/ArchiveIntermediates/BuzzSDK/IntermediateBuildFilesPath/BuzzSDK.build/Release-iphoneos/BuzzSDK.build/Objects-normal/arm64/MFLogger.bc -o /Users/alfhern/Library/Developer/Xcode/DerivedData/BuzzSDK-fweehmmbvevedtflhfyvkokodybl/Build/Intermediates.noindex/ArchiveIntermediates/BuzzSDK/IntermediateBuildFilesPath/BuzzSDK.build/Release-iphoneos/BuzzSDK.build/Objects-normal/arm64/MFVASTAd.bc -o /Users/alfhern/Library/Developer/Xcode/DerivedData/BuzzSDK-fweehmmbvevedtflhfyvkokodybl/Build/Intermediates.noindex/ArchiveIntermediates/BuzzSDK/IntermediateBuildFilesPath/BuzzSDK.build/Release-iphoneos/BuzzSDK.build/Objects-normal/arm64/BUZZSDKNetworking.bc -o /Users/alfhern/Library/Developer/Xcode/DerivedData/BuzzSDK-fweehmmbvevedtflhfyvkokodybl/Build/Intermediates.noindex/ArchiveIntermediates/BuzzSDK/IntermediateBuildFilesPath/BuzzSDK.build/Release-iphoneos/BuzzSDK.build/Objects-normal/arm64/MFVASTPlayerController.bc -o /Users/alfhern/Library/Developer/Xcode/DerivedData/BuzzSDK-fweehmmbvevedtflhfyvkokodybl/Build/Intermediates.noindex/ArchiveIntermediates/BuzzSDK/IntermediateBuildFilesPath/BuzzSDK.build/Release-iphoneos/BuzzSDK.build/Objects-normal/arm64/UIView+Shadow.bc -o /Users/alfhern/Library/Developer/Xcode/DerivedData/BuzzSDK-fweehmmbvevedtflhfyvkokodybl/Build/Intermediates.noindex/ArchiveIntermediates/BuzzSDK/IntermediateBuildFilesPath/BuzzSDK.build/Release-iphoneos/BuzzSDK.build/Objects-normal/arm64/MFFullScreenVideoPlayerController.bc -o /Users/alfhern/Library/Developer/Xcode/DerivedData/BuzzSDK-fweehmmbvevedtflhfyvkokodybl/Build/Intermediates.noindex/ArchiveIntermediates/BuzzSDK/IntermediateBuildFilesPath/BuzzSDK.build/Release-iphoneos/BuzzSDK.build/Objects-normal/arm64/MFImageDownloader.bc -o /Users/alfhern/Library/Developer/Xcode/DerivedData/BuzzSDK-fweehmmbvevedtflhfyvkokodybl/Build/Intermediates.noindex/ArchiveIntermediates/BuzzSDK/IntermediateBuildFilesPath/BuzzSDK.build/Release-iphoneos/BuzzSDK.build/Objects-normal/arm64/MFVASTDefinitions.bc -o /Users/alfhern/Library/Developer/Xcode/DerivedData/BuzzSDK-fweehmmbvevedtflhfyvkokodybl/Build/Intermediates.noindex/ArchiveIntermediates/BuzzSDK/IntermediateBuildFilesPath/BuzzSDK.build/Release-iphoneos/BuzzSDK.build/Objects-normal/arm64/MFVASTMediaFile.bc -o /Users/alfhern/Library/Developer/Xcode/DerivedData/BuzzSDK-fweehmmbvevedtflhfyvkokodybl/Build/Intermediates.noindex/ArchiveIntermediates/BuzzSDK/IntermediateBuildFilesPath/BuzzSDK.build/Release-iphoneos/BuzzSDK.build/Objects-normal/arm64/MFNetworking.bc -o /Users/alfhern/Library/Developer/Xcode/DerivedData/BuzzSDK-fweehmmbvevedtflhfyvkokodybl/Build/Intermediates.noindex/ArchiveIntermediates/BuzzSDK/IntermediateBuildFilesPath/BuzzSDK.build/Release-iphoneos/BuzzSDK.build/Objects-normal/arm64/UIColor_RGBA.bc -o /Users/alfhern/Library/Developer/Xcode/DerivedData/BuzzSDK-fweehmmbvevedtflhfyvkokodybl/Build/Intermediates.noindex/ArchiveIntermediates/BuzzSDK/IntermediateBuildFilesPath/BuzzSDK.build/Release-iphoneos/BuzzSDK.build/Objects-normal/arm64/MFIgnoreSelfTouchesView.bc -o /Users/alfhern/Library/Developer/Xcode/DerivedData/BuzzSDK-fweehmmbvevedtflhfyvkokodybl/Build/Intermediates.noindex/ArchiveIntermediates/BuzzSDK/IntermediateBuildFilesPath/BuzzSDK.build/Release-iphoneos/BuzzSDK.build/Objects-normal/arm64/APIEndpoint.bc -o /Users/alfhern/Library/Developer/Xcode/DerivedData/BuzzSDK-fweehmmbvevedtflhfyvkokodybl/Build/Intermediates.noindex/ArchiveIntermediates/BuzzSDK/IntermediateBuildFilesPath/BuzzSDK.build/Release-iphoneos/BuzzSDK.build/Objects-normal/arm64/MFVASTParserOperation.bc -o /Users/alfhern/Library/Developer/Xcode/DerivedData/BuzzSDK-fweehmmbvevedtflhfyvkokodybl/Build/Intermediates.noindex/ArchiveIntermediates/BuzzSDK/IntermediateBuildFilesPath/BuzzSDK.build/Release-iphoneos/BuzzSDK.build/Objects-normal/arm64/StringLocalized.bc -o /Users/alfhern/Library/Developer/Xcode/DerivedData/BuzzSDK-fweehmmbvevedtflhfyvkokodybl/Build/Intermediates.noindex/ArchiveIntermediates/BuzzSDK/IntermediateBuildFilesPath/BuzzSDK.build/Release-iphoneos/BuzzSDK.build/Objects-normal/arm64/MFVASTError.bc -o /Users/alfhern/Library/Developer/Xcode/DerivedData/BuzzSDK-fweehmmbvevedtflhfyvkokodybl/Build/Intermediates.noindex/ArchiveIntermediates/BuzzSDK/IntermediateBuildFilesPath/BuzzSDK.build/Release-iphoneos/BuzzSDK.build/Objects-normal/arm64/MFWebViewController.bc -resource-dir /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift
 <swift-imported-modules>
-Apple Swift version 4.0 (swiftlang-900.0.65.2 clang-900.0.37)
+Apple Swift version 4.0.2 (swiftlang-900.0.69.2 clang-900.0.38)
 /Users/alfhern/Documents/Development/MoveFast/Apps/MFSharedLibraries/MFSharedLibaries/MFDownloadManager/MFDownloadManager.swift
 _T07BuzzSDK8Download33_D62C936053882F7D0EEC2E23BEB802E6LLVMa
 MFDownloadManager.swift
@@ -3994,12 +3986,14 @@ __T07BuzzSDK16AppConfigurationC10MFVerticalOs16RawRepresentableAAsAFP8rawValue0f
 _globalinit_015_15508454CC06D4B16E31E0C0279DFF29A_func15
 _globalinit_015_15508454CC06D4B16E31E0C0279DFF29A_func16
 __T07BuzzSDK16AppConfigurationC8verticalAC10MFVerticalOfgZTo
-__T07BuzzSDK16AppConfigurationC30debugAssessAllVideosAsPlayableSbyFZTo
+__T07BuzzSDK16AppConfigurationC5resetySS13targetKeyName_tFZTo
 __T07BuzzSDK16AppConfigurationC17debugBlockAdCardsSbyFZTo
 __T07BuzzSDK16AppConfigurationC12appGroupNameSSyFZTo
 __T07BuzzSDK16AppConfigurationC17hardcodedBundleIdSSyFZTo
 __T07BuzzSDK16AppConfigurationC28verticalLocalizationFilenameSSyFZTo
 __T07BuzzSDK16AppConfigurationC07defaultC18TimeZoneIdentifierSSSgyFZTo
+__T07BuzzSDK16AppConfigurationC33regionCodesForTargetDeterminationSaySSGSgyFZTo
+__T07BuzzSDK16AppConfigurationC13targetKeyNameS2S13forRegionCode_tFZTo
 __T07BuzzSDK16AppConfigurationC13serverBaseURLSSyFZTo
 __T07BuzzSDK16AppConfigurationC15serverAuthTokenSSyFZTo
 __T07BuzzSDK16AppConfigurationC30ignoreCardStyleFromAPIResponseSbyFZTo
@@ -4072,6 +4066,7 @@ __T07BuzzSDK16AppConfigurationCfETo
 __T0s2eeoiSbx_xts16RawRepresentableRzs9Equatable0B5ValueRpzlFTfq4gg_n7BuzzSDK16AppConfigurationC8MFTargetO_Tg5
 __T07BuzzSDK16AppConfigurationC8MFTargetOAESgSS8rawValue_tcfCTf4gXd_n
 __T07BuzzSDK16AppConfigurationC12appGroupNameSSyFZTf4d_n
+__T07BuzzSDK16AppConfigurationC13targetKeyNameS2S13forRegionCode_tFZTf4gXd_n
 __T07BuzzSDK16AppConfigurationC13serverBaseURLSSyFZTf4d_n
 __T07BuzzSDK16AppConfigurationC15serverAuthTokenSSyFZTf4d_n
 __T07BuzzSDK16AppConfigurationC14watermarkImageSo7UIImageCSgyFZTf4d_n
@@ -4087,6 +4082,7 @@ __T07BuzzSDK16AppConfigurationC8MFTargetOwui
 __T07BuzzSDK16AppConfigurationC10MFVerticalOwug
 __T07BuzzSDK16AppConfigurationC10MFVerticalOwup
 __T07BuzzSDK16AppConfigurationC10MFVerticalOwui
+__T07BuzzSDK16AppConfigurationC30debugAssessAllVideosAsPlayableSbyFZTo
 __T07BuzzSDK16AppConfigurationC032pipVideoViewMinimumWidthToScreenI8Fraction12CoreGraphics7CGFloatVyFZTo
 __T07BuzzSDK16AppConfigurationC28includePIPAudioControlButtonSbyFZTo
 __T07BuzzSDK16AppConfigurationC33includePIPFullScreenControlButtonSbyFZTo
@@ -4129,13 +4125,16 @@ _T07BuzzSDK16AppConfigurationC8MFTargetOs16RawRepresentableAAWa
 _T07BuzzSDK16AppConfigurationC8MFTargetOs8HashableAAWa
 _T07BuzzSDK16AppConfigurationC8MFTargetOs9EquatableAAWa
 adjustAppLaunchEventToken
-_T07BuzzSDK16AppConfigurationC6targetAC8MFTargetOfau
 adjustAdImpressionEventToken
 adjustEventAdClickEventToken
 adjustToken
 watermarkImage
 serverAuthToken
+_T07BuzzSDK16AppConfigurationC6targetAC8MFTargetOfau
 serverBaseURL
+targetKeyName
+_T07BuzzSDK16AppConfigurationC13targetKeyNameSSfau
+_T0s2eeoiSbx_xts16RawRepresentableRzs9Equatable0B5ValueRpzlFTfq4gg_n7BuzzSDK16AppConfigurationC10MFVerticalO_Tg5
 appGroupName
 _T0s2eeoiSbx_xts16RawRepresentableRzs9Equatable0B5ValueRpzlFTfq4gg_n7BuzzSDK16AppConfigurationC8MFTargetO_Tg5
 adjustSubscriptionGroupPremiumEventToken
@@ -4188,20 +4187,19 @@ canShowShakeToGoBackCard
 showInfoCards
 appRequiresOnboarding
 ignoreCardStyleFromAPIResponse
+regionCodesForTargetDetermination
 defaultAppTimeZoneIdentifier
 verticalLocalizationFilename
 hardcodedBundleId
 debugBlockAdCards
-debugAssessAllVideosAsPlayable
+reset
 vertical.get
 globalinit_015_15508454CC06D4B16E31E0C0279DFF29A_func17
 _T07BuzzSDK16AppConfigurationC8verticalAC10MFVerticalOvZfiAFycfU_
 target.get
 globalinit_015_15508454CC06D4B16E31E0C0279DFF29A_func16
-_T07BuzzSDK16AppConfigurationC13targetKeyNameSSfau
 targetKeyName.get
 globalinit_015_15508454CC06D4B16E31E0C0279DFF29A_func15
-_T0s2eeoiSbx_xts16RawRepresentableRzs9Equatable0B5ValueRpzlFTfq4gg_n7BuzzSDK16AppConfigurationC10MFVerticalO_Tg5
 __T07BuzzSDK8MFLoggerC8LogLevelOs9EquatableAAsAFP2eeoiSbx_xtFZTW
 __T07BuzzSDK8MFLoggerC8LogLevelOs8HashableAAsAFP9hashValueSifgTW
 __T07BuzzSDK8MFLoggerC8LogLevelOs16RawRepresentableAAsAFPxSg0F5ValueQz03rawH0_tcfCTW
@@ -4914,6 +4912,7 @@ __T0SbIxy_SbIyBy_TR
 __T07BuzzSDK33MFFullScreenVideoPlayerControllerC7releaseyyycFTo
 __T07BuzzSDK33MFFullScreenVideoPlayerControllerC5shakeyyFTo
 __T07BuzzSDK33MFFullScreenVideoPlayerControllerC23ensureDisplayOfControlsyyFTo
+__T07BuzzSDK33MFFullScreenVideoPlayerControllerC08_longestD9Dimention33_7ABF327F2365E6F02F402664CE1EDC7DLL12CoreGraphics7CGFloatVfg
 __T07BuzzSDK33MFFullScreenVideoPlayerControllerC14_containerView33_7ABF327F2365E6F02F402664CE1EDC7DLLSQySo6UIViewCGXwfgTo
 __T07BuzzSDK33MFFullScreenVideoPlayerControllerC14_containerView33_7ABF327F2365E6F02F402664CE1EDC7DLLSQySo6UIViewCGXwfsTo
 __T07BuzzSDK33MFFullScreenVideoPlayerControllerC19_videoContainerView33_7ABF327F2365E6F02F402664CE1EDC7DLLSQySo6UIViewCGXwfgTo
@@ -4953,16 +4952,17 @@ __T07BuzzSDK33MFFullScreenVideoPlayerControllerC21_videoPlaybackPressed33_7ABF32
 __T07BuzzSDK33MFFullScreenVideoPlayerControllerC19_progressViewTapped33_7ABF327F2365E6F02F402664CE1EDC7DLLySo22UITapGestureRecognizerCFTo
 __T07BuzzSDK33MFFullScreenVideoPlayerControllerC19_progressViewPanned33_7ABF327F2365E6F02F402664CE1EDC7DLLySo22UIPanGestureRecognizerCFTo
 __T07BuzzSDK33MFFullScreenVideoPlayerControllerC21_videoDismissalPanned33_7ABF327F2365E6F02F402664CE1EDC7DLLySo22UIPanGestureRecognizerCFTo
-__T07BuzzSDK33MFFullScreenVideoPlayerControllerC7prepareySo07GDMediaF0C03forF0_tFToTm
 __T07BuzzSDK33MFFullScreenVideoPlayerControllerC26_showControlsTapRecognized33_7ABF327F2365E6F02F402664CE1EDC7DLLySo22UITapGestureRecognizerCFTo
+__T07BuzzSDK33MFFullScreenVideoPlayerControllerC7prepareySo07GDMediaF0C03forF0_tFToTm
 __T07BuzzSDK33MFFullScreenVideoPlayerControllerC21_moreInfoButtonTapped33_7ABF327F2365E6F02F402664CE1EDC7DLLySo8UIButtonCFTo
 __T07BuzzSDK33MFFullScreenVideoPlayerControllerC5_seek33_7ABF327F2365E6F02F402664CE1EDC7DLLySo07GDMediaF0C6player_SC7CGPointV31toTimeForLocationInProgressViewtFySbcfU_
 __T07BuzzSDK33MFFullScreenVideoPlayerControllerC23preferredStatusBarStyleSC08UIStatusjK0OfgTo
 __T07BuzzSDK33MFFullScreenVideoPlayerControllerC11viewDidLoadyyFTo
 __T07BuzzSDK33MFFullScreenVideoPlayerControllerC14viewWillAppearySbFTo
 __T07BuzzSDK33MFFullScreenVideoPlayerControllerC18viewWillTransitionySC6CGSizeV2to_So06UIViewgJ11Coordinator_p4withtFTo
-__T07BuzzSDK33MFFullScreenVideoPlayerControllerC08_restoreE32ContainerAfterAttemptedDismissal33_7ABF327F2365E6F02F402664CE1EDC7DLLyyF
-__T07BuzzSDK33MFFullScreenVideoPlayerControllerC08_restoreE32ContainerAfterAttemptedDismissal33_7ABF327F2365E6F02F402664CE1EDC7DLLyyFySbcfU0_
+__T07BuzzSDK33MFFullScreenVideoPlayerControllerC37_restoreValuesAfterAttemptedDismissal33_7ABF327F2365E6F02F402664CE1EDC7DLLyyF
+__T07BuzzSDK33MFFullScreenVideoPlayerControllerC37_restoreValuesAfterAttemptedDismissal33_7ABF327F2365E6F02F402664CE1EDC7DLLyyFyycfU_
+__T07BuzzSDK33MFFullScreenVideoPlayerControllerC37_restoreValuesAfterAttemptedDismissal33_7ABF327F2365E6F02F402664CE1EDC7DLLyyFySbcfU0_
 __T07BuzzSDK33MFFullScreenVideoPlayerControllerC16_configureStyles33_7ABF327F2365E6F02F402664CE1EDC7DLLyyF
 __T07BuzzSDK33MFFullScreenVideoPlayerControllerC26_shceduleControlsHideTimer33_7ABF327F2365E6F02F402664CE1EDC7DLLyyF
 __T07BuzzSDK33MFFullScreenVideoPlayerControllerC23_controlsHideTimerFiredySo0J0CFTo
@@ -5017,6 +5017,7 @@ __T07BuzzSDK33MFFullScreenVideoPlayerControllerC5_seek33_7ABF327F2365E6F02F40266
 __T07BuzzSDK33MFFullScreenVideoPlayerControllerC19_progressViewTapped33_7ABF327F2365E6F02F402664CE1EDC7DLLySo22UITapGestureRecognizerCFTf4gn_n
 __T07BuzzSDK33MFFullScreenVideoPlayerControllerC19_progressViewPanned33_7ABF327F2365E6F02F402664CE1EDC7DLLySo22UIPanGestureRecognizerCFTf4gn_n
 __T07BuzzSDK33MFFullScreenVideoPlayerControllerC21_videoDismissalPanned33_7ABF327F2365E6F02F402664CE1EDC7DLLySo22UIPanGestureRecognizerCFTf4gn_n
+__T07BuzzSDK33MFFullScreenVideoPlayerControllerC26_showControlsTapRecognized33_7ABF327F2365E6F02F402664CE1EDC7DLLySo22UITapGestureRecognizerCFTf4gn_n
 __T07BuzzSDK33MFFullScreenVideoPlayerControllerC17_closeButtonImage33_7ABF327F2365E6F02F402664CE1EDC7DLLSo7UIImageCfgAGycfU_Tf4g_n
 __T07BuzzSDK33MFFullScreenVideoPlayerControllerC17_pauseButtonImage33_7ABF327F2365E6F02F402664CE1EDC7DLLSo7UIImageCfgAGycfU_Tf4g_nTm
 ___swift_deallocate_boxed_opaque_existential_0
@@ -5038,8 +5039,8 @@ ___swift_project_boxed_opaque_existential_0
 __T07BuzzSDK33MFFullScreenVideoPlayerControllerC19_hideKickerAndTitle33_7ABF327F2365E6F02F402664CE1EDC7DLLySb8animated_tFyycfU_TA
 __T07BuzzSDK33MFFullScreenVideoPlayerControllerC19_hideKickerAndTitle33_7ABF327F2365E6F02F402664CE1EDC7DLLySb8animated_tFySbcfU0_TA
 __T07BuzzSDK33MFFullScreenVideoPlayerControllerC20_hideAdditionalViews33_7ABF327F2365E6F02F402664CE1EDC7DLLySb8animated_tFyycfU_TA
-__T07BuzzSDK33MFFullScreenVideoPlayerControllerC08_restoreE32ContainerAfterAttemptedDismissal33_7ABF327F2365E6F02F402664CE1EDC7DLLyyFyycfU_TA
-__T07BuzzSDK33MFFullScreenVideoPlayerControllerC08_restoreE32ContainerAfterAttemptedDismissal33_7ABF327F2365E6F02F402664CE1EDC7DLLyyFySbcfU0_TA
+__T07BuzzSDK33MFFullScreenVideoPlayerControllerC37_restoreValuesAfterAttemptedDismissal33_7ABF327F2365E6F02F402664CE1EDC7DLLyyFyycfU_TA
+__T07BuzzSDK33MFFullScreenVideoPlayerControllerC37_restoreValuesAfterAttemptedDismissal33_7ABF327F2365E6F02F402664CE1EDC7DLLyyFySbcfU0_TA
 __T07BuzzSDK33MFFullScreenVideoPlayerControllerC5_seek33_7ABF327F2365E6F02F402664CE1EDC7DLLySo07GDMediaF0C6player_SC7CGPointV31toTimeForLocationInProgressViewtFySbcfU_TA
 __T07BuzzSDK33MFFullScreenVideoPlayerControllerC28_animatePresentingTransitionySo06UIViewG20ContextTransitioning_p5using_tFySbcfU_TA
 __T07BuzzSDK33MFFullScreenVideoPlayerControllerC28_animatePresentingTransitionySo06UIViewG20ContextTransitioning_p5using_tFyycfU1_TA
@@ -5149,6 +5150,7 @@ __T07BuzzSDK33MFFullScreenVideoPlayerControllerC13_isPresenting33_7ABF327F2365E6
 __T07BuzzSDK41MFFullScreenVideoPlayerControllerDelegate_pMF
 l_OBJC_PROTOCOL_REFERENCE_$__TtP7BuzzSDK41MFFullScreenVideoPlayerControllerDelegate_
 __T07BuzzSDK33MFFullScreenVideoPlayerControllerC20_transitionsDuration33_7ABF327F2365E6F02F402664CE1EDC7DLLSdvWvd
+__T07BuzzSDK33MFFullScreenVideoPlayerControllerC0036__longestScreenDimentionstorage_rjBBl33_7ABF327F2365E6F02F402664CE1EDC7DLL12CoreGraphics7CGFloatVSgvWvd
 __T07BuzzSDK33MFFullScreenVideoPlayerControllerC40_videoContainerViewAspectRatioConstraint33_7ABF327F2365E6F02F402664CE1EDC7DLLSQySo08NSLayoutM0CGXwvWvd
 __T07BuzzSDK33MFFullScreenVideoPlayerControllerC36_videoContainerViewCenterXConstraint33_7ABF327F2365E6F02F402664CE1EDC7DLLSQySo18NSLayoutConstraintCGXwvWvd
 __T07BuzzSDK33MFFullScreenVideoPlayerControllerC36_videoContainerViewCenterYConstraint33_7ABF327F2365E6F02F402664CE1EDC7DLLSQySo18NSLayoutConstraintCGXwvWvd
@@ -5175,6 +5177,7 @@ l_OBJC_PROTOCOL_REFERENCE_$_UIViewControllerAnimatedTransitioning
 __T0So7UIImageCSgML
 __T0So7UIImageCML
 __T07BuzzSDK41MFFullScreenVideoPlayerControllerDelegate_pML
+__T012CoreGraphics7CGFloatVSgML
 __T0SQySo18NSLayoutConstraintCGML
 __T0SQySo23UIActivityIndicatorViewCGML
 __T0So23UIActivityIndicatorViewCML
@@ -5294,11 +5297,8 @@ _T07BuzzSDK33MFFullScreenVideoPlayerControllerC28_animatePresentingTransitionySo
 _T07BuzzSDK33MFFullScreenVideoPlayerControllerC28_animatePresentingTransitionySo06UIViewG20ContextTransitioning_p5using_tFySbcfU_
 _T07BuzzSDK33MFFullScreenVideoPlayerControllerC5_seek33_7ABF327F2365E6F02F402664CE1EDC7DLLySo07GDMediaF0C6player_SC7CGPointV31toTimeForLocationInProgressViewtFySbcfU_TA
 objectdestroy.61
-_T07BuzzSDK33MFFullScreenVideoPlayerControllerC08_restoreE32ContainerAfterAttemptedDismissal33_7ABF327F2365E6F02F402664CE1EDC7DLLyyFySbcfU0_TA
-_T07BuzzSDK33MFFullScreenVideoPlayerControllerC08_restoreE32ContainerAfterAttemptedDismissal33_7ABF327F2365E6F02F402664CE1EDC7DLLyyFyycfU_TA
-_T07BuzzSDK33MFFullScreenVideoPlayerControllerC08_restoreE32ContainerAfterAttemptedDismissal33_7ABF327F2365E6F02F402664CE1EDC7DLLyyFyycfU_
-_T07BuzzSDK33MFFullScreenVideoPlayerControllerC08_restoreE32ContainerAfterAttemptedDismissal33_7ABF327F2365E6F02F402664CE1EDC7DLLyyFyycfU_Tf4g_n
-_containerView.get
+_T07BuzzSDK33MFFullScreenVideoPlayerControllerC37_restoreValuesAfterAttemptedDismissal33_7ABF327F2365E6F02F402664CE1EDC7DLLyyFySbcfU0_TA
+_T07BuzzSDK33MFFullScreenVideoPlayerControllerC37_restoreValuesAfterAttemptedDismissal33_7ABF327F2365E6F02F402664CE1EDC7DLLyyFyycfU_TA
 _T07BuzzSDK33MFFullScreenVideoPlayerControllerC19_hideKickerAndTitle33_7ABF327F2365E6F02F402664CE1EDC7DLLySb8animated_tFySbcfU0_TA
 _T07BuzzSDK33MFFullScreenVideoPlayerControllerC19_hideKickerAndTitle33_7ABF327F2365E6F02F402664CE1EDC7DLLySb8animated_tFySbcfU0_
 _T07BuzzSDK33MFFullScreenVideoPlayerControllerC19_hideKickerAndTitle33_7ABF327F2365E6F02F402664CE1EDC7DLLySb8animated_tFyycfU_TA
@@ -5323,6 +5323,7 @@ _T0SQySo23UIActivityIndicatorViewCGMa
 _T0So23UIActivityIndicatorViewCMa
 _T0SQySo18NSLayoutConstraintCGMa
 _T0So18NSLayoutConstraintCMa
+_T012CoreGraphics7CGFloatVSgMa
 _T07BuzzSDK41MFFullScreenVideoPlayerControllerDelegate_pMa
 _T0SQySo6UIViewCGMa
 _T0So6UIViewCMa
@@ -5378,23 +5379,27 @@ __swift_deallocate_boxed_opaque_existential_0
 _T07BuzzSDK33MFFullScreenVideoPlayerControllerC17_pauseButtonImage33_7ABF327F2365E6F02F402664CE1EDC7DLLSo7UIImageCfgAGycfU_Tf4g_n
 _T07BuzzSDK33MFFullScreenVideoPlayerControllerC17_pauseButtonImage33_7ABF327F2365E6F02F402664CE1EDC7DLLSo7UIImageCfgAGycfU_AGyKXKfu_
 _T07BuzzSDK33MFFullScreenVideoPlayerControllerCSo7UIImageCSgIxyo_AcFIxxo_TR
+_showControlsTapRecognized
+_controlsAreVisible.get
+_controlsContainerView.get
+_T0s2eeoiSbx_xts16RawRepresentableRzs9Equatable0B5ValueRpzlFTfq4gg_nSC24UIGestureRecognizerStateO_Tg5
 _videoDismissalPanned
 _requestDismissal
 _configureForTransitionState
-_swift_stdlib_squareRoot
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/shims/LibcShims.h
+min
+_containerView.get
 _videoContainerViewCenterYConstraint.get
 _videoContainerViewCenterXConstraint.get
 _videoContainerLeadingConstraint.get
 _videoContainerTopConstraint.get
+_swift_stdlib_squareRoot
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/shims/LibcShims.h
 _progressViewPanned
 _seek
 _videoProgressView.get
 _progressViewTapped
-_T0s2eeoiSbx_xts16RawRepresentableRzs9Equatable0B5ValueRpzlFTfq4gg_nSC24UIGestureRecognizerStateO_Tg5
 _time
 max
-min
 _T07BuzzSDK33MFFullScreenVideoPlayerControllerC7releaseyyycFySbcfU0_Tf4dgn_n
 objectdestroy.8
 release
@@ -5438,7 +5443,6 @@ _hideAdditionalViews
 _showAdditionalViews
 _T07BuzzSDK33MFFullScreenVideoPlayerControllerC13_showControls33_7ABF327F2365E6F02F402664CE1EDC7DLLySb8animated_Sb12scheduleHidetFyycfU_
 _T07BuzzSDK33MFFullScreenVideoPlayerControllerC13_showControls33_7ABF327F2365E6F02F402664CE1EDC7DLLySb8animated_Sb12scheduleHidetFyycfU_Tf4g_n
-_controlsContainerView.get
 _showControls
 _stopControlsHideTimer
 _controlsHideTimer.set
@@ -5449,9 +5453,11 @@ _shceduleControlsHideTimer
 _configureStyles
 _T07BuzzSDK33MFFullScreenVideoPlayerControllerCSo7UIColorCSgIxyo_AcFIxxo_TR
 _T07BuzzSDK33MFFullScreenVideoPlayerControllerCSo6UIFontCSgIxyo_AcFIxxo_TR
-_T07BuzzSDK33MFFullScreenVideoPlayerControllerC08_restoreE32ContainerAfterAttemptedDismissal33_7ABF327F2365E6F02F402664CE1EDC7DLLyyFySbcfU0_
-_T07BuzzSDK33MFFullScreenVideoPlayerControllerC08_restoreE32ContainerAfterAttemptedDismissal33_7ABF327F2365E6F02F402664CE1EDC7DLLyyFySbcfU0_Tf4dg_n
-_restoreVideoContainerAfterAttemptedDismissal
+_T07BuzzSDK33MFFullScreenVideoPlayerControllerC37_restoreValuesAfterAttemptedDismissal33_7ABF327F2365E6F02F402664CE1EDC7DLLyyFySbcfU0_
+_T07BuzzSDK33MFFullScreenVideoPlayerControllerC37_restoreValuesAfterAttemptedDismissal33_7ABF327F2365E6F02F402664CE1EDC7DLLyyFySbcfU0_Tf4dg_n
+_T07BuzzSDK33MFFullScreenVideoPlayerControllerC37_restoreValuesAfterAttemptedDismissal33_7ABF327F2365E6F02F402664CE1EDC7DLLyyFyycfU_
+_T07BuzzSDK33MFFullScreenVideoPlayerControllerC37_restoreValuesAfterAttemptedDismissal33_7ABF327F2365E6F02F402664CE1EDC7DLLyyFyycfU_Tf4g_n
+_restoreValuesAfterAttemptedDismissal
 viewWillAppear
 viewDidLoad
 _T0Sa13_adoptStorageSayxG_SpyxGts016_ContiguousArrayB0CyxG_Si5counttFZSo18NSLayoutConstraintC_Tg5
@@ -5466,7 +5472,6 @@ _T07BuzzSDK33MFFullScreenVideoPlayerControllerC5_seek33_7ABF327F2365E6F02F402664
 _T07BuzzSDK33MFFullScreenVideoPlayerControllerC5_seek33_7ABF327F2365E6F02F402664CE1EDC7DLLySo07GDMediaF0C6player_SC7CGPointV31toTimeForLocationInProgressViewtFySbcfU_Tf4dgn_n
 _moreInfoButtonTapped
 _T07BuzzSDK33MFFullScreenVideoPlayerControllerCIxy_ACIxx_TR
-_showControlsTapRecognized
 _videoPlaybackPressed
 _close
 _T07BuzzSDK33MFFullScreenVideoPlayerControllerC27_textGradientBackgroundView33_7ABF327F2365E6F02F402664CE1EDC7DLLSQyAA010MFGradientK0CGXwfsTo
@@ -5519,6 +5524,9 @@ _T07BuzzSDK33MFFullScreenVideoPlayerControllerC19_videoContainerView33_7ABF327F2
 _T07BuzzSDK33MFFullScreenVideoPlayerControllerC14_containerView33_7ABF327F2365E6F02F402664CE1EDC7DLLSQySo6UIViewCGXwfsTo
 _containerView.set
 _T07BuzzSDK33MFFullScreenVideoPlayerControllerC14_containerView33_7ABF327F2365E6F02F402664CE1EDC7DLLSQySo6UIViewCGXwfgTo
+_longestScreenDimention.get
+_T07BuzzSDK33MFFullScreenVideoPlayerControllerC08_longestD9Dimention33_7ABF327F2365E6F02F402664CE1EDC7DLL12CoreGraphics7CGFloatVfgAHycfU_
+_T012CoreGraphics7CGFloatVs10ComparableAAsADP2geoiSbx_xtFZTW
 ensureDisplayOfControls
 shake
 _T0SbIxy_SbIyBy_TR
