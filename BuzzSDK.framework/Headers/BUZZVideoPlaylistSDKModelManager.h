@@ -22,6 +22,17 @@
  */
 @property(nonatomic, weak) _Nullable id<BUZZVideoPlaylistSDKModelManagerDelegate> delegate;
 
+#pragma mark - tracking variables
+
+// The count of video cards received on last call to build model.
+@property (nonatomic, assign) NSInteger countOfVideos;
+// The count of video cards that were not presentable due to errors.
+@property (nonatomic, assign) NSInteger countOfVideosErrors;
+// The count of video cards that were excluded from presentable due to already seen by user
+@property (nonatomic, assign) NSInteger countOfVideosAlreadySeen;
+// The count of video cards presentable to the user after loading.
+@property (nonatomic, assign) NSInteger countOfVideosPresentable;
+
 #pragma mark - Model Refresh and Update
 
 /**

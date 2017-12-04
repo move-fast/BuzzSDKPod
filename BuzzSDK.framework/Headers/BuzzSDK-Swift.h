@@ -496,6 +496,17 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) BUZZSDKNetwo
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 @end
 
+
+SWIFT_CLASS("_TtC7BuzzSDK13BuzzSDKDevice")
+@interface BuzzSDKDevice : NSObject
+/// The device slug for the device/app
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nullable slug;)
++ (NSString * _Nullable)slug SWIFT_WARN_UNUSED_RESULT;
+/// Will update and or register the device data as necessary. <code>completion</code> is allways called on main thread.
++ (void)updateWithCompletion:(void (^ _Nonnull)(BOOL))completion;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
 enum BuzzSDKStyleFormat : NSInteger;
 
 /// A convenience class to provide access to style configuration values for the BuzzSDK
@@ -513,6 +524,28 @@ typedef SWIFT_ENUM(NSInteger, BuzzSDKStyleFormat) {
   BuzzSDKStyleFormatFullScreen = 0,
   BuzzSDKStyleFormatPip = 1,
 };
+
+/// User Video Interactions. Mainly focused on interaction indicating user intent.
+/// BuzzSDKVideoInteractionFullScreen: The video was sent to fullscreen by user interaction
+/// BuzzSDKVideoInteractionSwipedToPlay: The video was swiped from the PIP playlist to start playback.
+/// BuzzSDKVideoInteractionPlay: The video was first played or resumed by the user by tapping on the Play button.
+/// BuzzSDKVideoInteractionSoundOn: The video was unmutted by user interaction.
+typedef SWIFT_ENUM(NSInteger, BuzzSDKVideoInteraction) {
+  BuzzSDKVideoInteractionFullScreen = 0,
+  BuzzSDKVideoInteractionSwipedToPlay = 1,
+  BuzzSDKVideoInteractionPlay = 2,
+  BuzzSDKVideoInteractionSoundOn = 3,
+};
+
+
+SWIFT_CLASS("_TtC7BuzzSDK30BuzzSDKVideoInteractionManager")
+@interface BuzzSDKVideoInteractionManager : NSObject
+- (void)addWithInteraction:(enum BuzzSDKVideoInteraction)interaction toVideoId:(NSString * _Nonnull)videoId;
+- (void)cleanInteractionsForVideoId:(NSString * _Nonnull)videoId;
+- (void)cleanAll;
+- (NSDictionary<NSNumber *, NSNumber *> * _Nonnull)interactionsForVideoId:(NSString * _Nonnull)videoId SWIFT_WARN_UNUSED_RESULT;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
 
 enum ContentFillStyle : NSInteger;
 enum TitleVerticalPosition : NSInteger;
@@ -720,6 +753,12 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) MFDownloadMa
 @end
 
 @class NSURLSession;
+
+@interface MFDownloadManager (SWIFT_EXTENSION(BuzzSDK)) <NSURLSessionDelegate>
+/// If an application has received an -application:handleEventsForBackgroundURLSession:completionHandler: message, the session delegate will receive this message to indicate that all messages previously enqueued for this session have been delivered. At this time it is safe to invoke the previously stored completion handler, or to begin any internal updates that will result in invoking the completion handler.
+- (void)URLSessionDidFinishEventsForBackgroundURLSession:(NSURLSession * _Nonnull)session;
+@end
+
 @class NSURLSessionTask;
 
 @interface MFDownloadManager (SWIFT_EXTENSION(BuzzSDK)) <NSURLSessionTaskDelegate>
@@ -730,12 +769,6 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) MFDownloadMa
 
 @interface MFDownloadManager (SWIFT_EXTENSION(BuzzSDK)) <NSURLSessionDownloadDelegate>
 - (void)URLSession:(NSURLSession * _Nonnull)session downloadTask:(NSURLSessionDownloadTask * _Nonnull)downloadTask didFinishDownloadingToURL:(NSURL * _Nonnull)location;
-@end
-
-
-@interface MFDownloadManager (SWIFT_EXTENSION(BuzzSDK)) <NSURLSessionDelegate>
-/// If an application has received an -application:handleEventsForBackgroundURLSession:completionHandler: message, the session delegate will receive this message to indicate that all messages previously enqueued for this session have been delivered. At this time it is safe to invoke the previously stored completion handler, or to begin any internal updates that will result in invoking the completion handler.
-- (void)URLSessionDidFinishEventsForBackgroundURLSession:(NSURLSession * _Nonnull)session;
 @end
 
 @class GDMediaPlayer;
@@ -1033,8 +1066,8 @@ typedef SWIFT_ENUM(NSInteger, MFVASTSoundState) {
 
 SWIFT_PROTOCOL("_TtP7BuzzSDK30MFVASTPlayerControllerDelegate_")
 @protocol MFVASTPlayerControllerDelegate
-/// Reports when the <code>controller</code> has finished requesting a VAST Ad successfully.
-- (void)vastPlayerControllerAdRequestCompletedSuccessfully:(MFVASTPlayerController * _Nonnull)controller;
+/// Reports when the <code>controller</code> has finished requesting a VAST Ad. If <code>success</code> is <code>false</code>, then <code>error</code> includes the error reason
+- (void)vastPlayerController:(MFVASTPlayerController * _Nonnull)controller adRequestCompletedSuccessfully:(BOOL)success error:(NSError * _Nullable)error;
 /// Reports when the <code>controller</code> has an error during processing. Either on Ad Request or video playback.
 - (void)vastPlayerController:(MFVASTPlayerController * _Nonnull)controller hasFailedWithError:(NSError * _Nonnull)error;
 /// Reports when the <code>controller</code> has successfully instantiated a <code>GDMediaPlayer</code> instance and will start the video loading process
