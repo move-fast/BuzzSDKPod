@@ -86,6 +86,8 @@ typedef void (^_Nullable GDTimeObservationBlock)(CMTime time);
 @protocol GDMediaPlayerUIDelegateProtocol <NSObject>
 
 @optional
+// the MediaPlayer's Master Player Layer has become visible, this indicates that it has been added to the visible view hierarchy (i.e for instance when chainging contatiner view) or that the layer was made visible after being hidden.
+- (void)mediaPlayer:(nonnull GDMediaPlayer *)mediaPlayer masterPlayerLayerIsVisibleIn:(nullable CALayer *)superLayer;
 
 // the MediaPlayer has been reqeusted to start Playback, will start if ready (canPlayNow)
 - (void)mediaPlayer:(nonnull GDMediaPlayer *)mediaPlayer playbackHasBeenRequestedCanStartPlayback:(BOOL)canPlayNow;

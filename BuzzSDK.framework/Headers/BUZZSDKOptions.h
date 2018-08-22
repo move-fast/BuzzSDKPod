@@ -190,9 +190,15 @@ FOUNDATION_EXPORT NSString *const kBUZZSDKOptionSDKLoadTimeoutKey;
 /// The minimum ammount of time (in seconds) that have to pass after SDK has been dismissed to be able to present the SDK once more. Any call to `presentDeck` before this grace period will be ignored.
 FOUNDATION_EXPORT NSString *const kBUZZSDKOptionSDKGracePeriodAfterDismiss;
 
-
 ///Indicates whether card stack should be rotated or not
 FOUNDATION_EXPORT NSString *const kBUZZSDKPrivateOptionStackRotationEnabledKey;
+
+/**
+ The Base64-encoded value for the app user's GDPR consent info as defined @ `https://github.com/InteractiveAdvertisingBureau/GDPR-Transparency-and-Consent-Framework/blob/master/Consent%20string%20and%20vendor%20list%20formats%20v1.1%20Final.md`
+ When provided, the BuzzSDK will also report on tracking pixels and request URI's macros as supporting `GDPR` regulation when requested.
+ */
+FOUNDATION_EXPORT NSString *const kBUZZSDKOptionGDPRConsentKey;
+
 
 
 #endif /* BUZZSDKOptions_h */
