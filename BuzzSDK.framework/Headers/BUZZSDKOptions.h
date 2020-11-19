@@ -194,7 +194,7 @@ FOUNDATION_EXPORT NSString *const kBUZZSDKOptionSDKGracePeriodAfterDismiss;
 FOUNDATION_EXPORT NSString *const kBUZZSDKPrivateOptionStackRotationEnabledKey;
 
 /**
- The Base64-encoded value for the app user's GDPR consent info as defined @ `https://github.com/InteractiveAdvertisingBureau/GDPR-Transparency-and-Consent-Framework/blob/master/Consent%20string%20and%20vendor%20list%20formats%20v1.1%20Final.md#vendor-consent-string-format-`
+ The Base64-encoded value for the app user's GDPR consent info as defined @ `https://github.com/InteractiveAdvertisingBureau/GDPR-Transparency-and-Consent-Framework/blob/master/Consent%20string%20and%20vendor%20list%20formats%20v1.1%20Final.md`
  When provided, the BuzzSDK will also report on tracking pixels and request URI's macros as supporting `GDPR` regulation when requested.
  */
 FOUNDATION_EXPORT NSString *const kBUZZSDKOptionGDPRConsentKey;

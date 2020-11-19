@@ -173,13 +173,6 @@ typedef enum : NSUInteger {
  */
 + (void)dismissDeck;
 
-/**
- * @brief Updates or set the GDPR Consent string
- * @param gdprConsent The Base64-encoded value for the app user's GDPR consent info as defined @ `https://github.com/InteractiveAdvertisingBureau/GDPR-Transparency-and-Consent-Framework/blob/master/Consent%20string%20and%20vendor%20list%20formats%20v1.1%20Final.md#vendor-consent-string-format-`
- */
-+ (void)updateGDPRConsent:(nonnull NSString *)gdprConsent;
-
-
 - (nonnull id) init __attribute__((unavailable("Please use 'startWithAPIKey:secretKey:groupId:andSDKOptions:' or 'startWithAPIKey:secretKey:' instead.")));
 
 @end
