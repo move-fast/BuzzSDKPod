@@ -3,6 +3,12 @@ framework module BuzzSDK {
 
   export *
   module * { export * }
+  
+  explicit module OMSDK_Buzztechno {
+    header "OMIDImports.h"
+    link "OMSDK_Buzztechno"
+    export *
+  }
 }
 
 module BuzzSDK.Swift {
