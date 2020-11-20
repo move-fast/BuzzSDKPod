@@ -376,7 +376,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSArray<NSStri
 @end
 
 /// Defines the grouping of verticals
-typedef SWIFT_ENUM(NSInteger, MFVertical, closed) {
+typedef SWIFT_ENUM(NSInteger, MFVertical, open) {
   MFVerticalBuzz = 0,
   MFVerticalBuzzSDK = 1,
   MFVerticalArchAndDesign = 2,
@@ -532,7 +532,7 @@ SWIFT_CLASS("_TtC7BuzzSDK12BuzzSDKStyle")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
-typedef SWIFT_ENUM(NSInteger, BuzzSDKStyleFormat, closed) {
+typedef SWIFT_ENUM(NSInteger, BuzzSDKStyleFormat, open) {
   BuzzSDKStyleFormatFullScreen = 0,
   BuzzSDKStyleFormatPip = 1,
 };
@@ -542,7 +542,7 @@ typedef SWIFT_ENUM(NSInteger, BuzzSDKStyleFormat, closed) {
 /// BuzzSDKVideoInteractionSwipedToPlay: The video was swiped from the PIP playlist to start playback.
 /// BuzzSDKVideoInteractionPlay: The video was first played or resumed by the user by tapping on the Play button.
 /// BuzzSDKVideoInteractionSoundOn: The video was unmutted by user interaction.
-typedef SWIFT_ENUM(NSInteger, BuzzSDKVideoInteraction, closed) {
+typedef SWIFT_ENUM(NSInteger, BuzzSDKVideoInteraction, open) {
   BuzzSDKVideoInteractionFullScreen = 0,
   BuzzSDKVideoInteractionSwipedToPlay = 1,
   BuzzSDKVideoInteractionPlay = 2,
@@ -671,19 +671,19 @@ SWIFT_CLASS("_TtC7BuzzSDK9CardStyle")
 @end
 
 /// The way the content should fill the card.
-typedef SWIFT_ENUM(NSInteger, ContentFillStyle, closed) {
+typedef SWIFT_ENUM(NSInteger, ContentFillStyle, open) {
   ContentFillStyleResizesToTitle = 0,
   ContentFillStyleFillsCard = 1,
 };
 
 /// The vertical position of the Title in the Card
-typedef SWIFT_ENUM(NSInteger, TitleVerticalPosition, closed) {
+typedef SWIFT_ENUM(NSInteger, TitleVerticalPosition, open) {
   TitleVerticalPositionTop = 0,
   TitleVerticalPositionBottom = 1,
 };
 
 /// The position of the Kicker in the Card
-typedef SWIFT_ENUM(NSInteger, KickerPosition, closed) {
+typedef SWIFT_ENUM(NSInteger, KickerPosition, open) {
   KickerPositionTopLeft = 0,
   KickerPositionTopRight = 1,
   KickerPositionTopCentered = 2,
@@ -693,13 +693,13 @@ typedef SWIFT_ENUM(NSInteger, KickerPosition, closed) {
 };
 
 /// The border type to apply to the kicker
-typedef SWIFT_ENUM(NSInteger, KickerBorderType, closed) {
+typedef SWIFT_ENUM(NSInteger, KickerBorderType, open) {
   KickerBorderTypeNone = 0,
   KickerBorderTypeInclinedRight = 1,
 };
 
 /// Defines the posible 4 corner positions a regular element can take for layout
-typedef SWIFT_ENUM(NSInteger, CornerPosition, closed) {
+typedef SWIFT_ENUM(NSInteger, CornerPosition, open) {
   CornerPositionTopLeft = 0,
   CornerPositionTopRight = 1,
   CornerPositionBottomLeft = 2,
@@ -707,7 +707,7 @@ typedef SWIFT_ENUM(NSInteger, CornerPosition, closed) {
 };
 
 /// :nodoc:
-typedef SWIFT_ENUM(NSInteger, DateFormatterStyle, closed) {
+typedef SWIFT_ENUM(NSInteger, DateFormatterStyle, open) {
   DateFormatterStyleDateTime = 0,
   DateFormatterStyleDateTimeTS = 1,
   DateFormatterStyleDateTimeMsTS = 2,
@@ -974,7 +974,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, copy) NSArray<NSString *> * _N
 @end
 
 /// The Log level options
-typedef SWIFT_ENUM(NSInteger, LogLevel, closed) {
+typedef SWIFT_ENUM(NSInteger, LogLevel, open) {
   LogLevelNone = 0,
   LogLevelError = 1,
   LogLevelWarning = 2,
@@ -1091,7 +1091,7 @@ SWIFT_CLASS("_TtC7BuzzSDK22MFVASTPlayerController")
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
-typedef SWIFT_ENUM(NSInteger, MFPlaybackQuartile, closed) {
+typedef SWIFT_ENUM(NSInteger, MFPlaybackQuartile, open) {
   MFPlaybackQuartileNone = 0,
   MFPlaybackQuartileFirst = 1,
   MFPlaybackQuartileSecond = 2,
@@ -1100,13 +1100,13 @@ typedef SWIFT_ENUM(NSInteger, MFPlaybackQuartile, closed) {
 };
 
 /// The types of display a video ad can take.
-typedef SWIFT_ENUM(NSInteger, MFVideoAdDisplayType, closed) {
+typedef SWIFT_ENUM(NSInteger, MFVideoAdDisplayType, open) {
   MFVideoAdDisplayTypePip = 0,
   MFVideoAdDisplayTypeFullscreen = 1,
 };
 
 /// The posible sound states of the VAST Controller media player.
-typedef SWIFT_ENUM(NSInteger, MFVASTSoundState, closed) {
+typedef SWIFT_ENUM(NSInteger, MFVASTSoundState, open) {
   MFVASTSoundStateMutted = 0,
   MFVASTSoundStateUnmutted = 1,
 };
@@ -1616,7 +1616,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSArray<NSStri
 @end
 
 /// Defines the grouping of verticals
-typedef SWIFT_ENUM(NSInteger, MFVertical, closed) {
+typedef SWIFT_ENUM(NSInteger, MFVertical, open) {
   MFVerticalBuzz = 0,
   MFVerticalBuzzSDK = 1,
   MFVerticalArchAndDesign = 2,
@@ -1772,7 +1772,7 @@ SWIFT_CLASS("_TtC7BuzzSDK12BuzzSDKStyle")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
-typedef SWIFT_ENUM(NSInteger, BuzzSDKStyleFormat, closed) {
+typedef SWIFT_ENUM(NSInteger, BuzzSDKStyleFormat, open) {
   BuzzSDKStyleFormatFullScreen = 0,
   BuzzSDKStyleFormatPip = 1,
 };
@@ -1782,7 +1782,7 @@ typedef SWIFT_ENUM(NSInteger, BuzzSDKStyleFormat, closed) {
 /// BuzzSDKVideoInteractionSwipedToPlay: The video was swiped from the PIP playlist to start playback.
 /// BuzzSDKVideoInteractionPlay: The video was first played or resumed by the user by tapping on the Play button.
 /// BuzzSDKVideoInteractionSoundOn: The video was unmutted by user interaction.
-typedef SWIFT_ENUM(NSInteger, BuzzSDKVideoInteraction, closed) {
+typedef SWIFT_ENUM(NSInteger, BuzzSDKVideoInteraction, open) {
   BuzzSDKVideoInteractionFullScreen = 0,
   BuzzSDKVideoInteractionSwipedToPlay = 1,
   BuzzSDKVideoInteractionPlay = 2,
@@ -1911,19 +1911,19 @@ SWIFT_CLASS("_TtC7BuzzSDK9CardStyle")
 @end
 
 /// The way the content should fill the card.
-typedef SWIFT_ENUM(NSInteger, ContentFillStyle, closed) {
+typedef SWIFT_ENUM(NSInteger, ContentFillStyle, open) {
   ContentFillStyleResizesToTitle = 0,
   ContentFillStyleFillsCard = 1,
 };
 
 /// The vertical position of the Title in the Card
-typedef SWIFT_ENUM(NSInteger, TitleVerticalPosition, closed) {
+typedef SWIFT_ENUM(NSInteger, TitleVerticalPosition, open) {
   TitleVerticalPositionTop = 0,
   TitleVerticalPositionBottom = 1,
 };
 
 /// The position of the Kicker in the Card
-typedef SWIFT_ENUM(NSInteger, KickerPosition, closed) {
+typedef SWIFT_ENUM(NSInteger, KickerPosition, open) {
   KickerPositionTopLeft = 0,
   KickerPositionTopRight = 1,
   KickerPositionTopCentered = 2,
@@ -1933,13 +1933,13 @@ typedef SWIFT_ENUM(NSInteger, KickerPosition, closed) {
 };
 
 /// The border type to apply to the kicker
-typedef SWIFT_ENUM(NSInteger, KickerBorderType, closed) {
+typedef SWIFT_ENUM(NSInteger, KickerBorderType, open) {
   KickerBorderTypeNone = 0,
   KickerBorderTypeInclinedRight = 1,
 };
 
 /// Defines the posible 4 corner positions a regular element can take for layout
-typedef SWIFT_ENUM(NSInteger, CornerPosition, closed) {
+typedef SWIFT_ENUM(NSInteger, CornerPosition, open) {
   CornerPositionTopLeft = 0,
   CornerPositionTopRight = 1,
   CornerPositionBottomLeft = 2,
@@ -1947,7 +1947,7 @@ typedef SWIFT_ENUM(NSInteger, CornerPosition, closed) {
 };
 
 /// :nodoc:
-typedef SWIFT_ENUM(NSInteger, DateFormatterStyle, closed) {
+typedef SWIFT_ENUM(NSInteger, DateFormatterStyle, open) {
   DateFormatterStyleDateTime = 0,
   DateFormatterStyleDateTimeTS = 1,
   DateFormatterStyleDateTimeMsTS = 2,
@@ -2214,7 +2214,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, copy) NSArray<NSString *> * _N
 @end
 
 /// The Log level options
-typedef SWIFT_ENUM(NSInteger, LogLevel, closed) {
+typedef SWIFT_ENUM(NSInteger, LogLevel, open) {
   LogLevelNone = 0,
   LogLevelError = 1,
   LogLevelWarning = 2,
@@ -2331,7 +2331,7 @@ SWIFT_CLASS("_TtC7BuzzSDK22MFVASTPlayerController")
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
-typedef SWIFT_ENUM(NSInteger, MFPlaybackQuartile, closed) {
+typedef SWIFT_ENUM(NSInteger, MFPlaybackQuartile, open) {
   MFPlaybackQuartileNone = 0,
   MFPlaybackQuartileFirst = 1,
   MFPlaybackQuartileSecond = 2,
@@ -2340,13 +2340,13 @@ typedef SWIFT_ENUM(NSInteger, MFPlaybackQuartile, closed) {
 };
 
 /// The types of display a video ad can take.
-typedef SWIFT_ENUM(NSInteger, MFVideoAdDisplayType, closed) {
+typedef SWIFT_ENUM(NSInteger, MFVideoAdDisplayType, open) {
   MFVideoAdDisplayTypePip = 0,
   MFVideoAdDisplayTypeFullscreen = 1,
 };
 
 /// The posible sound states of the VAST Controller media player.
-typedef SWIFT_ENUM(NSInteger, MFVASTSoundState, closed) {
+typedef SWIFT_ENUM(NSInteger, MFVASTSoundState, open) {
   MFVASTSoundStateMutted = 0,
   MFVASTSoundStateUnmutted = 1,
 };

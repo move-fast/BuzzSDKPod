@@ -1,0 +1,1512 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.3.1 (swiftlang-1200.0.41 clang-1200.0.32.8)
+// swift-module-flags: -target armv7-apple-ios9.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name BuzzSDK
+import AVFoundation
+import AdSupport
+@_exported import BuzzSDK
+import Foundation
+import OMSDK_Buzztechno
+import Swift
+import UIKit
+import WebKit
+@objc @_inheritsConvenienceInitializers public class MFVASTParserOperation : Foundation.Operation {
+  public var urlString: Swift.String?
+  public var gdprConsentInfo: Swift.String?
+  public var ad: BuzzSDK.MFVASTAd?
+  public var parsingError: Swift.Error?
+  public var invalidAds: [BuzzSDK.MFVASTAd]
+  @objc override dynamic public func main()
+  @objc deinit
+  @objc override dynamic public init()
+}
+extension MFVASTParserOperation : Foundation.XMLParserDelegate {
+  @objc dynamic public func parser(_ parser: Foundation.XMLParser, didStartElement elementName: Swift.String, namespaceURI: Swift.String?, qualifiedName qName: Swift.String?, attributes attributeDict: [Swift.String : Swift.String] = [:])
+  @objc dynamic public func parser(_ parser: Foundation.XMLParser, didEndElement elementName: Swift.String, namespaceURI: Swift.String?, qualifiedName qName: Swift.String?)
+  @objc dynamic public func parser(_ parser: Foundation.XMLParser, foundCDATA CDATABlock: Foundation.Data)
+  @objc dynamic public func parser(_ parser: Foundation.XMLParser, foundCharacters string: Swift.String)
+  @objc dynamic public func parser(_ parser: Foundation.XMLParser, parseErrorOccurred parseError: Swift.Error)
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers open class MFDownloadManager : ObjectiveC.NSObject {
+  public enum MediaType : Swift.String {
+    case video, image
+    public typealias RawValue = Swift.String
+    public init?(rawValue: Swift.String)
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  @objc open class func setup(forAppGroup appGroup: Swift.String?)
+  public static var isDiscretionary: Swift.Bool
+  @objc open class var shared: BuzzSDK.MFDownloadManager {
+    @objc get
+  }
+  @objc open func handleEventsForBackgroundURLSession(identifier: Swift.String, completionHandler: @escaping () -> Swift.Void)
+  @objc open func handleApplicationWillTerminate()
+  @objc open func deleteExpiredFiles()
+  @objc open func cancelDownload(withId id: Swift.String)
+  @objc open func cancellAll()
+  open func mediaFileURL(forId id: Swift.String, mediaType: BuzzSDK.MFDownloadManager.MediaType) -> Foundation.URL?
+  @objc open func imageFileURL(forId id: Swift.String) -> Foundation.URL?
+  @objc open func videoFileURL(forId id: Swift.String) -> Foundation.URL?
+  @objc open func image(forId id: Swift.String) -> UIKit.UIImage?
+  @objc open func image(atURL url: Foundation.URL) -> UIKit.UIImage?
+  open func mediaData(forId id: Swift.String, mediaType: BuzzSDK.MFDownloadManager.MediaType) -> Foundation.Data?
+  @objc open func mediaData(atURL url: Foundation.URL) -> Foundation.Data?
+  @objc open func expireMedia(forId id: Swift.String)
+  open func getLocalURL(forMediaAtURL url: Foundation.URL, inBackground: Swift.Bool, forId id: Swift.String, mediaType: BuzzSDK.MFDownloadManager.MediaType, expiringAt expiration: Foundation.Date?, completion: @escaping BuzzSDK.GetURLCompletion)
+  @objc open func getImage(atURL url: Foundation.URL, inBackground: Swift.Bool, forId id: Swift.String, expiringAt expiration: Foundation.Date?, completion: @escaping BuzzSDK.GetImageCompletion)
+  @objc open func cacheImage(atURL url: Foundation.URL, inBackground: Swift.Bool, forId id: Swift.String, expiringAt expiration: Foundation.Date?)
+  @objc open func getLocalURL(forImageAtURL url: Foundation.URL, inBackground: Swift.Bool, forId id: Swift.String, expiringAt expiration: Foundation.Date?, completion: @escaping BuzzSDK.GetURLCompletion)
+  @objc open func getLocalURL(forVideoAtURL url: Foundation.URL, inBackground: Swift.Bool, forId id: Swift.String, expiringAt expiration: Foundation.Date?, completion: @escaping BuzzSDK.GetURLCompletion)
+  @objc deinit
+}
+extension MFDownloadManager : Foundation.URLSessionDelegate {
+  @objc dynamic public func urlSessionDidFinishEvents(forBackgroundURLSession session: Foundation.URLSession)
+}
+extension MFDownloadManager : Foundation.URLSessionTaskDelegate {
+  @objc dynamic public func urlSession(_ session: Foundation.URLSession, task: Foundation.URLSessionTask, didCompleteWithError error: Swift.Error?)
+}
+extension MFDownloadManager : Foundation.URLSessionDownloadDelegate {
+  @objc dynamic public func urlSession(_ session: Foundation.URLSession, downloadTask: Foundation.URLSessionDownloadTask, didFinishDownloadingTo location: Foundation.URL)
+}
+public typealias GetURLCompletion = (Swift.Bool, Foundation.URL?) -> Swift.Void
+public typealias GetImageCompletion = (Swift.Bool, UIKit.UIImage?) -> Swift.Void
+public struct MFVASTSettings {
+}
+@objc public enum BuzzSDKVideoInteraction : Swift.Int {
+  case fullScreen, swipedToPlay, play, soundOn
+  public typealias RawValue = Swift.Int
+  public init?(rawValue: Swift.Int)
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc @_inheritsConvenienceInitializers public class BuzzSDKVideoInteractionManager : ObjectiveC.NSObject {
+  @objc public func add(interaction: BuzzSDK.BuzzSDKVideoInteraction, toVideoId videoId: Swift.String)
+  @objc public func cleanInteractions(forVideoId videoId: Swift.String)
+  @objc public func cleanAll()
+  @objc public func interactions(forVideoId videoId: Swift.String) -> [Swift.Int : Swift.Int]
+  @objc deinit
+  @objc override dynamic public init()
+}
+@_inheritsConvenienceInitializers @objc public class BuzzSDKStyle : ObjectiveC.NSObject {
+  @objc public enum BuzzSDKStyleFormat : Swift.Int {
+    case fullScreen, pip
+    public typealias RawValue = Swift.Int
+    public init?(rawValue: Swift.Int)
+    public var rawValue: Swift.Int {
+      get
+    }
+  }
+  @objc public class func font(forTitleInFormat format: BuzzSDK.BuzzSDKStyle.BuzzSDKStyleFormat) -> UIKit.UIFont
+  @objc public class func fontColorForTitle() -> UIKit.UIColor
+  @objc public class func font(forKickerInFormat format: BuzzSDK.BuzzSDKStyle.BuzzSDKStyleFormat) -> UIKit.UIFont
+  @objc public class func fontColorForKicker() -> UIKit.UIColor
+  @objc public class func colorForTextBackground() -> UIKit.UIColor
+  @objc deinit
+  @objc override dynamic public init()
+}
+@objc @_inheritsConvenienceInitializers public class AppStyle : ObjectiveC.NSObject {
+  @objc public class func statusBarStyleForMainViewController() -> UIKit.UIStatusBarStyle
+  @objc public class func colorsForGradientOnBackgroundView() -> [UIKit.UIColor]?
+  @objc public class func locationsForGradientOnBackgroundView() -> [CoreGraphics.CGFloat]?
+  @objc public class func mainViewBackgroundColor() -> UIKit.UIColor
+  @objc public class func colorForMainViewActivityIndicatorView() -> UIKit.UIColor?
+  @objc public class func allowKickerDisplay() -> Swift.Bool
+  @objc public class func shadowColorForCards() -> UIKit.UIColor
+  @objc public class func shadowRadiusForCards() -> CoreGraphics.CGFloat
+  @objc public class func shadowOffsetForCards() -> CoreGraphics.CGSize
+  @objc public class func videoMemeCardTextsFontName() -> Swift.String
+  @objc public class func videoMemeCardTextsBaseFontSize() -> CoreGraphics.CGFloat
+  @objc public class func videoMemeCardTextsColor() -> UIKit.UIColor
+  @objc public class func videoMemeCardTextAreaHeighFractionFromCardAreaHeight() -> CoreGraphics.CGFloat
+  @objc public class func videoMemeCardTopTextExtraPadding() -> CoreGraphics.CGFloat
+  @objc public class func videoMemeCardExportProgressLabelFontName() -> Swift.String
+  @objc public class func videoMemeCardExportProgressLabelFontSize() -> CoreGraphics.CGFloat
+  @objc public class func videoMemeCardExportBorderTicknessPoints() -> CoreGraphics.CGFloat
+  @objc public class func videoMemeCardExportBorderColor() -> UIKit.UIColor
+  @objc public class func videoMemeCardExportFinalInfoFrameTextColor() -> UIKit.UIColor
+  @objc public class func videoMemeCardExportFinalInfoFrameFontSize() -> CoreGraphics.CGFloat
+  @objc public class func videoMemeCardExportFinalInfoFrameBGColor() -> UIKit.UIColor
+  @objc public class func watermarkTextFontName() -> Swift.String
+  @objc public class func watermarkTextFontSize() -> CoreGraphics.CGFloat
+  @objc public class func watermarkColor() -> UIKit.UIColor
+  @objc public class func watermarkOpacity() -> CoreGraphics.CGFloat
+  @objc public class func watermarkImageOnTopOfText() -> Swift.Bool
+  @objc public class func additionalCardActionViewButtonsMargin() -> CoreGraphics.CGFloat
+  @objc public class func additionalCardActionViewLabelFontName() -> Swift.String
+  @objc public class func additionalCardActionViewLabelFontSize() -> CoreGraphics.CGFloat
+  @objc public class func additionalCardActionViewLabelFontColor() -> UIKit.UIColor
+  @objc public class func additionalCardActionViewButtonsFontName() -> Swift.String
+  @objc public class func additionalCardActionViewButtonsFontSize() -> CoreGraphics.CGFloat
+  @objc public class func additionalCardActionViewButtonsFontColor() -> UIKit.UIColor
+  @objc public class func additionalCardActionViewButtonsBackgroundColor() -> UIKit.UIColor
+  @objc public class func additionalCardActionViewButtonsBorderColor() -> UIKit.UIColor
+  @objc public class func additionalCardActionViewButtonsBorderWidth() -> CoreGraphics.CGFloat
+  @objc public class func additionalCardActionViewButtonsCornerRadius() -> CoreGraphics.CGFloat
+  public class func pipToolTipLabelPadding() -> BuzzSDK.LayoutCoordinates
+  @objc public class func pipToolTipLabelPadding() -> BuzzSDK.LayoutCoordinatesObjC
+  @objc public class func textualPIPToolTipFontName() -> Swift.String
+  @objc public class func textualPIPToolTipFontSize() -> CoreGraphics.CGFloat
+  @objc public class func textualPIPToolTipFontColor() -> UIKit.UIColor
+  @objc public class func textualPIPToolTiplBackgroundColor() -> UIKit.UIColor
+  @objc public class func stackProgressBarProgressTintColor() -> UIKit.UIColor
+  @objc public class func stackProgressBarTrackTintColor() -> UIKit.UIColor
+  @objc public class func fontNameForCounterInNavigationView() -> Swift.String
+  @objc public class func textColorForCounterInNavigationView() -> UIKit.UIColor
+  @objc public class func drawThinLineOverProgressBar() -> Swift.Bool
+  @objc public class func fontNameForInfoButtonLabelInNavigationView() -> Swift.String
+  public class func topBarBackgroundColor() -> UIKit.UIColor
+  public class func topBarBackgroundImage() -> UIKit.UIImage?
+  public class func logoTopMargin() -> CoreGraphics.CGFloat
+  public class func logoTopMarginIP4() -> CoreGraphics.CGFloat
+  public class func logoImageViewContentMode() -> UIKit.UIView.ContentMode
+  public class func logoVerticalConstraintAttribute() -> UIKit.NSLayoutConstraint.Attribute
+  public class func logoOffset() -> BuzzSDK.LayoutCoordinates
+  public class func tintColorForBackButton() -> UIKit.UIColor?
+  @objc public class func fontNameForReloadButton() -> Swift.String
+  @objc public class func fontSizeForReloadButton() -> CoreGraphics.CGFloat
+  @objc public class func webviewToolbarOnTop() -> Swift.Bool
+  @objc public class func tintColorForWebViewBottomBarItems() -> UIKit.UIColor?
+  @objc public class func presentSecondaryCloseButtonOnWebView() -> Swift.Bool
+  public class func inAppPurchaseSubscriptionViewsColorForButtonAndPageMarkers() -> UIKit.UIColor?
+  @objc public class func fontNameForSDKBringStackBackCounter() -> Swift.String
+  @objc public class func fontSizeForSDKBringStackBackCounter() -> CoreGraphics.CGFloat
+  @objc public class func fontColorForSDKBringStackBackCounter() -> UIKit.UIColor
+  @objc public class func backgroundColorForNormalStateForSDKBringStackBackCounter() -> UIKit.UIColor
+  @objc public class func backgroundColorForHighlightedStateForSDKBringStackBackCounter() -> UIKit.UIColor
+  @objc deinit
+  @objc override dynamic public init()
+}
+extension UIImageView {
+  @objc dynamic open func tintImage(withColor tintColor: UIKit.UIColor)
+}
+extension UIButton {
+  @objc dynamic open func tintButtonImage(forState state: UIKit.UIControl.State, withColor tintColor: UIKit.UIColor)
+}
+extension UIImage {
+  @objc dynamic open class func image(withColor color: UIKit.UIColor, bounds: CoreGraphics.CGRect) -> UIKit.UIImage?
+}
+public struct LayoutCoordinates {
+}
+@objc public class LayoutCoordinatesObjC : ObjectiveC.NSObject {
+  @objc public var top: CoreGraphics.CGFloat, bottom: CoreGraphics.CGFloat, left: CoreGraphics.CGFloat, right: CoreGraphics.CGFloat
+  required public init(layoutCoordinates: BuzzSDK.LayoutCoordinates)
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc public class CardStyle : ObjectiveC.NSObject {
+  public enum Style : Swift.String, Swift.CaseIterable {
+    case base
+    case bild, bildVideo, byou, noizz
+    case sportBild
+    case bildPlus
+    case autoBild
+    case computerBild
+    case travelBook
+    case styleBook
+    case techBook
+    case fitBook
+    case myHomeBook
+    case businessInsider
+    case archAndDesignDefault
+    case buzzSDKDefault
+    public typealias RawValue = Swift.String
+    public init?(rawValue: Swift.String)
+    public var rawValue: Swift.String {
+      get
+    }
+    public typealias AllCases = [BuzzSDK.CardStyle.Style]
+    public static var allCases: [BuzzSDK.CardStyle.Style] {
+      get
+    }
+  }
+  @objc public enum ContentFillStyle : Swift.Int {
+    case resizesToTitle, fillsCard
+    public typealias RawValue = Swift.Int
+    public init?(rawValue: Swift.Int)
+    public var rawValue: Swift.Int {
+      get
+    }
+  }
+  @objc public enum TitleVerticalPosition : Swift.Int {
+    case top, bottom
+    public typealias RawValue = Swift.Int
+    public init?(rawValue: Swift.Int)
+    public var rawValue: Swift.Int {
+      get
+    }
+  }
+  @objc public enum KickerPosition : Swift.Int {
+    case topLeft, topRight, topCentered
+    case bottomLeft, bottomRight, bottomCentered
+    public typealias RawValue = Swift.Int
+    public init?(rawValue: Swift.Int)
+    public var rawValue: Swift.Int {
+      get
+    }
+  }
+  @objc public enum KickerBorderType : Swift.Int {
+    case none, inclinedRight
+    public typealias RawValue = Swift.Int
+    public init?(rawValue: Swift.Int)
+    public var rawValue: Swift.Int {
+      get
+    }
+  }
+  @objc public enum CornerPosition : Swift.Int {
+    case topLeft, topRight, bottomLeft, bottomRight
+    public typealias RawValue = Swift.Int
+    public init?(rawValue: Swift.Int)
+    public var rawValue: Swift.Int {
+      get
+    }
+  }
+  required public init(style: BuzzSDK.CardStyle.Style)
+  @objc public class func defaultCardStyleForApp() -> BuzzSDK.CardStyle
+  @objc public class func cardStyle(forStyleString styleString: Swift.String?) -> BuzzSDK.CardStyle
+  @objc public func cardBackgroundColor() -> UIKit.UIColor
+  @objc public func cardAspectRatio() -> CoreGraphics.CGFloat
+  @objc public func horizontalMarginForCardRect() -> CoreGraphics.CGFloat
+  @objc public func minVerticalMarginForCardRect() -> CoreGraphics.CGFloat
+  @objc public func shouldApplyRotationToCard() -> Swift.Bool
+  @objc public func contentFillStyle() -> BuzzSDK.CardStyle.ContentFillStyle
+  @objc public func cardBorderSpacing() -> CoreGraphics.CGFloat
+  @objc public func titleVerticalPosition() -> BuzzSDK.CardStyle.TitleVerticalPosition
+  @objc public func titleTextAlingment() -> UIKit.NSTextAlignment
+  public func titleMargins() -> BuzzSDK.LayoutCoordinates
+  @objc public func titleMargins() -> BuzzSDK.LayoutCoordinatesObjC
+  @objc public func titlePaddings() -> UIKit.UIEdgeInsets
+  public func titleMarginsCompensationsIfNoKickerPresent() -> BuzzSDK.LayoutCoordinates
+  @objc public func titleMarginsCompensationsIfNoKickerPresent() -> BuzzSDK.LayoutCoordinatesObjC
+  @objc public func titleIntraLineSeparation() -> CoreGraphics.CGFloat
+  @objc public func slopeForDiagonalCutFitEffectFromTitleToMainContent() -> CoreGraphics.CGFloat
+  @objc public func maxTitleAreaHeighRatioToCardMainContentHeight() -> CoreGraphics.CGFloat
+  @objc public func fontNameForTitle() -> Swift.String
+  @objc public func fontSizeForTitle() -> CoreGraphics.CGFloat
+  @objc public func colorForTitleText() -> UIKit.UIColor
+  @objc public func colorForTitleBackground() -> UIKit.UIColor
+  @objc public func applyShadowToTitle() -> Swift.Bool
+  @objc public func forceTitleUppercase() -> Swift.Bool
+  @objc public func addGradientBackgroundForTitleReadability() -> Swift.Bool
+  @objc public func gradientBackgroundForTitleReadabilityNonLinearOverTitle() -> Swift.Bool
+  @objc public func gradientBackgroundForTitleReadabilityFadeYExtensionForSmoothFade() -> CoreGraphics.CGFloat
+  @objc public func gradientBackgroundForTitleReadabilityColorForEndPoint() -> UIKit.UIColor
+  @objc public func gradientBackgroundForTitleReadabilityColorForNonLinearTransitionPoint() -> UIKit.UIColor
+  @objc public func minimumLenghtForKickerText() -> Swift.Int
+  @objc public func kickerPosition() -> BuzzSDK.CardStyle.KickerPosition
+  public func kickerMargins() -> BuzzSDK.LayoutCoordinates
+  @objc public func kickerMargins() -> BuzzSDK.LayoutCoordinatesObjC
+  public func kickerPaddings() -> BuzzSDK.LayoutCoordinates
+  @objc public func kickerPaddings() -> BuzzSDK.LayoutCoordinatesObjC
+  @objc public func kickerBorderType() -> BuzzSDK.CardStyle.KickerBorderType
+  @objc public func kickerMaxHeight() -> CoreGraphics.CGFloat
+  @objc public func kickerBackgroudMustCoverFullWidthOfCard() -> Swift.Bool
+  @objc public func fontNameForKicker() -> Swift.String
+  @objc public func fontSizeForKicker() -> CoreGraphics.CGFloat
+  @objc public func colorForKickerText() -> UIKit.UIColor
+  @objc public func colorForKickerBackground() -> UIKit.UIColor
+  @objc public func hideKickerWhenTransitioningVideo() -> Swift.Bool
+  @objc public func forceKickerUppercase() -> Swift.Bool
+  @objc public func articleCardVideoControlButtonBaseSidePoints() -> CoreGraphics.CGFloat
+  public func overlayPrimaryTopLeftButtonMargins() -> BuzzSDK.LayoutCoordinates
+  @objc public func overlayPrimaryTopLeftButtonMargins() -> BuzzSDK.LayoutCoordinatesObjC
+  public func overlaySecondaryTopLeftButtonMargins() -> BuzzSDK.LayoutCoordinates
+  @objc public func overlaySecondaryTopLeftButtonMargins() -> BuzzSDK.LayoutCoordinatesObjC
+  public func overlayPrimaryTopRightButtonMargins() -> BuzzSDK.LayoutCoordinates
+  @objc public func overlayPrimaryTopRightButtonMargins() -> BuzzSDK.LayoutCoordinatesObjC
+  public func overlayPrimaryBottomLeftButtonMargins() -> BuzzSDK.LayoutCoordinates
+  @objc public func overlayPrimaryBottomLeftButtonMargins() -> BuzzSDK.LayoutCoordinatesObjC
+  @objc public func considerKickerPositionForFullScreenButtonPositioning() -> Swift.Bool
+  @objc public func tintColorForControlButtons() -> UIKit.UIColor?
+  @objc public func colorForVideoCoverUpView() -> UIKit.UIColor
+  @objc public func videoProgressBarProgressTintColor() -> UIKit.UIColor
+  @objc public func videoProgressBarTrackTintColor() -> UIKit.UIColor
+  @objc public func cardTagImageCornerPosition() -> BuzzSDK.CardStyle.CornerPosition
+  public func cardTagImageMarginToCard() -> BuzzSDK.LayoutCoordinates
+  @objc public func cardTagImageMarginToCard() -> BuzzSDK.LayoutCoordinatesObjC
+  @objc public func cardTagImageName() -> Swift.String?
+  @objc deinit
+  @objc override dynamic public init()
+}
+@objc public enum DateFormatterStyle : Swift.Int {
+  case dateTime, dateTimeTS, dateTimeMsTS, dateTimeMsTSAlt, date, dateUI
+  case time, timeWithMS
+  public typealias RawValue = Swift.Int
+  public init?(rawValue: Swift.Int)
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+extension Date {
+  public static func date(fromString string: Swift.String, style: BuzzSDK.DateFormatterStyle) -> Foundation.Date?
+  public static func date(fromLocalShortDateString string: Swift.String) -> Foundation.Date?
+  public static func date(fromLocalVerboseDateString string: Swift.String) -> Foundation.Date?
+  public static func timeInterval(fromString string: Swift.String, style: BuzzSDK.DateFormatterStyle) -> Foundation.TimeInterval?
+  public static func timeInterval(fromString string: Swift.String) -> Foundation.TimeInterval?
+  public static func string(fromTimeInterval timeInterval: Foundation.TimeInterval, style: BuzzSDK.DateFormatterStyle = .timeWithMS) -> Swift.String?
+  public func stringWithAPIFormat(style: BuzzSDK.DateFormatterStyle) -> Swift.String
+  public func stringWithGMTTimeHour() -> Swift.String
+  public func stringWithLocalTimeHour() -> Swift.String
+  public func stringWithLocalDayOfTheWeek() -> Swift.String
+  public func stringWithLocalShortDate() -> Swift.String
+  public func stringWithLocalDateTimeForFileNames() -> Swift.String
+  public func stringWithVerboseDateTime() -> Swift.String
+  public func stringWithLocalVerboseDate() -> Swift.String
+}
+extension NSDate {
+  @objc public static func date(fromString string: Swift.String, style: BuzzSDK.DateFormatterStyle) -> Foundation.NSDate?
+  @objc dynamic public func stringWithAPIFormat(style: BuzzSDK.DateFormatterStyle) -> Swift.String
+  @objc dynamic public func stringWithGMTTimeHour() -> Swift.String
+  @objc dynamic public func stringWithLocalTimeHour() -> Swift.String
+  @objc dynamic public func stringWithLocalDayOfTheWeek() -> Swift.String
+  @objc dynamic public func stringWithLocalShortDate() -> Swift.String
+}
+@_inheritsConvenienceInitializers @IBDesignable @objc final public class MFGradientView : UIKit.UIView {
+  @IBInspectable @objc final public var startColor: UIKit.UIColor
+  @IBInspectable @objc final public var endColor: UIKit.UIColor
+  @objc override final public func draw(_ rect: CoreGraphics.CGRect)
+  @objc deinit
+  @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @objc required dynamic public init?(coder: Foundation.NSCoder)
+}
+@_hasMissingDesignatedInitializers public class MFVASTNode {
+  @objc deinit
+}
+extension MFVASTNode : Swift.CustomStringConvertible {
+  public var description: Swift.String {
+    get
+  }
+}
+extension MFVASTNode : Swift.Equatable {
+  public static func == (lhs: BuzzSDK.MFVASTNode, rhs: BuzzSDK.MFVASTNode) -> Swift.Bool
+}
+@objc @_inheritsConvenienceInitializers public class AppConfiguration : ObjectiveC.NSObject {
+  public enum MFTarget : Swift.String {
+    case buzz, buzzStageDebug, buzzProductionTest
+    case buzzSDK
+    case archAndDesign
+    public typealias RawValue = Swift.String
+    public init?(rawValue: Swift.String)
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  @objc public enum MFVertical : Swift.Int {
+    case buzz
+    case buzzSDK
+    case archAndDesign
+    public typealias RawValue = Swift.Int
+    public init?(rawValue: Swift.Int)
+    public var rawValue: Swift.Int {
+      get
+    }
+  }
+  public static var targetKeyName: Swift.String {
+    get
+  }
+  public static var target: BuzzSDK.AppConfiguration.MFTarget {
+    get
+  }
+  @objc public static let vertical: BuzzSDK.AppConfiguration.MFVertical
+  @objc public class func reset(targetKeyName: Swift.String)
+  @objc public class func debugAssessAllVideosAsPlayable() -> Swift.Bool
+  @objc public class func debugBlockAdCards() -> Swift.Bool
+  @objc public class func appGroupName() -> Swift.String
+  @objc public class func hardcodedBundleId() -> Swift.String
+  @objc public class func verticalLocalizationFilename() -> Swift.String
+  @objc public class func serverBaseURL() -> Swift.String
+  @objc public class func serverAuthToken() -> Swift.String
+  @objc public class func ignoreCardStyleFromAPIResponse() -> Swift.Bool
+  @objc public class func appRequiresOnboarding() -> Swift.Bool
+  @objc public class func showInfoCards() -> Swift.Bool
+  @objc public class func canShowShakeToGoBackCard() -> Swift.Bool
+  @objc public class func nibNameForGenericCardActionView() -> Swift.String
+  @objc public class func nibNameForNotificationView() -> Swift.String
+  @objc public class func shakeInfoCardImageName() -> Swift.String
+  @objc public class func logoButtonImageName() -> Swift.String
+  @objc public class func imageNameForBackButton() -> Swift.String
+  @objc public class func soundONButtonImageName() -> Swift.String
+  @objc public class func soundOFFButtonImageName() -> Swift.String
+  @objc public class func soundOnButtonImage() -> UIKit.UIImage?
+  @objc public class func soundOffButtonImage() -> UIKit.UIImage?
+  @objc public class func minimizeButtonImage() -> UIKit.UIImage?
+  @objc public class func fullScreenButtonImage() -> UIKit.UIImage?
+  @objc public class func playButtonStackImage() -> UIKit.UIImage?
+  @objc public class func soundPIPOffButtonImage() -> UIKit.UIImage?
+  @objc public class func soundPIPOnButtonImage() -> UIKit.UIImage?
+  @objc public class func fullScreenPIPButtonImage() -> UIKit.UIImage?
+  @objc public class func stackViewReloadImageName() -> Swift.String?
+  @objc public class func watermarkImage() -> UIKit.UIImage?
+  @objc public class func shouldAllowFullScreenVideoPlayback() -> Swift.Bool
+  @objc public class func showVideoControlButtonsOverlayOverVideoContainer() -> Swift.Bool
+  @objc public class func pipVideoViewBorderPoints() -> CoreGraphics.CGFloat
+  @objc public class func pipVideoViewDefaultWidthToScreenWidthFraction() -> CoreGraphics.CGFloat
+  @objc public class func pipVideoViewMaximumWidthToScreenWidthFraction() -> CoreGraphics.CGFloat
+  @objc public class func pipVideoViewMinimumWidthToScreenWidthFraction() -> CoreGraphics.CGFloat
+  @objc public class func pipVideoViewMaxHeightToScreenHeightFraction() -> CoreGraphics.CGFloat
+  @objc public class func pipVideoViewControllerDisplayTopPipCentered() -> Swift.Bool
+  @objc public class func desiredVerticalSpaceBetweenCardStackBottomAndPIPVideoTop() -> CoreGraphics.CGFloat
+  @objc public class func pipVideoViewRequiredDismissalsToHidePanDownTooltipForever() -> Swift.Int
+  @objc public class func shouldAllowTooltipInPIP() -> Swift.Bool
+  @objc public class func includePIPAudioControlButton() -> Swift.Bool
+  @objc public class func includePIPFullScreenControlButton() -> Swift.Bool
+  @objc public class func numberOfMemeShareRequiredBeforeHidingIntroMessage() -> Swift.Int
+  @objc public class func videoMemeCardExportIncludeFinalInfoFrame() -> Swift.Bool
+  @objc public class func showShareWatermark() -> Swift.Bool
+  @objc public class func watermarkLabelText() -> Swift.String
+  @objc public class func webViewInjectJSString() -> Swift.String?
+  @objc public class func shareAppStoreURLMessage() -> Swift.String
+  @objc public class func useInvertedShareButtons() -> Swift.Bool
+  @objc public class func showVideoShareButtonsAfterSeconds() -> CoreGraphics.CGFloat
+  @objc public class func automaticDisplayOfShareButtonsAfterSeconds() -> CoreGraphics.CGFloat
+  @objc public class func videoAssetNameForIntroController() -> Swift.String?
+  @objc public class func backgroundColorForIntroController() -> UIKit.UIColor
+  @objc public class func supportSubscriptions() -> Swift.Bool
+  @objc public class func wasBeforeAPaidApp() -> Swift.Bool
+  @objc public class func productsListPlistName() -> Swift.String
+  @objc public static var productIdentifiers: [Swift.String] {
+    @objc get
+  }
+  @objc public class func dividerForSubscriptionSubUnitPriceCalculationBasic() -> Swift.Double
+  @objc public class func dividerForSubscriptionSubUnitPriceCalculationPremium() -> Swift.Double
+  @objc public class func urlStringForPrivacyPolicy() -> Swift.String
+  @objc public class func urlStringForTermsOfUse() -> Swift.String
+  @objc public class func presentDataPrivacyInfoButton() -> Swift.Bool
+  @objc public class func trackableURLRefererHeaderValue() -> Swift.String?
+  @objc public class func adjustToken() -> Swift.String?
+  @objc public class func adjustEventAdClickEventToken() -> Swift.String?
+  @objc public class func adjustAdImpressionEventToken() -> Swift.String?
+  @objc public class func adjustAppLaunchEventToken() -> Swift.String?
+  @objc public class func adjustOnboardingCompleteAllowPushEventToken() -> Swift.String?
+  @objc public class func adjustOnboardingCompleteEventToken() -> Swift.String?
+  @objc public class func adjustSubscriptionEventToken() -> Swift.String?
+  @objc public class func adjustSubscriptionUIGroupBasicEventToken() -> Swift.String?
+  @objc public class func adjustSubscriptionUIGroupPremiumEventToken() -> Swift.String?
+  @objc public class func adjustSubscriptionGroupBasicEventToken() -> Swift.String?
+  @objc public class func adjustSubscriptionGroupPremiumEventToken() -> Swift.String?
+  @objc deinit
+  @objc override dynamic public init()
+}
+@objc @_inheritsConvenienceInitializers public class BuzzSDKDevice : ObjectiveC.NSObject {
+  @objc public static var slug: Swift.String? {
+    @objc get
+  }
+  @objc public class func update(completion: @escaping (Swift.Bool) -> Swift.Void)
+  @objc deinit
+  @objc override dynamic public init()
+}
+@objc @_inheritsConvenienceInitializers public class MFLogger : ObjectiveC.NSObject {
+  @objc public enum LogLevel : Swift.Int {
+    case none
+    case error
+    case warning
+    case info
+    case debug
+    public typealias RawValue = Swift.Int
+    public init?(rawValue: Swift.Int)
+    public var rawValue: Swift.Int {
+      get
+    }
+  }
+  @objc public static var logLevel: BuzzSDK.MFLogger.LogLevel
+  @objc public static var classNamesToInclude: [Swift.String]
+  @objc public class func log(_ message: Swift.String, fromClass aClass: Swift.AnyClass?, level: BuzzSDK.MFLogger.LogLevel)
+  @objc deinit
+  @objc override dynamic public init()
+}
+@objc @_hasMissingDesignatedInitializers public class BUZZSDKNetworking : ObjectiveC.NSObject {
+  @objc public static var shared: BuzzSDK.BUZZSDKNetworking {
+    @objc get
+  }
+  @objc public class func setup(withAPIKey apiKey: Swift.String)
+  @objc public func getDeviceInfo(forSlug slug: Swift.String, completion: @escaping (BuzzSDK.MFNetworking.Payload?, Swift.Error?) -> Swift.Void)
+  @objc public func registerOrUpdateDevice(forSlug slug: Swift.String?, deviceInfo: BuzzSDK.MFNetworking.Payload, completion: @escaping (Swift.String?, Swift.Error?) -> Swift.Void)
+  @objc public func getConfiguration(forGroup group: Swift.String?, completion: @escaping (BuzzSDK.MFNetworking.Payload?, [BuzzSDK.MFNetworking.Payload]?, Swift.Error?) -> Swift.Void)
+  @objc public func postDeviceLogs(_ logs: [BuzzSDK.MFNetworking.Payload], forSlug slug: Swift.String, completion: @escaping (Swift.Bool, Swift.Error?) -> Swift.Void)
+  @objc deinit
+  @objc override dynamic public init()
+}
+extension UIView {
+  @objc dynamic public func applyShadow(withColor color: UIKit.UIColor = .black, offset: CoreGraphics.CGSize = CGSize(width : 0, height: 1), opacity: Swift.Float = 0.2, radius: CoreGraphics.CGFloat = 2.0)
+  @objc dynamic public func applyShadow(withOpacity opacity: Swift.Float)
+}
+@objc public protocol MFFullScreenVideoPlayerControllerDelegate : AnyObject {
+  @objc func fullScreenVideoPlayerController(_ controller: BuzzSDK.MFFullScreenVideoPlayerController, willStartTransitionFrom fromVC: UIKit.UIViewController, to toVC: UIKit.UIViewController, in transitionView: UIKit.UIView?, for mediaPlayer: BuzzSDK.GDMediaPlayer?, with videoContainerView: UIKit.UIView?)
+  @objc func fullScreenVideoPlayerController(_ controller: BuzzSDK.MFFullScreenVideoPlayerController, videoContainerViewFrameForTransitionTo destinationController: UIKit.UIViewController) -> CoreGraphics.CGRect
+  @objc func fullScreenVideoPlayerController(_ controller: BuzzSDK.MFFullScreenVideoPlayerController, didEndTransitionTo toVC: UIKit.UIViewController, from fromVC: UIKit.UIViewController, in transitionView: UIKit.UIView?, for mediaPlayer: BuzzSDK.GDMediaPlayer?, with placeholderImage: UIKit.UIImage?)
+  @objc func fullScreenVideoPlayerController(_ controller: BuzzSDK.MFFullScreenVideoPlayerController, didCancelTransitionTo toVC: UIKit.UIViewController, from fromVC: UIKit.UIViewController, in transitionView: UIKit.UIView?, for mediaPlayer: BuzzSDK.GDMediaPlayer)
+  @objc func fullScreenVideoPlayerController(_ controller: BuzzSDK.MFFullScreenVideoPlayerController, handlePanGestureForInteractiveDismissal recognizer: UIKit.UIPanGestureRecognizer)
+  @objc func fullScreenVideoPlayerControllerUserRequestDismissal(_ controller: BuzzSDK.MFFullScreenVideoPlayerController, interactive: Swift.Bool)
+  @objc optional func fullScreenVideoPlayerControllerUserRequestsMoreInfo(_ controller: BuzzSDK.MFFullScreenVideoPlayerController)
+  @objc func fullScreenVideoPlayerController(_ controller: BuzzSDK.MFFullScreenVideoPlayerController, shouldVideoPlaybackOnPresentation mediaPlayer: BuzzSDK.GDMediaPlayer) -> Swift.Bool
+  @objc func fullScreenVideoPlayerController(_ controller: BuzzSDK.MFFullScreenVideoPlayerController, willPlayback mediaPlayer: BuzzSDK.GDMediaPlayer) -> Swift.Bool
+  @objc func fullScreenVideoPlayerController(_ controller: BuzzSDK.MFFullScreenVideoPlayerController, willPause mediaPlayer: BuzzSDK.GDMediaPlayer) -> Swift.Bool
+  @objc func fullScreenVideoPlayerController(_ controller: BuzzSDK.MFFullScreenVideoPlayerController, playbackHasEnded mediaPlayer: BuzzSDK.GDMediaPlayer)
+  @objc func fullScreenVideoPlayerController(_ controller: BuzzSDK.MFFullScreenVideoPlayerController, shouldAllowUserToSkipForPlayer mediaPlayer: BuzzSDK.GDMediaPlayer, forward: Swift.Bool) -> Swift.Bool
+  @objc func fullScreenVideoPlayerController(_ controller: BuzzSDK.MFFullScreenVideoPlayerController, willSeek mediaPlayer: BuzzSDK.GDMediaPlayer, to time: CoreMedia.CMTime, externalCompletion completion: (Swift.Bool) -> Swift.Void) -> Swift.Bool
+  @objc optional func fullScreenVideoPlayerControllerImageForCloseButton(_ controller: BuzzSDK.MFFullScreenVideoPlayerController) -> UIKit.UIImage?
+  @objc optional func fullScreenVideoPlayerControllerImageForPlayButton(_ controller: BuzzSDK.MFFullScreenVideoPlayerController) -> UIKit.UIImage?
+  @objc optional func fullScreenVideoPlayerControllerImageForPauseButton(_ controller: BuzzSDK.MFFullScreenVideoPlayerController) -> UIKit.UIImage?
+  @objc optional func fullScreenVideoPlayerControllerStringForMoreInfoButton(_ controller: BuzzSDK.MFFullScreenVideoPlayerController) -> Swift.String?
+  @objc optional func fullScreenVideoPlayerControllerTitleString(_ controller: BuzzSDK.MFFullScreenVideoPlayerController) -> Swift.String?
+  @objc optional func fullScreenVideoPlayerControllerFontForTitle(_ controller: BuzzSDK.MFFullScreenVideoPlayerController) -> UIKit.UIFont?
+  @objc optional func fullScreenVideoPlayerControllerColorForTitle(_ controller: BuzzSDK.MFFullScreenVideoPlayerController) -> UIKit.UIColor?
+  @objc optional func fullScreenVideoPlayerControllerKickerString(_ controller: BuzzSDK.MFFullScreenVideoPlayerController) -> Swift.String?
+  @objc optional func fullScreenVideoPlayerControllerFontForKicker(_ controller: BuzzSDK.MFFullScreenVideoPlayerController) -> UIKit.UIFont?
+  @objc optional func fullScreenVideoPlayerControllerColorForKicker(_ controller: BuzzSDK.MFFullScreenVideoPlayerController) -> UIKit.UIColor?
+  @objc optional func fullScreenVideoPlayerControllerColorForTextBackground(_ controller: BuzzSDK.MFFullScreenVideoPlayerController) -> UIKit.UIColor?
+}
+@objc public class MFFullScreenVideoPlayerController : UIKit.UIViewController {
+  @objc public var mediaPlayer: BuzzSDK.GDMediaPlayer? {
+    get
+  }
+  @objc public var placeholderImage: UIKit.UIImage?
+  @objc @IBOutlet weak public var additionalViewsContainerView: UIKit.UIView!
+  @objc public var transitionWasCancelled: Swift.Bool {
+    get
+  }
+  @objc public init?(delegate: BuzzSDK.MFFullScreenVideoPlayerControllerDelegate)
+  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc public var interactiveTransition: Swift.Bool
+  @objc public func update(transitionProgress progress: CoreGraphics.CGFloat)
+  @objc public func cancelTransition()
+  @objc public func finishTransition()
+  @objc public var isTransitioning: Swift.Bool {
+    get
+  }
+  @objc public func prepare(forPlayer player: BuzzSDK.GDMediaPlayer)
+  @objc public func addPlayerLayerToViewHierarchy()
+  @objc public func playback()
+  @objc public func pause()
+  @objc public func canExchange(with player: BuzzSDK.GDMediaPlayer) -> Swift.Bool
+  @objc public func exchange(player: BuzzSDK.GDMediaPlayer, from controller: UIKit.UIViewController, animated: Swift.Bool, interactive: Swift.Bool = false)
+  @objc public func release(_ completion: @escaping () -> Swift.Void)
+  @objc public func shake()
+  @objc public func ensureDisplayOfControls()
+  @objc public func friendlyObstructions() -> [UIKit.UIView]
+  @objc override dynamic public var preferredStatusBarStyle: UIKit.UIStatusBarStyle {
+    @objc get
+  }
+  @objc override dynamic public func viewDidLoad()
+  @objc override dynamic public func viewWillAppear(_ animated: Swift.Bool)
+  @objc override dynamic public func viewWillTransition(to size: CoreGraphics.CGSize, with coordinator: UIKit.UIViewControllerTransitionCoordinator)
+  @objc deinit
+  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+}
+extension MFFullScreenVideoPlayerController : BuzzSDK.GDMediaPlayerUIDelegateProtocol {
+  @objc dynamic public func mediaPlayer(_ mediaPlayer: BuzzSDK.GDMediaPlayer, playbackHasBeenRequestedCanStartPlayback canPlayNow: Swift.Bool)
+  @objc dynamic public func mediaPlayer(_ mediaPlayer: BuzzSDK.GDMediaPlayer, startedPlaybackFor mediaPlayerContentType: BuzzSDK.GDMediaPlayerContentType)
+  @objc dynamic public func mediaPlayer(_ mediaPlayer: BuzzSDK.GDMediaPlayer, videoCanRestartPlaybackFor mediaPlayerContentType: BuzzSDK.GDMediaPlayerContentType, wasStalled: Swift.Bool)
+  @objc dynamic public func mediaPlayer(_ mediaPlayer: BuzzSDK.GDMediaPlayer, videoHasStalledFor mediaPlayerContentType: BuzzSDK.GDMediaPlayerContentType)
+  @objc dynamic public func mediaPlayer(_ mediaPlayer: BuzzSDK.GDMediaPlayer, isReadyForDisplayFor mediaPlayerContentType: BuzzSDK.GDMediaPlayerContentType)
+  @objc dynamic public func mediaPlayer(_ mediaPlayer: BuzzSDK.GDMediaPlayer, playbackWasPausedFor mediaPlayerContentType: BuzzSDK.GDMediaPlayerContentType)
+  @objc dynamic public func mediaPlayer(_ mediaPlayer: BuzzSDK.GDMediaPlayer, videoHasReachedEndFor mediaPlayerContentType: BuzzSDK.GDMediaPlayerContentType, willLoop: Swift.Bool)
+}
+extension MFFullScreenVideoPlayerController : UIKit.UIViewControllerTransitioningDelegate {
+  @objc dynamic public func animationController(forPresented presented: UIKit.UIViewController, presenting: UIKit.UIViewController, source: UIKit.UIViewController) -> UIKit.UIViewControllerAnimatedTransitioning?
+  @objc dynamic public func animationController(forDismissed dismissed: UIKit.UIViewController) -> UIKit.UIViewControllerAnimatedTransitioning?
+  @objc dynamic public func interactionControllerForDismissal(using animator: UIKit.UIViewControllerAnimatedTransitioning) -> UIKit.UIViewControllerInteractiveTransitioning?
+  @objc dynamic public func interactionControllerForPresentation(using animator: UIKit.UIViewControllerAnimatedTransitioning) -> UIKit.UIViewControllerInteractiveTransitioning?
+}
+extension MFFullScreenVideoPlayerController : UIKit.UIViewControllerAnimatedTransitioning {
+  @objc dynamic public func animateTransition(using transitionContext: UIKit.UIViewControllerContextTransitioning)
+  @objc dynamic public func transitionDuration(using transitionContext: UIKit.UIViewControllerContextTransitioning?) -> Foundation.TimeInterval
+}
+@objc @_inheritsConvenienceInitializers public class MFImageDownloader : ObjectiveC.NSObject {
+  @objc public class func downloadImageTask(forURLString urlString: Swift.String, completion: @escaping (UIKit.UIImage?) -> Swift.Void) -> Foundation.URLSessionDataTask?
+  @objc public class func downloadImage(forURLString urlString: Swift.String, completion: @escaping (UIKit.UIImage?) -> Swift.Void)
+  @objc deinit
+  @objc override dynamic public init()
+}
+extension NumberFormatter {
+  public static let shared: Foundation.NumberFormatter
+}
+@objc open class MFNetworking : ObjectiveC.NSObject {
+  public typealias Payload = [Swift.String : Any]
+  public struct ErrorUserInfoKeys {
+  }
+  public enum MFError : Foundation.CustomNSError, Swift.Equatable {
+    case emptyResponseData
+    case invalidResponseData(description: Swift.String?)
+    case unsuccesfullHTTPResponseCode(code: Swift.Int, description: Swift.String?)
+    case invalidPayload(description: Swift.String?)
+    case missingRequestData(description: Swift.String?)
+    public static var errorDomain: Swift.String
+    public var errorCode: Swift.Int {
+      get
+    }
+    public var errorUserInfo: [Swift.String : Any] {
+      get
+    }
+    public static func == (lhs: BuzzSDK.MFNetworking.MFError, rhs: BuzzSDK.MFNetworking.MFError) -> Swift.Bool
+  }
+  required public init(authToken: Swift.String, identifier: Swift.String = "MFNetworkingURLSession")
+  public var backgroundCompletionHandlers: [Swift.String : (() -> Swift.Void)]
+  public func createBackgroundURLSessions()
+  public func isTaskPending(for url: Foundation.URL) -> Swift.Bool
+  public func isTaskPending(for sourceId: Swift.String) -> Swift.Bool
+  open func sendRequest(forURL url: Foundation.URL, method: Swift.String, extraHeaders: [Swift.String : Swift.String] = [:], body: Any?, acceptEmptyResponse: Swift.Bool = false, completion: @escaping (Any?, Swift.Error?) -> Swift.Void) -> Foundation.URLSessionDataTask?
+  public func sendRequestAllowEmptyResponse(forURL url: Foundation.URL, method: Swift.String, extraHeaders: [Swift.String : Swift.String] = [:], body: Any?, completion: @escaping (Any?, Swift.Error?) -> Swift.Void) -> Foundation.URLSessionDataTask?
+  public func sendRequestWithDictionaryResponse(forURL url: Foundation.URL, method: Swift.String, extraHeaders: [Swift.String : Swift.String] = [:], body: Any?, completion: @escaping (BuzzSDK.MFNetworking.Payload?, Swift.Error?) -> Swift.Void) -> Foundation.URLSessionDataTask?
+  @objc override dynamic public init()
+  @objc deinit
+}
+extension MFNetworking : Foundation.URLSessionDelegate {
+  @objc dynamic public func urlSessionDidFinishEvents(forBackgroundURLSession session: Foundation.URLSession)
+}
+extension MFNetworking : Foundation.URLSessionTaskDelegate {
+  @objc dynamic public func urlSession(_ session: Foundation.URLSession, task: Foundation.URLSessionTask, didCompleteWithError error: Swift.Error?)
+}
+extension MFNetworking : Foundation.URLSessionDataDelegate {
+  @objc dynamic public func urlSession(_ session: Foundation.URLSession, dataTask: Foundation.URLSessionDataTask, didReceive data: Foundation.Data)
+}
+extension MFNetworking : Foundation.URLSessionDownloadDelegate {
+  @objc dynamic public func urlSession(_ session: Foundation.URLSession, downloadTask: Foundation.URLSessionDownloadTask, didFinishDownloadingTo location: Foundation.URL)
+}
+extension UIColor {
+  @objc convenience dynamic public init(red: Swift.UInt, green: Swift.UInt, blue: Swift.UInt, andAlpha alpha: Swift.UInt)
+  @objc convenience dynamic public init(RGBA: Swift.UInt)
+  @objc dynamic public class func withIntRed(_ red: Swift.UInt, green: Swift.UInt, blue: Swift.UInt, alpha: Swift.UInt) -> UIKit.UIColor
+  @objc dynamic public class func withRGBA(_ rgba: Swift.UInt) -> UIKit.UIColor
+  @objc convenience dynamic public init?(RGBAString: Swift.String)
+}
+@objc public protocol MFVASTPlayerControllerDelegate {
+  @objc func vastPlayerController(_ controller: BuzzSDK.MFVASTPlayerController, adRequestCompletedSuccessfully success: Swift.Bool, error: Swift.Error?)
+  @objc func vastPlayerController(_ controller: BuzzSDK.MFVASTPlayerController, hasFailedWithError error: Swift.Error)
+  @objc func vastPlayerController(_ controller: BuzzSDK.MFVASTPlayerController, willStartLoadingVideoPlayer player: BuzzSDK.GDMediaPlayer)
+  @objc func vastPlayerController(_ controller: BuzzSDK.MFVASTPlayerController, followClickThroughWithURL url: Foundation.URL)
+  @objc func vastPlayerController(_ controller: BuzzSDK.MFVASTPlayerController, didUpdatePlaybackTime playbackTime: Foundation.TimeInterval, videoDuration: Foundation.TimeInterval)
+  @objc func vastPlayerControllerHasLoadedVideoAssets(_ controller: BuzzSDK.MFVASTPlayerController)
+  @objc func vastPlayerControllerIsReadyForDisplay(_ controller: BuzzSDK.MFVASTPlayerController)
+  @objc func vastPlayerControllerStartedPlayback(_ controller: BuzzSDK.MFVASTPlayerController)
+  @objc func vastPlayerControllerPausedPlayback(_ controller: BuzzSDK.MFVASTPlayerController)
+  @objc func vastPlayerControllerCompletedPlayback(_ controller: BuzzSDK.MFVASTPlayerController)
+  @objc func vastPlayerControllerPlaybackStalled(_ controller: BuzzSDK.MFVASTPlayerController)
+  @objc func vastPlayerControllerResumePlaybackAfterStalled(_ controller: BuzzSDK.MFVASTPlayerController)
+  @objc func vastPlayerControllerHasTrackedImpression(_ controller: BuzzSDK.MFVASTPlayerController)
+}
+@objc public class MFVASTPlayerController : ObjectiveC.NSObject {
+  @objc public enum MFPlaybackQuartile : Swift.Int {
+    case none, first, second, third, fourth
+    public typealias RawValue = Swift.Int
+    public init?(rawValue: Swift.Int)
+    public var rawValue: Swift.Int {
+      get
+    }
+  }
+  @objc public enum MFVideoAdDisplayType : Swift.Int {
+    case pip, fullscreen
+    public typealias RawValue = Swift.Int
+    public init?(rawValue: Swift.Int)
+    public var rawValue: Swift.Int {
+      get
+    }
+  }
+  @objc required public init(delegate: BuzzSDK.MFVASTPlayerControllerDelegate)
+  @objc deinit
+  @objc public func processVideoAd(from vastURLString: Swift.String)
+  @objc public var completedPlayback: Swift.Bool {
+    get
+  }
+  @objc public func adClickThroughURL() -> Foundation.URL?
+  public var mediaPlayerType: BuzzSDK.GDMediaPlayer.Type
+  @objc public var mediaPlayer: BuzzSDK.GDMediaPlayer? {
+    get
+  }
+  public var playheadTimeInterval: Foundation.TimeInterval {
+    get
+  }
+  @objc public var currentQuartile: BuzzSDK.MFVASTPlayerController.MFPlaybackQuartile {
+    @objc get
+  }
+  @objc public var videoDuration: Foundation.TimeInterval {
+    @objc get
+  }
+  @objc public var skipOffset: Foundation.TimeInterval {
+    @objc get
+  }
+  @objc public func startLoadingVideoAdContent()
+  @objc public func stop()
+  @objc public func skip()
+  @objc public func pause(byUserAction userAction: Swift.Bool)
+  @objc public func play()
+  @objc public func backToBeginning()
+  @objc public func seek(to time: CoreMedia.CMTime, completion: @escaping (Swift.Bool) -> Swift.Void)
+  @objc public func resume()
+  @objc public func adjustVolumeLevel(_ volumeLevel: Swift.Float, andTrack track: Swift.Bool)
+  @objc public enum MFVASTSoundState : Swift.Int {
+    case mutted, unmutted
+    public typealias RawValue = Swift.Int
+    public init?(rawValue: Swift.Int)
+    public var rawValue: Swift.Int {
+      get
+    }
+  }
+  @objc public func track(soundStateChange newState: BuzzSDK.MFVASTPlayerController.MFVASTSoundState)
+  @objc public func displayTypeChanged(_ newType: BuzzSDK.MFVASTPlayerController.MFVideoAdDisplayType)
+  @objc public func changedFriendlyObstructions(_ friendlyObstructions: [UIKit.UIView]?)
+  @objc public func tapped()
+  @objc public var isAutoplay: Swift.Bool
+  @objc public var gdprConsentInfo: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc override dynamic public init()
+}
+extension MFVASTPlayerController : BuzzSDK.GDMediaPlayerStatusDelegateProtocol {
+  @objc dynamic public func mediaPlayer(_ mediaPlayer: BuzzSDK.GDMediaPlayer, itemIsReadyToPlayFor mediaPlayerContentType: BuzzSDK.GDMediaPlayerContentType)
+  @objc dynamic public func mediaPlayer(_ mediaPlayer: BuzzSDK.GDMediaPlayer, assetsMetadataLoadedFor mediaPlayerContentType: BuzzSDK.GDMediaPlayerContentType)
+  @objc dynamic public func mediaPlayer(_ mediaPlayer: BuzzSDK.GDMediaPlayer, failedToLoadMediaFor mediaPlayerContentType: BuzzSDK.GDMediaPlayerContentType, error: Swift.Error)
+  @objc dynamic public func mediaPlayer(_ mediaPlayer: BuzzSDK.GDMediaPlayer, itemIsNotPlayableFor mediaPlayerContentType: BuzzSDK.GDMediaPlayerContentType)
+}
+extension MFVASTPlayerController : BuzzSDK.GDMediaPlayerUIDelegateProtocol {
+  @objc dynamic public func mediaPlayer(_ mediaPlayer: BuzzSDK.GDMediaPlayer, masterPlayerLayerIsVisibleIn superLayer: QuartzCore.CALayer?)
+  @objc dynamic public func mediaPlayer(_ mediaPlayer: BuzzSDK.GDMediaPlayer, startedPlaybackFor mediaPlayerContentType: BuzzSDK.GDMediaPlayerContentType)
+  @objc dynamic public func mediaPlayer(_ mediaPlayer: BuzzSDK.GDMediaPlayer, playbackWasPausedFor mediaPlayerContentType: BuzzSDK.GDMediaPlayerContentType)
+  @objc dynamic public func mediaPlayer(_ mediaPlayer: BuzzSDK.GDMediaPlayer, isReadyForDisplayFor mediaPlayerContentType: BuzzSDK.GDMediaPlayerContentType)
+  @objc dynamic public func mediaPlayer(_ mediaPlayer: BuzzSDK.GDMediaPlayer, videoHasStalledFor mediaPlayerContentType: BuzzSDK.GDMediaPlayerContentType)
+  @objc dynamic public func mediaPlayer(_ mediaPlayer: BuzzSDK.GDMediaPlayer, videoCanRestartPlaybackFor mediaPlayerContentType: BuzzSDK.GDMediaPlayerContentType, wasStalled: Swift.Bool)
+  @objc dynamic public func mediaPlayer(_ mediaPlayer: BuzzSDK.GDMediaPlayer, videoHasReachedEndFor mediaPlayerContentType: BuzzSDK.GDMediaPlayerContentType, willLoop: Swift.Bool)
+}
+extension Bool {
+  public init(_ string: Swift.String?, def: Swift.Bool = false)
+}
+public enum APIEndpoint {
+  case appConfig(group: Swift.String?)
+  case deviceRegistration(slug: Swift.String?)
+  case deviceInfo(slug: Swift.String)
+  case deviceLogs(slug: Swift.String)
+}
+extension String {
+  public var localized: Swift.String {
+    get
+  }
+  public var localizedVertical: Swift.String {
+    get
+  }
+}
+extension NSString {
+  @objc dynamic public var localized: Foundation.NSString {
+    @objc get
+  }
+  @objc dynamic public var localizedVertical: Foundation.NSString {
+    @objc get
+  }
+}
+@_hasMissingDesignatedInitializers public class MFVASTAd {
+  public enum TrackType {
+    case impression(BuzzSDK.MFVAST.Impressions.Kind)
+    case error(BuzzSDK.MFVAST.AdError)
+    case click
+    case event(BuzzSDK.MFVAST.TrackingEvent.EventType)
+    case verificationError(BuzzSDK.MFVAST.Verification, BuzzSDK.MFVAST.VerificationFailureReason)
+  }
+  public struct State {
+    public func stateValues() -> [BuzzSDK.MFVAST.PlayerState]
+    public func with(clickPos: CoreGraphics.CGPoint?) -> BuzzSDK.MFVASTAd.State
+    public var description: Swift.String {
+      get
+    }
+  }
+  public var clickThroughURLString: Swift.String?
+  public static let defaultSize: CoreGraphics.CGSize
+  public var isCategoryBlocked: Swift.Bool {
+    get
+  }
+  public func bestMediaFile() -> BuzzSDK.MFVASTMediaFile?
+  public func triggerTrackingForType(_ type: BuzzSDK.MFVASTAd.TrackType, forState state: BuzzSDK.MFVASTAd.State) -> [Foundation.URL]
+  @objc deinit
+}
+extension MFVASTAd : Swift.Comparable {
+  public static func < (lhs: BuzzSDK.MFVASTAd, rhs: BuzzSDK.MFVASTAd) -> Swift.Bool
+  public static func == (lhs: BuzzSDK.MFVASTAd, rhs: BuzzSDK.MFVASTAd) -> Swift.Bool
+}
+@_hasMissingDesignatedInitializers public class MFVASTMediaFile {
+  final public let urlString: Swift.String
+  @objc deinit
+}
+extension MFVASTMediaFile : Swift.Comparable {
+  public static func < (lhs: BuzzSDK.MFVASTMediaFile, rhs: BuzzSDK.MFVASTMediaFile) -> Swift.Bool
+  public static func == (lhs: BuzzSDK.MFVASTMediaFile, rhs: BuzzSDK.MFVASTMediaFile) -> Swift.Bool
+}
+@objc public class MFWebViewController : UIKit.UIViewController {
+  @objc public init(withURL url: Foundation.URL, mimeType: Swift.String? = nil, showToolbar: Swift.Bool = true)
+  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc deinit
+  @objc override dynamic public var preferredStatusBarStyle: UIKit.UIStatusBarStyle {
+    @objc get
+  }
+  @objc override dynamic public func viewDidLoad()
+  @objc override dynamic public func viewDidAppear(_ animated: Swift.Bool)
+  @objc override dynamic public func observeValue(forKeyPath keyPath: Swift.String?, of object: Any?, change: [Foundation.NSKeyValueChangeKey : Any]?, context: Swift.UnsafeMutableRawPointer?)
+  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+}
+extension MFWebViewController : WebKit.WKNavigationDelegate {
+  @objc dynamic public func webView(_ webView: WebKit.WKWebView, didFinish navigation: WebKit.WKNavigation!)
+}
+public struct MFVAST {
+  public enum PlayerState : Swift.String {
+    public static func all() -> [BuzzSDK.MFVAST.PlayerState]
+    case skipped, muted, autoplayed, mautoplayed, fullscreen
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+    public init?(rawValue: Swift.String)
+  }
+  public struct AdCategory : Swift.Hashable {
+    public enum Category : Swift.String {
+      case iab1
+      case iab1_1
+      case iab1_2
+      case iab1_3
+      case iab1_4
+      case iab1_5
+      case iab1_6
+      case iab1_7
+      case iab2
+      case iab2_1
+      case iab2_10
+      case iab2_11
+      case iab2_12
+      case iab2_13
+      case iab2_14
+      case iab2_15
+      case iab2_16
+      case iab2_17
+      case iab2_18
+      case iab2_19
+      case iab2_2
+      case iab2_20
+      case iab2_21
+      case iab2_22
+      case iab2_23
+      case iab2_3
+      case iab2_4
+      case iab2_5
+      case iab2_6
+      case iab2_7
+      case iab2_8
+      case iab2_9
+      case iab3
+      case iab3_1
+      case iab3_10
+      case iab3_11
+      case iab3_12
+      case iab3_2
+      case iab3_3
+      case iab3_4
+      case iab3_5
+      case iab3_6
+      case iab3_7
+      case iab3_8
+      case iab3_9
+      case iab4
+      case iab4_1
+      case iab4_10
+      case iab4_11
+      case iab4_2
+      case iab4_3
+      case iab4_4
+      case iab4_5
+      case iab4_6
+      case iab4_7
+      case iab4_8
+      case iab4_9
+      case iab5
+      case iab5_1
+      case iab5_10
+      case iab5_11
+      case iab5_12
+      case iab5_13
+      case iab5_14
+      case iab5_15
+      case iab5_2
+      case iab5_3
+      case iab5_4
+      case iab5_5
+      case iab5_6
+      case iab5_7
+      case iab5_8
+      case iab5_9
+      case iab6
+      case iab6_1
+      case iab6_2
+      case iab6_3
+      case iab6_4
+      case iab6_5
+      case iab6_6
+      case iab6_7
+      case iab6_8
+      case iab6_9
+      case iab7
+      case iab7_1
+      case iab7_10
+      case iab7_11
+      case iab7_12
+      case iab7_13
+      case iab7_14
+      case iab7_15
+      case iab7_16
+      case iab7_17
+      case iab7_18
+      case iab7_19
+      case iab7_2
+      case iab7_20
+      case iab7_21
+      case iab7_22
+      case iab7_23
+      case iab7_24
+      case iab7_25
+      case iab7_26
+      case iab7_27
+      case iab7_28
+      case iab7_29
+      case iab7_3
+      case iab7_30
+      case iab7_31
+      case iab7_32
+      case iab7_33
+      case iab7_34
+      case iab7_35
+      case iab7_36
+      case iab7_37
+      case iab7_38
+      case iab7_39
+      case iab7_4
+      case iab7_40
+      case iab7_41
+      case iab7_42
+      case iab7_43
+      case iab7_44
+      case iab7_45
+      case iab7_5
+      case iab7_6
+      case iab7_7
+      case iab7_8
+      case iab7_9
+      case iab8
+      case iab8_1
+      case iab8_10
+      case iab8_11
+      case iab8_12
+      case iab8_13
+      case iab8_14
+      case iab8_15
+      case iab8_16
+      case iab8_17
+      case iab8_18
+      case iab8_2
+      case iab8_3
+      case iab8_4
+      case iab8_5
+      case iab8_6
+      case iab8_7
+      case iab8_8
+      case iab8_9
+      case iab9
+      case iab9_1
+      case iab9_10
+      case iab9_11
+      case iab9_12
+      case iab9_13
+      case iab9_14
+      case iab9_15
+      case iab9_16
+      case iab9_17
+      case iab9_18
+      case iab9_19
+      case iab9_2
+      case iab9_20
+      case iab9_21
+      case iab9_22
+      case iab9_23
+      case iab9_24
+      case iab9_25
+      case iab9_26
+      case iab9_27
+      case iab9_28
+      case iab9_29
+      case iab9_3
+      case iab9_30
+      case iab9_31
+      case iab9_4
+      case iab9_5
+      case iab9_6
+      case iab9_7
+      case iab9_8
+      case iab9_9
+      case iab10
+      case iab10_1
+      case iab10_2
+      case iab10_3
+      case iab10_4
+      case iab10_5
+      case iab10_6
+      case iab10_7
+      case iab10_8
+      case iab10_9
+      case iab11
+      case iab11_1
+      case iab11_2
+      case iab11_3
+      case iab11_4
+      case iab11_5
+      case iab12
+      case iab12_1
+      case iab12_2
+      case iab12_3
+      case iab13
+      case iab13_1
+      case iab13_10
+      case iab13_11
+      case iab13_12
+      case iab13_2
+      case iab13_3
+      case iab13_4
+      case iab13_5
+      case iab13_6
+      case iab13_7
+      case iab13_8
+      case iab13_9
+      case iab14
+      case iab14_1
+      case iab14_2
+      case iab14_3
+      case iab14_4
+      case iab14_5
+      case iab14_6
+      case iab14_7
+      case iab14_8
+      case iab15
+      case iab15_1
+      case iab15_10
+      case iab15_2
+      case iab15_3
+      case iab15_4
+      case iab15_5
+      case iab15_6
+      case iab15_7
+      case iab15_8
+      case iab15_9
+      case iab16
+      case iab16_1
+      case iab16_2
+      case iab16_3
+      case iab16_4
+      case iab16_5
+      case iab16_6
+      case iab16_7
+      case iab17
+      case iab17_1
+      case iab17_10
+      case iab17_11
+      case iab17_12
+      case iab17_13
+      case iab17_14
+      case iab17_15
+      case iab17_16
+      case iab17_17
+      case iab17_18
+      case iab17_19
+      case iab17_2
+      case iab17_20
+      case iab17_21
+      case iab17_22
+      case iab17_23
+      case iab17_24
+      case iab17_25
+      case iab17_26
+      case iab17_27
+      case iab17_28
+      case iab17_29
+      case iab17_3
+      case iab17_30
+      case iab17_31
+      case iab17_32
+      case iab17_33
+      case iab17_34
+      case iab17_35
+      case iab17_36
+      case iab17_37
+      case iab17_38
+      case iab17_39
+      case iab17_4
+      case iab17_40
+      case iab17_41
+      case iab17_42
+      case iab17_43
+      case iab17_44
+      case iab17_5
+      case iab17_6
+      case iab17_7
+      case iab17_8
+      case iab17_9
+      case iab18
+      case iab18_1
+      case iab18_2
+      case iab18_3
+      case iab18_4
+      case iab18_5
+      case iab18_6
+      case iab19
+      case iab19_1
+      case iab19_10
+      case iab19_11
+      case iab19_12
+      case iab19_13
+      case iab19_14
+      case iab19_15
+      case iab19_16
+      case iab19_17
+      case iab19_18
+      case iab19_19
+      case iab19_2
+      case iab19_20
+      case iab19_21
+      case iab19_22
+      case iab19_23
+      case iab19_24
+      case iab19_25
+      case iab19_26
+      case iab19_27
+      case iab19_28
+      case iab19_29
+      case iab19_3
+      case iab19_30
+      case iab19_31
+      case iab19_32
+      case iab19_33
+      case iab19_34
+      case iab19_35
+      case iab19_36
+      case iab19_4
+      case iab19_5
+      case iab19_6
+      case iab19_7
+      case iab19_8
+      case iab19_9
+      case iab20
+      case iab20_1
+      case iab20_10
+      case iab20_11
+      case iab20_12
+      case iab20_13
+      case iab20_14
+      case iab20_15
+      case iab20_16
+      case iab20_17
+      case iab20_18
+      case iab20_19
+      case iab20_2
+      case iab20_20
+      case iab20_21
+      case iab20_22
+      case iab20_23
+      case iab20_24
+      case iab20_25
+      case iab20_26
+      case iab20_27
+      case iab20_3
+      case iab20_4
+      case iab20_5
+      case iab20_6
+      case iab20_7
+      case iab20_8
+      case iab20_9
+      case iab21
+      case iab21_1
+      case iab21_2
+      case iab21_3
+      case iab22
+      case iab22_1
+      case iab22_2
+      case iab22_3
+      case iab22_4
+      case iab23
+      case iab23_1
+      case iab23_10
+      case iab23_2
+      case iab23_3
+      case iab23_4
+      case iab23_5
+      case iab23_6
+      case iab23_7
+      case iab23_8
+      case iab23_9
+      case iab24
+      case iab25
+      case iab25_1
+      case iab25_2
+      case iab25_3
+      case iab25_4
+      case iab25_5
+      case iab25_6
+      case iab25_7
+      case iab26
+      case iab26_1
+      case iab26_2
+      case iab26_3
+      case iab26_4
+      public typealias RawValue = Swift.String
+      public init?(rawValue: Swift.String)
+      public var rawValue: Swift.String {
+        get
+      }
+    }
+    public func hash(into hasher: inout Swift.Hasher)
+    public init(authority: Swift.String, category: BuzzSDK.MFVAST.AdCategory.Category)
+    public init?(authority: Swift.String, category: Swift.String)
+    public var hashValue: Swift.Int {
+      get
+    }
+    public static func == (a: BuzzSDK.MFVAST.AdCategory, b: BuzzSDK.MFVAST.AdCategory) -> Swift.Bool
+  }
+  public enum Macro : Swift.String {
+    case timeStamp
+    case cacheBusting
+    case playHead
+    case mediaPlayHead
+    case breakPosition
+    case blockedAdCategories
+    case adCategories
+    case adCount
+    case transactionId
+    case placementType
+    case adType
+    case universalAdId
+    case ifa
+    case ifaType
+    case clientUA
+    case serverUA
+    case deviceUA
+    case serverSide
+    case deviceIP
+    case latLong
+    case domain
+    case pageURL
+    case appName
+    case vastVersions
+    case apiFrameworks
+    case extensions
+    case verificationVendors
+    case mediaMime
+    case playerCapabilities
+    case clickType
+    case playerState
+    case playerSize
+    case adPlayHead
+    case assetURI
+    case podSequence
+    case adServingId
+    case clickPos
+    case errorCode
+    case reason
+    case limitAdTracking
+    case regulations
+    case gdprConsent
+    case ts
+    case idfa
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+    public init?(rawValue: Swift.String)
+  }
+  @objc public class MacroRegex : Foundation.NSRegularExpression {
+    public typealias DataSourceBlock = (BuzzSDK.MFVAST.Macro, BuzzSDK.MFVASTAd.State?) -> Swift.String
+    public init(dataSource: @escaping BuzzSDK.MFVAST.MacroRegex.DataSourceBlock, state: BuzzSDK.MFVASTAd.State?)
+    @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+    @objc override dynamic public func replacementString(for result: Foundation.NSTextCheckingResult, in string: Swift.String, offset: Swift.Int, template templ: Swift.String) -> Swift.String
+    @objc deinit
+    @objc override dynamic public init(pattern: Swift.String, options: Foundation.NSRegularExpression.Options = []) throws
+  }
+  @_hasMissingDesignatedInitializers public class TrackingEvent {
+    public enum EventType : Swift.String {
+      case start
+      case firstQuartile, midpoint, thirdQuartile, complete
+      case mute, unmute
+      case pause, rewind, resume
+      case fullscreen, exitFullscreen, expand, collapse, playerExpand, playerCollapse
+      case acceptInvitationLinear
+      case closeLinear
+      case skip
+      case loaded
+      case progress
+      case timeSpentViewing
+      case otherAdInteraction
+      case creativeView
+      case acceptInvitation
+      case adExpand, adCollapse
+      case minimize
+      case close
+      case overlayViewDuration
+      case verificationNotExecuted
+      public typealias RawValue = Swift.String
+      public init?(rawValue: Swift.String)
+      public var rawValue: Swift.String {
+        get
+      }
+    }
+    @objc deinit
+  }
+  @_hasMissingDesignatedInitializers public class Verification {
+    @objc deinit
+  }
+  public struct VerificationResource : Swift.Equatable {
+    public enum APIFramework : Swift.String {
+      case VPAID10
+      case VPAID20
+      case MRAID10
+      case ORMMA
+      case MRAID20
+      case MRAID30
+      case OMSDK10
+      case OMSDKXX
+      public typealias RawValue = Swift.String
+      public init?(rawValue: Swift.String)
+      public var rawValue: Swift.String {
+        get
+      }
+    }
+    public enum ResourceError : Foundation.LocalizedError {
+      case invalidURL, browserNotOptional, unsupportedAPIFramework
+      public var errorDescription: Swift.String? {
+        get
+      }
+      public var verificationFailureReason: BuzzSDK.MFVAST.VerificationFailureReason {
+        get
+      }
+      public static func == (a: BuzzSDK.MFVAST.VerificationResource.ResourceError, b: BuzzSDK.MFVAST.VerificationResource.ResourceError) -> Swift.Bool
+      public var hashValue: Swift.Int {
+        get
+      }
+      public func hash(into hasher: inout Swift.Hasher)
+    }
+    public static func == (lhs: BuzzSDK.MFVAST.VerificationResource, rhs: BuzzSDK.MFVAST.VerificationResource) -> Swift.Bool
+  }
+  public enum VerificationFailureReason : Swift.Int, Swift.Comparable {
+    case resourceRejected, notSupported, loadFailure
+    public static func all() -> [BuzzSDK.MFVAST.VerificationFailureReason]
+    public static func < (lhs: BuzzSDK.MFVAST.VerificationFailureReason, rhs: BuzzSDK.MFVAST.VerificationFailureReason) -> Swift.Bool
+    public typealias RawValue = Swift.Int
+    public init?(rawValue: Swift.Int)
+    public var rawValue: Swift.Int {
+      get
+    }
+  }
+  public enum AdError : Foundation.LocalizedError {
+    case unknown
+    case xmlParsing
+    case invalidAdType
+    case invalidURL
+    case invalidWrapperURL
+    case noValidAdsFound
+    case blockedAdCategory
+    case noVASTResponseAfterWrappers
+    case noValidMediaFile
+    case invalidMediaFileURL
+    case tooManyWrappers
+    case canNotFollowAdditionalWrappers
+    case adPodUnsupported
+    case multipleAdsInWrapperResponseForbidden
+    case loadTimeout
+    case failedToLoadMediaFile
+    case failedToPlay
+    case invalidDuration
+    case videoStalled
+    case verificationNotExecuted
+    public static func all() -> [BuzzSDK.MFVAST.AdError]
+    public var errorDescription: Swift.String? {
+      get
+    }
+    public static func == (a: BuzzSDK.MFVAST.AdError, b: BuzzSDK.MFVAST.AdError) -> Swift.Bool
+    public var hashValue: Swift.Int {
+      get
+    }
+    public func hash(into hasher: inout Swift.Hasher)
+  }
+  public struct Impressions {
+    public enum Kind {
+      case normal, viewable, notViewable, viewUndetermined
+      public static func all() -> [BuzzSDK.MFVAST.Impressions.Kind]
+      public static func == (a: BuzzSDK.MFVAST.Impressions.Kind, b: BuzzSDK.MFVAST.Impressions.Kind) -> Swift.Bool
+      public var hashValue: Swift.Int {
+        get
+      }
+      public func hash(into hasher: inout Swift.Hasher)
+    }
+  }
+}
+extension BuzzSDK.MFDownloadManager.MediaType : Swift.Equatable {}
+extension BuzzSDK.MFDownloadManager.MediaType : Swift.Hashable {}
+extension BuzzSDK.MFDownloadManager.MediaType : Swift.RawRepresentable {}
+extension BuzzSDK.BuzzSDKVideoInteraction : Swift.Equatable {}
+extension BuzzSDK.BuzzSDKVideoInteraction : Swift.Hashable {}
+extension BuzzSDK.BuzzSDKVideoInteraction : Swift.RawRepresentable {}
+extension BuzzSDK.BuzzSDKStyle.BuzzSDKStyleFormat : Swift.Equatable {}
+extension BuzzSDK.BuzzSDKStyle.BuzzSDKStyleFormat : Swift.Hashable {}
+extension BuzzSDK.BuzzSDKStyle.BuzzSDKStyleFormat : Swift.RawRepresentable {}
+extension BuzzSDK.CardStyle.Style : Swift.Equatable {}
+extension BuzzSDK.CardStyle.Style : Swift.Hashable {}
+extension BuzzSDK.CardStyle.Style : Swift.RawRepresentable {}
+extension BuzzSDK.CardStyle.ContentFillStyle : Swift.Equatable {}
+extension BuzzSDK.CardStyle.ContentFillStyle : Swift.Hashable {}
+extension BuzzSDK.CardStyle.ContentFillStyle : Swift.RawRepresentable {}
+extension BuzzSDK.CardStyle.TitleVerticalPosition : Swift.Equatable {}
+extension BuzzSDK.CardStyle.TitleVerticalPosition : Swift.Hashable {}
+extension BuzzSDK.CardStyle.TitleVerticalPosition : Swift.RawRepresentable {}
+extension BuzzSDK.CardStyle.KickerPosition : Swift.Equatable {}
+extension BuzzSDK.CardStyle.KickerPosition : Swift.Hashable {}
+extension BuzzSDK.CardStyle.KickerPosition : Swift.RawRepresentable {}
+extension BuzzSDK.CardStyle.KickerBorderType : Swift.Equatable {}
+extension BuzzSDK.CardStyle.KickerBorderType : Swift.Hashable {}
+extension BuzzSDK.CardStyle.KickerBorderType : Swift.RawRepresentable {}
+extension BuzzSDK.CardStyle.CornerPosition : Swift.Equatable {}
+extension BuzzSDK.CardStyle.CornerPosition : Swift.Hashable {}
+extension BuzzSDK.CardStyle.CornerPosition : Swift.RawRepresentable {}
+extension BuzzSDK.DateFormatterStyle : Swift.Equatable {}
+extension BuzzSDK.DateFormatterStyle : Swift.Hashable {}
+extension BuzzSDK.DateFormatterStyle : Swift.RawRepresentable {}
+extension BuzzSDK.AppConfiguration.MFTarget : Swift.Equatable {}
+extension BuzzSDK.AppConfiguration.MFTarget : Swift.Hashable {}
+extension BuzzSDK.AppConfiguration.MFTarget : Swift.RawRepresentable {}
+extension BuzzSDK.AppConfiguration.MFVertical : Swift.Equatable {}
+extension BuzzSDK.AppConfiguration.MFVertical : Swift.Hashable {}
+extension BuzzSDK.AppConfiguration.MFVertical : Swift.RawRepresentable {}
+extension BuzzSDK.MFLogger.LogLevel : Swift.Equatable {}
+extension BuzzSDK.MFLogger.LogLevel : Swift.Hashable {}
+extension BuzzSDK.MFLogger.LogLevel : Swift.RawRepresentable {}
+extension BuzzSDK.MFVASTPlayerController.MFPlaybackQuartile : Swift.Equatable {}
+extension BuzzSDK.MFVASTPlayerController.MFPlaybackQuartile : Swift.Hashable {}
+extension BuzzSDK.MFVASTPlayerController.MFPlaybackQuartile : Swift.RawRepresentable {}
+extension BuzzSDK.MFVASTPlayerController.MFVideoAdDisplayType : Swift.Equatable {}
+extension BuzzSDK.MFVASTPlayerController.MFVideoAdDisplayType : Swift.Hashable {}
+extension BuzzSDK.MFVASTPlayerController.MFVideoAdDisplayType : Swift.RawRepresentable {}
+extension BuzzSDK.MFVASTPlayerController.MFVASTSoundState : Swift.Equatable {}
+extension BuzzSDK.MFVASTPlayerController.MFVASTSoundState : Swift.Hashable {}
+extension BuzzSDK.MFVASTPlayerController.MFVASTSoundState : Swift.RawRepresentable {}
+extension BuzzSDK.MFVAST.PlayerState : Swift.Equatable {}
+extension BuzzSDK.MFVAST.PlayerState : Swift.Hashable {}
+extension BuzzSDK.MFVAST.PlayerState : Swift.RawRepresentable {}
+extension BuzzSDK.MFVAST.AdCategory.Category : Swift.Equatable {}
+extension BuzzSDK.MFVAST.AdCategory.Category : Swift.Hashable {}
+extension BuzzSDK.MFVAST.AdCategory.Category : Swift.RawRepresentable {}
+extension BuzzSDK.MFVAST.Macro : Swift.Equatable {}
+extension BuzzSDK.MFVAST.Macro : Swift.Hashable {}
+extension BuzzSDK.MFVAST.Macro : Swift.RawRepresentable {}
+extension BuzzSDK.MFVAST.TrackingEvent.EventType : Swift.Equatable {}
+extension BuzzSDK.MFVAST.TrackingEvent.EventType : Swift.Hashable {}
+extension BuzzSDK.MFVAST.TrackingEvent.EventType : Swift.RawRepresentable {}
+extension BuzzSDK.MFVAST.VerificationResource.APIFramework : Swift.Equatable {}
+extension BuzzSDK.MFVAST.VerificationResource.APIFramework : Swift.Hashable {}
+extension BuzzSDK.MFVAST.VerificationResource.APIFramework : Swift.RawRepresentable {}
+extension BuzzSDK.MFVAST.VerificationResource.ResourceError : Swift.Equatable {}
+extension BuzzSDK.MFVAST.VerificationResource.ResourceError : Swift.Hashable {}
+extension BuzzSDK.MFVAST.VerificationFailureReason : Swift.Hashable {}
+extension BuzzSDK.MFVAST.VerificationFailureReason : Swift.RawRepresentable {}
+extension BuzzSDK.MFVAST.AdError : Swift.Equatable {}
+extension BuzzSDK.MFVAST.AdError : Swift.Hashable {}
+extension BuzzSDK.MFVAST.Impressions.Kind : Swift.Equatable {}
+extension BuzzSDK.MFVAST.Impressions.Kind : Swift.Hashable {}
