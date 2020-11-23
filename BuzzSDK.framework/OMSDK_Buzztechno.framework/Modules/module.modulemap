@@ -1,4 +1,0 @@
-module OMSDK_Buzztechno {
-    header "Headers/OMIDImports.h"
-    export *
-}
