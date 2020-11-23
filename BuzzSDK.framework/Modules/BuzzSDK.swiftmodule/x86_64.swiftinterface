@@ -1,6 +1,6 @@
 // swift-interface-format-version: 1.0
 // swift-compiler-version: Apple Swift version 5.3.1 (swiftlang-1200.0.41 clang-1200.0.32.8)
-// swift-module-flags: -target x86_64-apple-ios9.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name BuzzSDK
+// swift-module-flags: -target x86_64-apple-ios11.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name BuzzSDK
 import AVFoundation
 import AdSupport
 @_exported import BuzzSDK
@@ -670,6 +670,19 @@ extension UIColor {
   @objc dynamic public class func withIntRed(_ red: Swift.UInt, green: Swift.UInt, blue: Swift.UInt, alpha: Swift.UInt) -> UIKit.UIColor
   @objc dynamic public class func withRGBA(_ rgba: Swift.UInt) -> UIKit.UIColor
   @objc convenience dynamic public init?(RGBAString: Swift.String)
+  public var rgba: Swift.UInt? {
+    get
+  }
+  public var rgb: Swift.UInt? {
+    get
+  }
+  public var rgbaString: Swift.String? {
+    get
+  }
+  public var rgbString: Swift.String? {
+    get
+  }
+  public func rgbStringAndOpacity() -> (Swift.String, Swift.Float)?
 }
 @objc public protocol MFVASTPlayerControllerDelegate {
   @objc func vastPlayerController(_ controller: BuzzSDK.MFVASTPlayerController, adRequestCompletedSuccessfully success: Swift.Bool, error: Swift.Error?)
@@ -1305,6 +1318,7 @@ public struct MFVAST {
     case reason
     case limitAdTracking
     case regulations
+    case gdpr
     case gdprConsent
     case ts
     case idfa
