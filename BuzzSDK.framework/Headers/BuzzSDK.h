@@ -11,7 +11,6 @@
 #import <BuzzSDK/BUZZSDKSharedOptions.h>
 #import <BuzzSDK/GDMediaPlayer.h>
 #import <BuzzSDK/BUZZVideoPlaylistSDKModelManager.h>
-#import <BuzzSDK/OMIDImports.h>
 
 //! Project version number for BuzzSDK.
 FOUNDATION_EXPORT double BuzzSDKVersionNumber;
